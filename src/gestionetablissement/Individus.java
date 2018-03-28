@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Individus {
      int idIndividu;
-    Private String nomIndividu;
+    private String nomIndividu;
      String prenomIndividu; 
      String genreIndividu; 
      Date datNaisIndividu; 
