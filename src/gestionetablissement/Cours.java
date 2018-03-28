@@ -26,11 +26,14 @@ public class Cours {
         this.volHorCours = volHorCours;
         this.descriptifCours = descriptifCours;
     }
-
+/**
+ * 
+ * @return 
+ */
     public int getIdCours() {
         return idCours;
     }
-
+    
     public void setIdCours(int idCours) {
         this.idCours = idCours;
     }

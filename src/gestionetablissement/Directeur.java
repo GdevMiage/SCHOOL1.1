@@ -7,8 +7,8 @@ package gestionetablissement;
  */
 public class Directeur {
     
-   public int  idDirecteur;
-    public int idAffectation;
+    private int  idDirecteur;
+    private int idAffectation;
     
      public Directeur(int idDirecteur, int idAffectation) {
         this.idDirecteur = idDirecteur;
