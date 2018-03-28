@@ -8,9 +8,22 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gestionetablissement.FXMLGEtablissementController">
   <children>
-    <Button fx:id="button" layoutX="126.0" layoutY="90.0" onAction="#handleButtonAction" text="Lyes" />
     <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
-    <Button layoutX="120.0" layoutY="52.0" mnemonicParsing="false" text="Ouadie" />
-    <Button layoutX="32.0" layoutY="84.0" mnemonicParsing="false" text="salim" />
+    <GridPane layoutX="61.0" layoutY="55.0">
+      <children>
+        <Button mnemonicParsing="false" text="Ouadie" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button mnemonicParsing="false" text="salim" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button fx:id="button" onAction="#handleButtonAction" text="Lyes" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
   </children>
 </AnchorPane>
