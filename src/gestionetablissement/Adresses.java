@@ -3,14 +3,14 @@ package gestionetablissement;
 
 
 public class Adresses {
-    int idAdresse;
-   int idIndividu;
-   int batAdresse;
-   int noAdresse;
-   String rueAdresse; 
-   int cpAdresse;
-   String villeAdresse;
-   String paysAdresse;
+  private int idAdresse;
+  private int idIndividu;
+  private int batAdresse;
+  private int noAdresse;
+  private String rueAdresse; 
+  private int cpAdresse;
+  private String villeAdresse;
+  private String paysAdresse;
 
     public Adresses(int idAdresse, int idIndividu, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;

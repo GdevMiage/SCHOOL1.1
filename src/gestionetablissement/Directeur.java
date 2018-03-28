@@ -7,7 +7,7 @@ package gestionetablissement;
  */
 public class Directeur {
     
-   public int  idDirecteur;
+    public int  idDirecteur;
     public int idAffectation;
     
      public Directeur(int idDirecteur, int idAffectation) {

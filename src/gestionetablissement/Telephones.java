@@ -3,15 +3,15 @@ package gestionetablissement;
 
 
 public class Telephones {
-   int idTelephone;
-   int idIndividu; 
-   int mobileTelephone;
-   int fixeTelephone; 
-   String prenomContactTelephone;
-   String nomContactTelephone;
-   String mobileContactTelephone;
-   String fixeContactTelehone;
-   String lienContactTelephone;
+  private int idTelephone;
+  private int idIndividu; 
+  private int mobileTelephone;
+  private int fixeTelephone; 
+  private String prenomContactTelephone;
+  private String nomContactTelephone;
+  private String mobileContactTelephone;
+  private String fixeContactTelehone;
+  private String lienContactTelephone;
 
     public Telephones(int idTelephone, int idIndividu, int mobileTelephone, int fixeTelephone, String prenomContactTelephone, String nomContactTelephone, String mobileContactTelephone, String fixeContactTelehone, String lienContactTelephone) {
         this.idTelephone = idTelephone;
