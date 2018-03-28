@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ 
 package gestionetablissement;
 
 /**
@@ -10,5 +6,33 @@ package gestionetablissement;
  * @author salim
  */
 public class Directeur {
+    
+   public int  idDirecteur;
+    public int idAffectation;
+    
+     public Directeur(int idDirecteur, int idAffectation) {
+        this.idDirecteur = idDirecteur;
+        this.idAffectation = idAffectation;
+    }
+    
+
+    public int getIdDirecteur() {
+        return idDirecteur;
+    }
+
+    public void setIdDirecteur(int idDirecteur) {
+        this.idDirecteur = idDirecteur;
+    }
+
+    public int getIdAffectation() {
+        return idAffectation;
+    }
+
+    public void setIdAffectation(int idAffectation) {
+        this.idAffectation = idAffectation;
+    }
+
+   
+    
     
 }
