@@ -10,9 +10,9 @@ public class Avencement {
    private String commentCours;
    private String avancemCours;
 
-    public Avencement(int idAvencement, int idSéance, String leconsCours, String commentCours, String avancemCours) {
+    public Avencement(int idAvencement, Seances seance, String leconsCours, String commentCours, String avancemCours) {
         this.idAvencement = idAvencement;
-        this.idSéance = idSéance;
+        this.seance = seance;
         this.leconsCours = leconsCours;
         this.commentCours = commentCours;
         this.avancemCours = avancemCours;
@@ -26,13 +26,15 @@ public class Avencement {
         this.idAvencement = idAvencement;
     }
 
-    public int getIdSéance() {
-        return idSéance;
+    public Seances getSeance() {
+        return seance;
     }
 
-    public void setIdSéance(int idSéance) {
-        this.idSéance = idSéance;
+    public void setSeance(Seances seance) {
+        this.seance = seance;
     }
+
+
 
     public String getLeconsCours() {
         return leconsCours;
