@@ -5,8 +5,8 @@ package gestionetablissement;
 public class Seances {
     
     private int idSeance;
-    private int idGroupe;
-    private int idHoraire;
+    private Groupes groupe;
+    private Horaires horaire;
     private String remplacantSeance;
     private String rattrapageSeance;
     private String annulationSeance;
