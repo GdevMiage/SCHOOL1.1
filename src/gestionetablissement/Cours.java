@@ -15,9 +15,9 @@ public class Cours {
     private int volHorCours; // a revoir
     private String descriptifCours; // a revoir
 
-    public Cours(int idCours, int idSupport, String typeDocCours, int nbrTypeDocCours, String libelCours, String niveauCours, String partieCours, int volHorCours, String descriptifCours) {
+    public Cours(int idCours, Supports support, String typeDocCours, int nbrTypeDocCours, String libelCours, String niveauCours, String partieCours, int volHorCours, String descriptifCours) {
         this.idCours = idCours;
-        this.idSupport = idSupport;
+        this.support = support;
         this.typeDocCours = typeDocCours;
         this.nbrTypeDocCours = nbrTypeDocCours;
         this.libelCours = libelCours;
@@ -38,13 +38,15 @@ public class Cours {
         this.idCours = idCours;
     }
 
-    public int getIdSupport() {
-        return idSupport;
+    public Supports getSupport() {
+        return support;
     }
 
-    public void setIdSupport(int idSupport) {
-        this.idSupport = idSupport;
+    public void setSupport(Supports support) {
+        this.support = support;
     }
+
+ 
 
     public String getTypeDocCours() {
         return typeDocCours;

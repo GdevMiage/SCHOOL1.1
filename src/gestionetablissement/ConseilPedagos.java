@@ -8,9 +8,9 @@ public class ConseilPedagos {
    private String libelConseilPedago;
    private String decisConseilPedago;
 
-    public ConseilPedagos(int idConseilPedago, int idReunion, String libelConseilPedago, String decisConseilPedago) {
+    public ConseilPedagos(int idConseilPedago, Reunions reunion, String libelConseilPedago, String decisConseilPedago) {
         this.idConseilPedago = idConseilPedago;
-        this.idReunion = idReunion;
+        this.reunion = reunion;
         this.libelConseilPedago = libelConseilPedago;
         this.decisConseilPedago = decisConseilPedago;
     }
@@ -23,13 +23,15 @@ public class ConseilPedagos {
         this.idConseilPedago = idConseilPedago;
     }
 
-    public int getIdReunion() {
-        return idReunion;
+    public Reunions getReunion() {
+        return reunion;
     }
 
-    public void setIdReunion(int idReunion) {
-        this.idReunion = idReunion;
+    public void setReunion(Reunions reunion) {
+        this.reunion = reunion;
     }
+
+
 
     public String getLibelConseilPedago() {
         return libelConseilPedago;

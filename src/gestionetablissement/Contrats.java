@@ -18,11 +18,11 @@ public class Contrats {
    private String contratContrat;
 
    //constructeur
-    public Contrats(int idContrat, int idStatut, int idFonction, int idIndividu, String libelContrat, Date dateEntrContrat, Date datesortContrat, float salaireContrat, float indemnitéContrat, String materielContrat, String contratContrat) {
+    public Contrats(int idContrat, Statuts status, Fonctions fonction, Individus individus, String libelContrat, Date dateEntrContrat, Date datesortContrat, float salaireContrat, float indemnitéContrat, String materielContrat, String contratContrat) {
         this.idContrat = idContrat;
-        this.idStatut = idStatut;
-        this.idFonction = idFonction;
-        this.idIndividu = idIndividu;
+        this.status = status;
+        this.fonction = fonction;
+        this.individus = individus;
         this.libelContrat = libelContrat;
         this.dateEntrContrat = dateEntrContrat;
         this.datesortContrat = datesortContrat;
@@ -40,29 +40,31 @@ public class Contrats {
         this.idContrat = idContrat;
     }
 
-    public int getIdStatut() {
-        return idStatut;
+    public Statuts getStatus() {
+        return status;
     }
 
-    public void setIdStatut(int idStatut) {
-        this.idStatut = idStatut;
+    public Fonctions getFonction() {
+        return fonction;
     }
 
-    public int getIdFonction() {
-        return idFonction;
+    public Individus getIndividus() {
+        return individus;
     }
 
-    public void setIdFonction(int idFonction) {
-        this.idFonction = idFonction;
+    public void setStatus(Statuts status) {
+        this.status = status;
     }
 
-    public int getIdIndividu() {
-        return idIndividu;
+    public void setFonction(Fonctions fonction) {
+        this.fonction = fonction;
     }
 
-    public void setIdIndividu(int idIndividu) {
-        this.idIndividu = idIndividu;
+    public void setIndividus(Individus individus) {
+        this.individus = individus;
     }
+
+
 
     public String getLibelContrat() {
         return libelContrat;
