@@ -5,7 +5,7 @@ package gestionetablissement;
 public class Cours {
     
     private int idCours;
-    private int idSupport;
+    private Supports support;
     private String typeDocCours; // a revoir
     private int nbrTypeDocCours;
     // private int support[1-n]Cours; a revoir

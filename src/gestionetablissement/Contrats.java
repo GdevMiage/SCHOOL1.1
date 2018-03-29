@@ -6,9 +6,9 @@ import java.util.Date;
 
 public class Contrats {
    private int idContrat;
-   private int idStatut;
-   private int idFonction;
-   private int idIndividu;
+   private Statuts status;
+   private Fonctions fonction;
+   private Individus individus;
    private String libelContrat;
    private Date dateEntrContrat; 
    private Date datesortContrat; 

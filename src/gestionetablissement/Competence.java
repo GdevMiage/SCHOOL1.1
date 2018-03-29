@@ -4,8 +4,8 @@ package gestionetablissement;
  
 public class Competence {
     
-private int idProgramme;
-private int idEnseignant;
+private Programme programme;
+private Enseignants ensignant;
 
     public Competence(int idProgramme, int idEnseignant) {
         this.idProgramme = idProgramme;

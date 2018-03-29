@@ -5,7 +5,7 @@ package gestionetablissement;
 public class Avencement {
     
    private int idAvencement;
-   private int idSéance;
+   private Seances seance;
    private String leconsCours;
    private String commentCours;
    private String avancemCours;

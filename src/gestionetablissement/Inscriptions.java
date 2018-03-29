@@ -8,13 +8,13 @@ import java.util.Date;
 public class Inscriptions {
     
     private int idInscription;
-    private int idEtudiant;
-    private int idPaiment;
-    private int idPrEnCharg;
+    private Etudiants etudiant;
+    private Paiements paiment;
+    private PrEnCharg prEnCharg;
     private Date dateInscription;
     private Date dateAbandInscription;
     private Date dateAnnulInscription;
-    private int creditInscription; //a revoir
+    private double creditInscription; //a revoir
 
     public Inscriptions(int idInscription, int idEtudiant, int idPaiment, int idPrEnCharg, Date dateInscription, Date dateAbandInscription, Date dateAnnulInscription, int creditInscription) {
         this.idInscription = idInscription;
