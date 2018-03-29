@@ -10,9 +10,9 @@ public class Secretaire {
    private int  idSecretaire;
     private Affectations affectation;
 
-    public Secretaire(int idSecretaire, int idAffectation) {
+    public Secretaire(int idSecretaire, Affectations affectation) {
         this.idSecretaire = idSecretaire;
-        this.idAffectation = idAffectation;
+        this.affectation = affectation;
     }
 
     public int getIdSecretaire() {
@@ -23,13 +23,15 @@ public class Secretaire {
         this.idSecretaire = idSecretaire;
     }
 
-    public int getIdAffectation() {
-        return idAffectation;
+    public Affectations getAffectation() {
+        return affectation;
     }
 
-    public void setIdAffectation(int idAffectation) {
-        this.idAffectation = idAffectation;
+    public void setAffectation(Affectations affectation) {
+        this.affectation = affectation;
     }
+
+
     
     
     

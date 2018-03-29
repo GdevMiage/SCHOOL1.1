@@ -12,10 +12,10 @@ public class Seances {
     private String annulationSeance;
     private String reportSeance;
 
-    public Seances(int idSeance, int idGroupe, int idHoraire, String remplacantSeance, String rattrapageSeance, String annulationSeance, String reportSeance) {
+    public Seances(int idSeance, Groupes groupe, Horaires horaire, String remplacantSeance, String rattrapageSeance, String annulationSeance, String reportSeance) {
         this.idSeance = idSeance;
-        this.idGroupe = idGroupe;
-        this.idHoraire = idHoraire;
+        this.groupe = groupe;
+        this.horaire = horaire;
         this.remplacantSeance = remplacantSeance;
         this.rattrapageSeance = rattrapageSeance;
         this.annulationSeance = annulationSeance;
@@ -30,21 +30,23 @@ public class Seances {
         this.idSeance = idSeance;
     }
 
-    public int getIdGroupe() {
-        return idGroupe;
+    public Groupes getGroupe() {
+        return groupe;
     }
 
-    public void setIdGroupe(int idGroupe) {
-        this.idGroupe = idGroupe;
+    public void setGroupe(Groupes groupe) {
+        this.groupe = groupe;
     }
 
-    public int getIdHoraire() {
-        return idHoraire;
+    public Horaires getHoraire() {
+        return horaire;
     }
 
-    public void setIdHoraire(int idHoraire) {
-        this.idHoraire = idHoraire;
+    public void setHoraire(Horaires horaire) {
+        this.horaire = horaire;
     }
+
+
 
     public String getRemplacantSeance() {
         return remplacantSeance;

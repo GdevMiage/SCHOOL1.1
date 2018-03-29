@@ -12,14 +12,14 @@ public class Reunions {
     private String ODJReunion; //arevoir
     private Date hrDebReunion;
     private Date hrFinReunion;
-    private String presReunion;
+    private Individus[] presReunion;
     private Individus[] abscReunion;
     private String commReunion;
     private String CRReunion;
 
-    public Reunions(int idReunion, int idSeance, String libelReunion, String participantsReunion, String ODJReunion, String hrDebReunion, String hrFinReunion, String presReunion, String abscReunion, String commReunion, String CRReunion) {
+    public Reunions(int idReunion, int idSeance, String libelReunion, Individus[] participantsReunion, String ODJReunion, Date hrDebReunion, Date hrFinReunion, Individus[] presReunion, Individus[] abscReunion, String commReunion, String CRReunion) {
         this.idReunion = idReunion;
-        this.idSeance = idSeance;
+        this.seance = seance;
         this.libelReunion = libelReunion;
         this.participantsReunion = participantsReunion;
         this.ODJReunion = ODJReunion;
@@ -39,14 +39,7 @@ public class Reunions {
         this.idReunion = idReunion;
     }
 
-    public int getIdSeance() {
-        return idSeance;
-    }
-
-    public void setIdSeance(int idSeance) {
-        this.idSeance = idSeance;
-    }
-
+ 
     public String getLibelReunion() {
         return libelReunion;
     }
@@ -55,13 +48,6 @@ public class Reunions {
         this.libelReunion = libelReunion;
     }
 
-    public String getParticipantsReunion() {
-        return participantsReunion;
-    }
-
-    public void setParticipantsReunion(String participantsReunion) {
-        this.participantsReunion = participantsReunion;
-    }
 
     public String getODJReunion() {
         return ODJReunion;
@@ -71,37 +57,56 @@ public class Reunions {
         this.ODJReunion = ODJReunion;
     }
 
-    public String getHrDebReunion() {
+    public Seances getSeance() {
+        return seance;
+    }
+
+    public void setSeance(Seances seance) {
+        this.seance = seance;
+    }
+
+    public Individus[] getParticipantsReunion() {
+        return participantsReunion;
+    }
+
+    public void setParticipantsReunion(Individus[] participantsReunion) {
+        this.participantsReunion = participantsReunion;
+    }
+
+    public Date getHrDebReunion() {
         return hrDebReunion;
     }
 
-    public void setHrDebReunion(String hrDebReunion) {
+    public void setHrDebReunion(Date hrDebReunion) {
         this.hrDebReunion = hrDebReunion;
     }
 
-    public String getHrFinReunion() {
+    public Date getHrFinReunion() {
         return hrFinReunion;
     }
 
-    public void setHrFinReunion(String hrFinReunion) {
+    public void setHrFinReunion(Date hrFinReunion) {
         this.hrFinReunion = hrFinReunion;
     }
 
-    public String getPresReunion() {
+    public Individus[] getPresReunion() {
         return presReunion;
     }
 
-    public void setPresReunion(String presReunion) {
+    public void setPresReunion(Individus[] presReunion) {
         this.presReunion = presReunion;
     }
 
-    public String getAbscReunion() {
+    public Individus[] getAbscReunion() {
         return abscReunion;
     }
 
-    public void setAbscReunion(String abscReunion) {
+    public void setAbscReunion(Individus[] abscReunion) {
         this.abscReunion = abscReunion;
     }
+
+
+
 
     public String getCommReunion() {
         return commReunion;
