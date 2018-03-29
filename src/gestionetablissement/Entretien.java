@@ -7,9 +7,9 @@ public class Entretien {
   private int idEntretien;
   private Affectations affectation;
 
-    public Entretien(int idEntretien, int idAffectation) {
+    public Entretien(int idEntretien, Affectations affectation) {
         this.idEntretien = idEntretien;
-        this.idAffectation = idAffectation;
+        this.affectation = affectation;
     }
 
     public int getIdEntretien() {
@@ -20,13 +20,14 @@ public class Entretien {
         this.idEntretien = idEntretien;
     }
 
-    public int getIdAffectation() {
-        return idAffectation;
+    public Affectations getAffectation() {
+        return affectation;
     }
 
-    public void setIdAffectation(int idAffectation) {
-        this.idAffectation = idAffectation;
+    public void setAffectation(Affectations affectation) {
+        this.affectation = affectation;
     }
-  
+
+
     
 }

@@ -10,10 +10,10 @@ public class Evaluations {
    private float noteEvaluation;
    private String apprecEvaluation;
 
-    public Evaluations(int idEvaluation, int idAssiduite, int idExamen, String auteurEvaluation, float noteEvaluation, String apprecEvaluation) {
+    public Evaluations(int idEvaluation, Assiduites assiduite, Examens examen, String auteurEvaluation, float noteEvaluation, String apprecEvaluation) {
         this.idEvaluation = idEvaluation;
-        this.idAssiduite = idAssiduite;
-        this.idExamen = idExamen;
+        this.assiduite = assiduite;
+        this.examen = examen;
         this.auteurEvaluation = auteurEvaluation;
         this.noteEvaluation = noteEvaluation;
         this.apprecEvaluation = apprecEvaluation;
@@ -27,21 +27,23 @@ public class Evaluations {
         this.idEvaluation = idEvaluation;
     }
 
-    public int getIdAssiduite() {
-        return idAssiduite;
+    public Assiduites getAssiduite() {
+        return assiduite;
     }
 
-    public void setIdAssiduite(int idAssiduite) {
-        this.idAssiduite = idAssiduite;
+    public void setAssiduite(Assiduites assiduite) {
+        this.assiduite = assiduite;
     }
 
-    public int getIdExamen() {
-        return idExamen;
+    public Examens getExamen() {
+        return examen;
     }
 
-    public void setIdExamen(int idExamen) {
-        this.idExamen = idExamen;
+    public void setExamen(Examens examen) {
+        this.examen = examen;
     }
+
+
 
     public String getAuteurEvaluation() {
         return auteurEvaluation;

@@ -11,9 +11,9 @@ public class Examens {
   private int baremExamen;//a revoir
   private String descrExam;
 
-    public Examens(int idExamen, int idSupport, String typeExamen, String formeExamen, String baremExamen, String descrExam) {
+    public Examens(int idExamen, Supports support, String typeExamen, String formeExamen, int baremExamen, String descrExam) {
         this.idExamen = idExamen;
-        this.idSupport = idSupport;
+        this.support = support;
         this.typeExamen = typeExamen;
         this.formeExamen = formeExamen;
         this.baremExamen = baremExamen;
@@ -28,13 +28,6 @@ public class Examens {
         this.idExamen = idExamen;
     }
 
-    public int getIdSupport() {
-        return idSupport;
-    }
-
-    public void setIdSupport(int idSupport) {
-        this.idSupport = idSupport;
-    }
 
     public String getTypeExamen() {
         return typeExamen;
@@ -52,13 +45,7 @@ public class Examens {
         this.formeExamen = formeExamen;
     }
 
-    public String getBaremExamen() {
-        return baremExamen;
-    }
 
-    public void setBaremExamen(String baremExamen) {
-        this.baremExamen = baremExamen;
-    }
 
     public String getDescrExam() {
         return descrExam;

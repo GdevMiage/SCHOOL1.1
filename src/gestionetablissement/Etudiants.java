@@ -2,14 +2,14 @@
 package gestionetablissement;
 
  
-public class Etudiants extends Individus  {
+public class Etudiants   {
     
     private int idEtudiant;
     private Affectations affectation;
 
-    public Etudiants(int idEtudiant, int idAffectation) {
+    public Etudiants(int idEtudiant, Affectations affectation) {
         this.idEtudiant = idEtudiant;
-        this.idAffectation = idAffectation;
+        this.affectation = affectation;
     }
 
     public int getIdEtudiant() {
@@ -20,14 +20,7 @@ public class Etudiants extends Individus  {
         this.idEtudiant = idEtudiant;
     }
 
-    public int getIdAffectation() {
-        return idAffectation;
-    }
 
-    public void setIdAffectation(int idAffectation) {
-        this.idAffectation = idAffectation;
-    }
-    
     
     
 }

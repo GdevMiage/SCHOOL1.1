@@ -9,7 +9,7 @@ public class Fins {
     private int idFin;
     private Date heureFin;
 
-    public Fins(int idFin, String heureFin) {
+    public Fins(int idFin, Date heureFin) {
         this.idFin = idFin;
         this.heureFin = heureFin;
     }
@@ -22,14 +22,15 @@ public class Fins {
         this.idFin = idFin;
     }
 
-    public String getHeureFin() {
+    public Date getHeureFin() {
         return heureFin;
     }
 
-    public void setHeureFin(String heureFin) {
+    public void setHeureFin(Date heureFin) {
         this.heureFin = heureFin;
     }
-    
+
+   
     
     
     
