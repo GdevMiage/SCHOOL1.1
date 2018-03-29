@@ -7,26 +7,28 @@ public class Competence {
 private Programme programme;
 private Enseignants ensignant;
 
-    public Competence(int idProgramme, int idEnseignant) {
-        this.idProgramme = idProgramme;
-        this.idEnseignant = idEnseignant;
+    public Competence(Programme programme, Enseignants ensignant) {
+        this.programme = programme;
+        this.ensignant = ensignant;
     }
 
-    public int getIdProgramme() {
-        return idProgramme;
+    public Programme getProgramme() {
+        return programme;
     }
 
-    public void setIdProgramme(int idProgramme) {
-        this.idProgramme = idProgramme;
+    public Enseignants getEnsignant() {
+        return ensignant;
     }
 
-    public int getIdEnseignant() {
-        return idEnseignant;
+    public void setProgramme(Programme programme) {
+        this.programme = programme;
     }
 
-    public void setIdEnseignant(int idEnseignant) {
-        this.idEnseignant = idEnseignant;
+    public void setEnsignant(Enseignants ensignant) {
+        this.ensignant = ensignant;
     }
+
+    
     
 
 }
