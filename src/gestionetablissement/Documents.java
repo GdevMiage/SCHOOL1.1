@@ -15,10 +15,10 @@ public class Documents {
     private String texteDocument;  // a revoir
     private String couvDocument;  // a revoir
 
-    public Documents(int idDocument, int idSupport, int idTypeDoc, String libelDocument, String versionDocument, String mediaDocument, int nbrPagNBDocument, int reliureDocument, int texteDocument, int couvDocument) {
+    public Documents(int idDocument, Supports support, TypeDocs typeDocs, String libelDocument, String versionDocument, String mediaDocument, int nbrPagNBDocument, String reliureDocument, String texteDocument, String couvDocument) {
         this.idDocument = idDocument;
-        this.idSupport = idSupport;
-        this.idTypeDoc = idTypeDoc;
+        this.support = support;
+        this.typeDocs = typeDocs;
         this.libelDocument = libelDocument;
         this.versionDocument = versionDocument;
         this.mediaDocument = mediaDocument;
@@ -36,21 +36,7 @@ public class Documents {
         this.idDocument = idDocument;
     }
 
-    public int getIdSupport() {
-        return idSupport;
-    }
 
-    public void setIdSupport(int idSupport) {
-        this.idSupport = idSupport;
-    }
-
-    public int getIdTypeDoc() {
-        return idTypeDoc;
-    }
-
-    public void setIdTypeDoc(int idTypeDoc) {
-        this.idTypeDoc = idTypeDoc;
-    }
 
     public String getLibelDocument() {
         return libelDocument;
@@ -84,29 +70,48 @@ public class Documents {
         this.nbrPagNBDocument = nbrPagNBDocument;
     }
 
-    public int getReliureDocument() {
+    public Supports getSupport() {
+        return support;
+    }
+
+    public TypeDocs getTypeDocs() {
+        return typeDocs;
+    }
+
+    public String getReliureDocument() {
         return reliureDocument;
     }
 
-    public void setReliureDocument(int reliureDocument) {
-        this.reliureDocument = reliureDocument;
-    }
-
-    public int getTexteDocument() {
+    public String getTexteDocument() {
         return texteDocument;
     }
 
-    public void setTexteDocument(int texteDocument) {
-        this.texteDocument = texteDocument;
-    }
-
-    public int getCouvDocument() {
+    public String getCouvDocument() {
         return couvDocument;
     }
 
-    public void setCouvDocument(int couvDocument) {
+    public void setSupport(Supports support) {
+        this.support = support;
+    }
+
+    public void setTypeDocs(TypeDocs typeDocs) {
+        this.typeDocs = typeDocs;
+    }
+
+    public void setReliureDocument(String reliureDocument) {
+        this.reliureDocument = reliureDocument;
+    }
+
+    public void setTexteDocument(String texteDocument) {
+        this.texteDocument = texteDocument;
+    }
+
+    public void setCouvDocument(String couvDocument) {
         this.couvDocument = couvDocument;
     }
+
+
+
     
     
 }
