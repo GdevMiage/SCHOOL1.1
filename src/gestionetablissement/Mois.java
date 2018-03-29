@@ -3,11 +3,12 @@ package gestionetablissement;
 
 
 public class Mois {
+    public enum mois{JANVIER,FEVRIER,MARS,AVEIL,MAI,JUIN,JUILLET,AOUT,SEPTEMBTE,OCTOBRE,NOVEMBRE,DECEMBRE}
     
-   private int idMois;
-   private String nomMois;
+    private int idMois;
+    private mois nomMois;
 
-    public Mois(int idMois, String nomMois) {
+    public Mois(int idMois, mois nomMois) {
         this.idMois = idMois;
         this.nomMois = nomMois;
     }
@@ -20,15 +21,15 @@ public class Mois {
         this.idMois = idMois;
     }
 
-    public String getNomMois() {
+    public mois getNomMois() {
         return nomMois;
     }
 
-    public void setNomMois(String nomMois) {
+    public void setNomMois(mois nomMois) {
         this.nomMois = nomMois;
     }
-   
-   
-   
-   
+    
+    
+    
+    
 }

@@ -3,11 +3,12 @@ package gestionetablissement;
 
 
 public class Jours {
+    public enum Jour{LUNDI,MARDI,MERCREDI,JEUDI,VENDREDI,SAMEDI,DIMANCHE};
     
     private int idJours;
-    private String nomJours;
+    private Jour nomJours;
 
-    public Jours(int idJours, String nomJours) {
+    public Jours(int idJours, Jour nomJours) {
         this.idJours = idJours;
         this.nomJours = nomJours;
     }
@@ -20,11 +21,12 @@ public class Jours {
         this.idJours = idJours;
     }
 
-    public String getNomJours() {
+    public Jour getNomJours() {
         return nomJours;
     }
 
-    public void setNomJours(String nomJours) {
+    
+    public void setNomJours(Jour nomJours) {
         this.nomJours = nomJours;
     }
     
