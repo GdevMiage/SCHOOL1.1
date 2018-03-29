@@ -7,9 +7,9 @@ public class Agents {
     private int idAgent;
     private Affectations affectation;
 
-    public Agents(int idAgent, int idAffectation) {
+    public Agents(int idAgent, Affectations affectation) {
         this.idAgent = idAgent;
-        this.idAffectation = idAffectation;
+        this.affectation = affectation;
     }
 
     public int getIdAgent() {
@@ -20,13 +20,15 @@ public class Agents {
         this.idAgent = idAgent;
     }
 
-    public int getIdAffectation() {
-        return idAffectation;
+    public Affectations getAffectation() {
+        return affectation;
     }
 
-    public void setIdAffectation(int idAffectation) {
-        this.idAffectation = idAffectation;
+    public void setAffectation(Affectations affectation) {
+        this.affectation = affectation;
     }
+
+    
     
     
 }

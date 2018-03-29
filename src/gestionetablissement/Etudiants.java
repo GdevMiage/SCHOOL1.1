@@ -2,7 +2,7 @@
 package gestionetablissement;
 
  
-public class Etudiants {
+public class Etudiants extends Individus  {
     
     private int idEtudiant;
     private Affectations affectation;

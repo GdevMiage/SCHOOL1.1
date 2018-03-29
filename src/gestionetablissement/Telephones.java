@@ -4,7 +4,7 @@ package gestionetablissement;
 
 public class Telephones {
   private int idTelephone;
-  private int idIndividu; 
+  private Individus individu; 
   private int mobileTelephone;
   private int fixeTelephone; 
   private String prenomContactTelephone;

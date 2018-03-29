@@ -4,7 +4,7 @@ package gestionetablissement;
 
 public class TacheAFaires {
    private int idTacheAFaire;
-   private int idReunion;
+   private Reunions reunion;
    private String libelTacheAFaire;
    private String echTacheAFaire;
    private String emettTacheAFaire;

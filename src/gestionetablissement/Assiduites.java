@@ -15,10 +15,10 @@ public class Assiduites {
    private String commAssiduite;
    private String docAssiduite; //a revoir pdf
 
-    public Assiduites(int idAssiduite, int idInscription, int idSeance, String etatAssiduite, Date datRelancAssiduite, String commAssiduite, String docAssiduite) {
+    public Assiduites(int idAssiduite, Inscriptions inscription, Seances seance, String etatAssiduite, Date datRelancAssiduite, String commAssiduite, String docAssiduite) {
         this.idAssiduite = idAssiduite;
-        this.idInscription = idInscription;
-        this.idSeance = idSeance;
+        this.inscription = inscription;
+        this.seance = seance;
         this.etatAssiduite = etatAssiduite;
         this.datRelancAssiduite = datRelancAssiduite;
         this.commAssiduite = commAssiduite;
@@ -33,21 +33,6 @@ public class Assiduites {
         this.idAssiduite = idAssiduite;
     }
 
-    public int getIdInscription() {
-        return idInscription;
-    }
-
-    public void setIdInscription(int idInscription) {
-        this.idInscription = idInscription;
-    }
-
-    public int getIdSeance() {
-        return idSeance;
-    }
-
-    public void setIdSeance(int idSeance) {
-        this.idSeance = idSeance;
-    }
 
     public String getEtatAssiduite() {
         return etatAssiduite;
