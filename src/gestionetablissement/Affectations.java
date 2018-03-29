@@ -18,9 +18,9 @@ public class Affectations {
    private String referentAffectation; 
    private boolean validAffectation;
 
-    public Affectations(int idAffectation, int idContrat, int trigrAffectation, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, String referentAffectation, boolean validAffectation) {
+    public Affectations(int idAffectation, Contrats contrat, int trigrAffectation, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, String referentAffectation, boolean validAffectation) {
         this.idAffectation = idAffectation;
-        this.idContrat = idContrat;
+        this.contrat = contrat;
         this.trigrAffectation = trigrAffectation;
         this.loginAffectation = loginAffectation;
         this.motPasseAffectation = motPasseAffectation;
@@ -40,13 +40,15 @@ public class Affectations {
         this.idAffectation = idAffectation;
     }
 
-    public int getIdContrat() {
-        return idContrat;
+    public Contrats getContrat() {
+        return contrat;
     }
 
-    public void setIdContrat(int idContrat) {
-        this.idContrat = idContrat;
+    public void setContrat(Contrats contrat) {
+        this.contrat = contrat;
     }
+
+  
 
     public int getTrigrAffectation() {
         return trigrAffectation;
