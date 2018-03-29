@@ -5,7 +5,7 @@ package gestionetablissement;
 public class Entretien {
     
   private int idEntretien;
-  private int idAffectation;
+  private Affectations affectation;
 
     public Entretien(int idEntretien, int idAffectation) {
         this.idEntretien = idEntretien;

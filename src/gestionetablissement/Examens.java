@@ -5,10 +5,10 @@ package gestionetablissement;
 public class Examens {
     
   private int idExamen;
-  private int idSupport;
+  private Supports support;
   private String typeExamen;// a revoir type ennumere
   private String formeExamen;//type ennumere
-  private String baremExamen;//a revoir
+  private int baremExamen;//a revoir
   private String descrExam;
 
     public Examens(int idExamen, int idSupport, String typeExamen, String formeExamen, String baremExamen, String descrExam) {

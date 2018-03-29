@@ -5,7 +5,7 @@ package gestionetablissement;
 public class Lecons {
     
     private int idLecon;
-    private int idSupport;
+    private Supports support;
     private String libelLecon;
     private String pagDebLecon;
     private String pagFinLecon;

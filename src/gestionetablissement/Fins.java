@@ -1,11 +1,13 @@
 
 package gestionetablissement;
 
+import java.util.Date;
+
 
 public class Fins {
     
     private int idFin;
-    private String heureFin;
+    private Date heureFin;
 
     public Fins(int idFin, String heureFin) {
         this.idFin = idFin;

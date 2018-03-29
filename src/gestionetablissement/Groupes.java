@@ -7,19 +7,19 @@ import java.util.Date;
 public class Groupes {
     
  private int idGroupe;
- private int idSession;
- private int idPlanning;
- private int idSalle;
- private int idModule;
- private int idCompetence;
+ private Sessions session;
+ private Plannings planning;
+ private Salles salle;
+ private Modules module;
+ private Competence competence;
  private String libelGroupe;
  private String genreGroupe;
  private String commentGroupe;
  private String effSuplemGroupe;
  private String seanSuplGroupe; 
  private Date dateExamGroupe;
- private String heurePauseHoraire;   
- private String dureePauseHoraire;
+ private Date heurePauseHoraire;   
+ private Date dureePauseHoraire;
 
     public Groupes(int idGroupe, int idSession, int idPlanning, int idSalle, int idModule, int idCompetence, String libelGroupe, String genreGroupe, String commentGroupe, String effSuplemGroupe, String seanSuplGroupe, Date dateExamGroupe, String heurePauseHoraire, String dureePauseHoraire) {
         this.idGroupe = idGroupe;

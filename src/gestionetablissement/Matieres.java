@@ -2,13 +2,13 @@
 package gestionetablissement;
 
  
-public class Matières {
+public class Matieres {
     
     private int idMatiere;
-    private int idModule;
+    private Modules module;
     private String libelMatiere;
 
-    public Matières(int idMatiere, int idModule, String libelMatiere) {
+    public Matieres(int idMatiere, int idModule, String libelMatiere) {
         this.idMatiere = idMatiere;
         this.idModule = idModule;
         this.libelMatiere = libelMatiere;

@@ -8,7 +8,7 @@ package gestionetablissement;
 public class Secretaire {
     
    private int  idSecretaire;
-    private int idAffectation;
+    private Affectations affectation;
 
     public Secretaire(int idSecretaire, int idAffectation) {
         this.idSecretaire = idSecretaire;

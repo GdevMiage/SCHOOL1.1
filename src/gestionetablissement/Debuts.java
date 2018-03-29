@@ -1,11 +1,13 @@
 
 package gestionetablissement;
 
+import java.util.Date;
+
 
 public class Debuts {
     
   private int idDebut;
-  private String heureDebut;//a chnager avec un objet heure
+  private Date  heureDebut;//a chnager avec un objet heure / c'est bon
 
     public Debuts(int idDebut, String heureDebut) {
         this.idDebut = idDebut;

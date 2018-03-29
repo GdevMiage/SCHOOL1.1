@@ -4,13 +4,13 @@ package gestionetablissement;
 
 public class Repartition {
     
-   private int idGroupe;
-   private int idSession;
-   private int idPlanning;
-   private int idSalle;
-   private int idModule;
-   private int idInscription;
-   private int idEtudiant;
+   private Groupes groupe;
+   private Sessions session;
+   private Plannings planning;
+   private Salles salle;
+   private Modules module;
+   private Inscriptions inscription;
+   private Etudiants etudiant;
 
     public Repartition(int idGroupe, int idSession, int idPlanning, int idSalle, int idModule, int idInscription, int idEtudiant) {
         this.idGroupe = idGroupe;

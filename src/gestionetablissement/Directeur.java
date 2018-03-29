@@ -9,10 +9,9 @@ public class Directeur {
     
  
     private int  idDirecteur;
-    private int idAffectation;
+    private Affectations affectation;
  
-   private  int  idDirecteurr;
-   private  int idAffectationn;
+  
  
     
      public Directeur(int idDirecteur, int idAffectation) {

@@ -5,7 +5,7 @@ package gestionetablissement;
 public class Emails {
     
   private int idEmail;
-  private int idIndividu;
+  private Individus individus;
   private String adresseEmail;
   private String frqUtlMailEmail;
 

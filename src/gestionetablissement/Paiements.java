@@ -6,8 +6,8 @@ import java.util.Date;
 public class Paiements {
     
     private int idPaiement;
-    private int idInscription;
-    private int idTarifs;
+    private Inscriptions inscription;
+    private Tarifs idTarifs;
     private int nbrSessionPaiment;
     private int nbrMatierePaiment;
     private double montantPaiement;

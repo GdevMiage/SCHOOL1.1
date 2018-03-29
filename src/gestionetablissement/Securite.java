@@ -5,7 +5,7 @@ package gestionetablissement;
 public class Securite {
     
    private int idSecurite;
-   private int idAffectation;
+   private Affectations affectation;
 
     public Securite(int idSecurite, int idAffectation) {
         this.idSecurite = idSecurite;

@@ -5,10 +5,10 @@ package gestionetablissement;
 public class Horaires {
     
   private int idHoraire;
-  private String isSession;
-  private int idJours;
-  private int idDebut;
-  private int idFin;
+  private Sessions session;
+  private Jours jour;
+  private Debuts debut;
+  private Fins Fin;
   private String libelHoraire;
 
     public Horaires(int idHoraire, String isSession, int idJours, int idDebut, int idFin, String libelHoraire) {

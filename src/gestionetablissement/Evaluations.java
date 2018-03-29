@@ -4,8 +4,8 @@ package gestionetablissement;
 
 public class Evaluations {
    private int idEvaluation;
-   private int idAssiduite;
-   private int idExamen;
+   private Assiduites assiduite;
+   private Examens examen;
    private String auteurEvaluation;
    private float noteEvaluation;
    private String apprecEvaluation;

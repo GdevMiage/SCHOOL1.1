@@ -5,15 +5,15 @@ package gestionetablissement;
 public class Documents {
     
     private int idDocument;
-    private int idSupport;
-    private int idTypeDoc;
+    private Supports support;
+    private TypeDocs typeDocs;
     private String libelDocument;
     private String versionDocument; // a revoir
     private String mediaDocument;  // a revoir
     private int nbrPagNBDocument;
-    private int reliureDocument;  // a revoir
-    private int texteDocument;  // a revoir
-    private int couvDocument;  // a revoir
+    private String reliureDocument;  // a revoir
+    private String texteDocument;  // a revoir
+    private String couvDocument;  // a revoir
 
     public Documents(int idDocument, int idSupport, int idTypeDoc, String libelDocument, String versionDocument, String mediaDocument, int nbrPagNBDocument, int reliureDocument, int texteDocument, int couvDocument) {
         this.idDocument = idDocument;

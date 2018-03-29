@@ -9,7 +9,7 @@ public class Inscriptions {
     
     private int idInscription;
     private Etudiants etudiant;
-    private Paiements paiment;
+    private Paiements paiement;
     private PrEnCharg prEnCharg;
     private Date dateInscription;
     private Date dateAbandInscription;

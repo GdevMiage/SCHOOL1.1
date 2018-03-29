@@ -6,11 +6,11 @@ import java.util.Date;
 
 public class Sessions {
   private int idSession;
-  private int idAnnee;
+  private Annees annee;
   private String libelSession;
   private Date dateDebutSession;
   private Date dateFinSession;
-  private String joursFerieSession;
+  private Jours[] joursFerieSession;
 
     public Sessions(int idSession, int idAnnee, String libelSession, Date dateDebutSession, Date dateFinSession, String joursFerieSession) {
         this.idSession = idSession;

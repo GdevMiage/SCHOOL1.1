@@ -5,7 +5,7 @@ package gestionetablissement;
 public class Supports {
     
     private int idSupport;
-    private int idMatière;
+    private Matieres idMatière;
     private int idtypeDocs;
     private String libelSupport;
     private String titreSupport;

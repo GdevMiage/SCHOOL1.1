@@ -5,10 +5,10 @@ package gestionetablissement;
 public class Programme {
     
    private int idLecon;
-   private int idSupport;
-   private int idSeance;
-   private int idGroupe; 
-   private int idHoraire;
+   private Supports support;
+   private Seances seance;
+   private Groupes groupe; 
+   private Horaires horaire;
 
     public Programme(int idLecon, int idSupport, int idSeance, int idGroupe, int idHoraire) {
         this.idLecon = idLecon;

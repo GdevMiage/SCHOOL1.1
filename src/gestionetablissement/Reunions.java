@@ -1,17 +1,19 @@
 
 package gestionetablissement;
 
+import java.util.Date;
+
 
 public class Reunions {
     private int idReunion;
-    private int idSeance;
+    private Seances seance;
     private String libelReunion;
-    private String participantsReunion;//a revoir
+    private Individus[] participantsReunion;//a revoir
     private String ODJReunion; //arevoir
-    private String hrDebReunion;
-    private String hrFinReunion;
+    private Date hrDebReunion;
+    private Date hrFinReunion;
     private String presReunion;
-    private String abscReunion;
+    private Individus[] abscReunion;
     private String commReunion;
     private String CRReunion;
 
