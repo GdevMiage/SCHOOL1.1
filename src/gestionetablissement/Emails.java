@@ -9,9 +9,9 @@ public class Emails {
   private String adresseEmail;
   private String frqUtlMailEmail;
 
-    public Emails(int idEmail, int idIndividu, String adresseEmail, String frqUtlMailEmail) {
+    public Emails(int idEmail, Individus individus, String adresseEmail, String frqUtlMailEmail) {
         this.idEmail = idEmail;
-        this.idIndividu = idIndividu;
+        this.individus = individus;
         this.adresseEmail = adresseEmail;
         this.frqUtlMailEmail = frqUtlMailEmail;
     }
@@ -24,13 +24,14 @@ public class Emails {
         this.idEmail = idEmail;
     }
 
-    public int getIdIndividu() {
-        return idIndividu;
+    public Individus getIndividus() {
+        return individus;
     }
 
-    public void setIdIndividu(int idIndividu) {
-        this.idIndividu = idIndividu;
+    public void setIndividus(Individus individus) {
+        this.individus = individus;
     }
+
 
     public String getAdresseEmail() {
         return adresseEmail;

@@ -7,9 +7,9 @@ public class Enseignants {
     private int idEnseignant;
     private Affectations affectation;
 
-    public Enseignants(int idEnseignant, int idAffectation) {
+    public Enseignants(int idEnseignant, Affectations affectation) {
         this.idEnseignant = idEnseignant;
-        this.idAffectation = idAffectation;
+        this.affectation = affectation;
     }
 
     public int getIdEnseignant() {
@@ -20,13 +20,14 @@ public class Enseignants {
         this.idEnseignant = idEnseignant;
     }
 
-    public int getIdAffectation() {
-        return idAffectation;
+    public Affectations getAffectation() {
+        return affectation;
     }
 
-    public void setIdAffectation(int idAffectation) {
-        this.idAffectation = idAffectation;
+    public void setAffectation(Affectations affectation) {
+        this.affectation = affectation;
     }
-    
+
+
     
 }
