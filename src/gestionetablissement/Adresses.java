@@ -4,7 +4,7 @@ package gestionetablissement;
 
 public class Adresses {
   private int idAdresse;
-  private int idIndividu;
+  private Individus [] individus;
   private int batAdresse;
   private int noAdresse;
   private String rueAdresse; 

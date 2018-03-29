@@ -4,7 +4,7 @@ package gestionetablissement;
 
 public class ConseilPedagos {
    private int idConseilPedago;
-   private int idReunion;
+   private Reunions Reunion;
    private String libelConseilPedago;
    private String decisConseilPedago;
 

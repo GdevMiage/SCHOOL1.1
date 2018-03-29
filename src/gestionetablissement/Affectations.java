@@ -7,7 +7,7 @@ import java.util.Date;
 public class Affectations {
     
    private int idAffectation;
-   private int idContrat;
+   private Contrats contrat;
    private int trigrAffectation;
    private String loginAffectation;
    private String motPasseAffectation; 

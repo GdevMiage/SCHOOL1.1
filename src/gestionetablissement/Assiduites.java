@@ -8,8 +8,8 @@ public class Assiduites {
     
     
    private int idAssiduite;
-   private int idInscription;
-   private int idSeance;
+   private Inscriptions inscription;
+   private Seances seance;
    private String etatAssiduite;//a revoir avec type ennumere
    private Date datRelancAssiduite;
    private String commAssiduite;
