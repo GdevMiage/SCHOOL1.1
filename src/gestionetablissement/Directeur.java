@@ -14,9 +14,9 @@ public class Directeur {
   
  
     
-     public Directeur(int idDirecteur, int idAffectation) {
+     public Directeur(int idDirecteur, Affectations affectation) {
         this.idDirecteur = idDirecteur;
-        this.idAffectation = idAffectation;
+        this.affectation = affectation;
     }
     
 
@@ -28,13 +28,15 @@ public class Directeur {
         this.idDirecteur = idDirecteur;
     }
 
-    public int getIdAffectation() {
-        return idAffectation;
+    public Affectations getAffectation() {
+        return affectation;
     }
 
-    public void setIdAffectation(int idAffectation) {
-        this.idAffectation = idAffectation;
+    public void setAffectation(Affectations affectation) {
+        this.affectation = affectation;
     }
+
+
 
    
     

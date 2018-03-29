@@ -9,7 +9,7 @@ public class Debuts {
   private int idDebut;
   private Date  heureDebut;//a chnager avec un objet heure / c'est bon
 
-    public Debuts(int idDebut, String heureDebut) {
+    public Debuts(int idDebut, Date heureDebut) {
         this.idDebut = idDebut;
         this.heureDebut = heureDebut;
     }
@@ -22,11 +22,11 @@ public class Debuts {
         this.idDebut = idDebut;
     }
 
-    public String getHeureDebut() {
+    public Date getHeureDebut() {
         return heureDebut;
     }
 
-    public void setHeureDebut(String heureDebut) {
+    public void setHeureDebut(Date heureDebut) {
         this.heureDebut = heureDebut;
     }
 
