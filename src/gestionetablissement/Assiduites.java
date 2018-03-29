@@ -10,10 +10,10 @@ public class Assiduites {
    private int idAssiduite;
    private int idInscription;
    private int idSeance;
-   private String etatAssiduite;//a revoir avec type ennumere
+   private String etatAssiduite;
    private Date datRelancAssiduite;
    private String commAssiduite;
-   private String docAssiduite; //a revoir pdf
+   private String docAssiduite; 
 
     public Assiduites(int idAssiduite, int idInscription, int idSeance, String etatAssiduite, Date datRelancAssiduite, String commAssiduite, String docAssiduite) {
         this.idAssiduite = idAssiduite;
