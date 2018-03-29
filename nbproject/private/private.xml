@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Modules.java</file>
             <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Secretaire.java</file>
             <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Enseignants.java</file>
@@ -26,6 +27,20 @@
             <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Entretien.java</file>
             <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Charges.java</file>
             <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Matières.java</file>
+=======
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Telephones.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Materiels.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Adresses.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Affectations.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Directeur.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Contrats.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Statuts.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/GestionEtablissement.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Emails.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Frequences.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Fonctions.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Individus.java</file>
+>>>>>>> 17221678ea592fe8281632011bca52eb77c14fe5
         </group>
     </open-files>
 </project-private>

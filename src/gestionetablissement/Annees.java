@@ -1,14 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gestionetablissement;
 
-/**
- *
- * @author salim
- */
+
 public class Annees {
+    private int idAnnee;
+    private int nomAnnee;
+
+    public Annees(int idAnnee, int nomAnnee) {
+        this.idAnnee = idAnnee;
+        this.nomAnnee = nomAnnee;
+    }
+
+    public int getIdAnnee() {
+        return idAnnee;
+    }
+
+    public void setIdAnnee(int idAnnee) {
+        this.idAnnee = idAnnee;
+    }
+
+    public int getNomAnnee() {
+        return nomAnnee;
+    }
+
+    public void setNomAnnee(int nomAnnee) {
+        this.nomAnnee = nomAnnee;
+    }
+    
+    
+    
     
 }

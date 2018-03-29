@@ -12,6 +12,7 @@ public class Adresses {
   private String villeAdresse;
   private String paysAdresse;
 
+  
     public Adresses(int idAdresse, int idIndividu, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;
         this.idIndividu = idIndividu;
