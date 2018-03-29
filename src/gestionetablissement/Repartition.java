@@ -12,71 +12,72 @@ public class Repartition {
    private Inscriptions inscription;
    private Etudiants etudiant;
 
-    public Repartition(int idGroupe, int idSession, int idPlanning, int idSalle, int idModule, int idInscription, int idEtudiant) {
-        this.idGroupe = idGroupe;
-        this.idSession = idSession;
-        this.idPlanning = idPlanning;
-        this.idSalle = idSalle;
-        this.idModule = idModule;
-        this.idInscription = idInscription;
-        this.idEtudiant = idEtudiant;
+    public Repartition(Groupes groupe, Sessions session, Plannings planning, Salles salle, Modules module, Inscriptions inscription, Etudiants etudiant) {
+        this.groupe = groupe;
+        this.session = session;
+        this.planning = planning;
+        this.salle = salle;
+        this.module = module;
+        this.inscription = inscription;
+        this.etudiant = etudiant;
     }
 
-    public int getIdGroupe() {
-        return idGroupe;
+    public Groupes getGroupe() {
+        return groupe;
     }
 
-    public void setIdGroupe(int idGroupe) {
-        this.idGroupe = idGroupe;
+    public void setGroupe(Groupes groupe) {
+        this.groupe = groupe;
     }
 
-    public int getIdSession() {
-        return idSession;
+    public Sessions getSession() {
+        return session;
     }
 
-    public void setIdSession(int idSession) {
-        this.idSession = idSession;
+    public void setSession(Sessions session) {
+        this.session = session;
     }
 
-    public int getIdPlanning() {
-        return idPlanning;
+    public Plannings getPlanning() {
+        return planning;
     }
 
-    public void setIdPlanning(int idPlanning) {
-        this.idPlanning = idPlanning;
+    public void setPlanning(Plannings planning) {
+        this.planning = planning;
     }
 
-    public int getIdSalle() {
-        return idSalle;
+    public Salles getSalle() {
+        return salle;
     }
 
-    public void setIdSalle(int idSalle) {
-        this.idSalle = idSalle;
+    public void setSalle(Salles salle) {
+        this.salle = salle;
     }
 
-    public int getIdModule() {
-        return idModule;
+    public Modules getModule() {
+        return module;
     }
 
-    public void setIdModule(int idModule) {
-        this.idModule = idModule;
+    public void setModule(Modules module) {
+        this.module = module;
     }
 
-    public int getIdInscription() {
-        return idInscription;
+    public Inscriptions getInscription() {
+        return inscription;
     }
 
-    public void setIdInscription(int idInscription) {
-        this.idInscription = idInscription;
+    public void setInscription(Inscriptions inscription) {
+        this.inscription = inscription;
     }
 
-    public int getIdEtudiant() {
-        return idEtudiant;
+    public Etudiants getEtudiant() {
+        return etudiant;
     }
 
-    public void setIdEtudiant(int idEtudiant) {
-        this.idEtudiant = idEtudiant;
+    public void setEtudiant(Etudiants etudiant) {
+        this.etudiant = etudiant;
     }
+
    
    
    

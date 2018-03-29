@@ -8,9 +8,9 @@ public class Matieres {
     private Modules module;
     private String libelMatiere;
 
-    public Matieres(int idMatiere, int idModule, String libelMatiere) {
+    public Matieres(int idMatiere, Modules module, String libelMatiere) {
         this.idMatiere = idMatiere;
-        this.idModule = idModule;
+        this.module = module;
         this.libelMatiere = libelMatiere;
     }
 
@@ -22,13 +22,14 @@ public class Matieres {
         this.idMatiere = idMatiere;
     }
 
-    public int getIdModule() {
-        return idModule;
+    public Modules getModule() {
+        return module;
     }
 
-    public void setIdModule(int idModule) {
-        this.idModule = idModule;
+    public void setModule(Modules module) {
+        this.module = module;
     }
+
 
     public String getLibelMatiere() {
         return libelMatiere;

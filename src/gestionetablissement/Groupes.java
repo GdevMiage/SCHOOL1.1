@@ -21,13 +21,13 @@ public class Groupes {
  private Date heurePauseHoraire;   
  private Date dureePauseHoraire;
 
-    public Groupes(int idGroupe, int idSession, int idPlanning, int idSalle, int idModule, int idCompetence, String libelGroupe, String genreGroupe, String commentGroupe, String effSuplemGroupe, String seanSuplGroupe, Date dateExamGroupe, String heurePauseHoraire, String dureePauseHoraire) {
+    public Groupes(int idGroupe, Sessions session, Plannings planning, Salles salle, Modules module, Competence competence, String libelGroupe, String genreGroupe, String commentGroupe, String effSuplemGroupe, String seanSuplGroupe, Date dateExamGroupe, Date heurePauseHoraire, Date dureePauseHoraire) {
         this.idGroupe = idGroupe;
-        this.idSession = idSession;
-        this.idPlanning = idPlanning;
-        this.idSalle = idSalle;
-        this.idModule = idModule;
-        this.idCompetence = idCompetence;
+        this.session = session;
+        this.planning = planning;
+        this.salle = salle;
+        this.module = module;
+        this.competence = competence;
         this.libelGroupe = libelGroupe;
         this.genreGroupe = genreGroupe;
         this.commentGroupe = commentGroupe;
@@ -44,46 +44,6 @@ public class Groupes {
 
     public void setIdGroupe(int idGroupe) {
         this.idGroupe = idGroupe;
-    }
-
-    public int getIdSession() {
-        return idSession;
-    }
-
-    public void setIdSession(int idSession) {
-        this.idSession = idSession;
-    }
-
-    public int getIdPlanning() {
-        return idPlanning;
-    }
-
-    public void setIdPlanning(int idPlanning) {
-        this.idPlanning = idPlanning;
-    }
-
-    public int getIdSalle() {
-        return idSalle;
-    }
-
-    public void setIdSalle(int idSalle) {
-        this.idSalle = idSalle;
-    }
-
-    public int getIdModule() {
-        return idModule;
-    }
-
-    public void setIdModule(int idModule) {
-        this.idModule = idModule;
-    }
-
-    public int getIdCompetence() {
-        return idCompetence;
-    }
-
-    public void setIdCompetence(int idCompetence) {
-        this.idCompetence = idCompetence;
     }
 
     public String getLibelGroupe() {
@@ -134,22 +94,7 @@ public class Groupes {
         this.dateExamGroupe = dateExamGroupe;
     }
 
-    public String getHeurePauseHoraire() {
-        return heurePauseHoraire;
-    }
 
-    public void setHeurePauseHoraire(String heurePauseHoraire) {
-        this.heurePauseHoraire = heurePauseHoraire;
-    }
-
-    public String getDureePauseHoraire() {
-        return dureePauseHoraire;
-    }
-
-    public void setDureePauseHoraire(String dureePauseHoraire) {
-        this.dureePauseHoraire = dureePauseHoraire;
-    }
- 
  
  
  

@@ -16,11 +16,11 @@ public class Inscriptions {
     private Date dateAnnulInscription;
     private double creditInscription; //a revoir
 
-    public Inscriptions(int idInscription, int idEtudiant, int idPaiment, int idPrEnCharg, Date dateInscription, Date dateAbandInscription, Date dateAnnulInscription, int creditInscription) {
+    public Inscriptions(int idInscription, Etudiants etudiant, Paiements paiement, PrEnCharg prEnCharg, Date dateInscription, Date dateAbandInscription, Date dateAnnulInscription, int creditInscription) {
         this.idInscription = idInscription;
-        this.idEtudiant = idEtudiant;
-        this.idPaiment = idPaiment;
-        this.idPrEnCharg = idPrEnCharg;
+        this.etudiant = etudiant;
+        this.paiement = paiement;
+        this.prEnCharg = prEnCharg;
         this.dateInscription = dateInscription;
         this.dateAbandInscription = dateAbandInscription;
         this.dateAnnulInscription = dateAnnulInscription;
@@ -35,29 +35,7 @@ public class Inscriptions {
         this.idInscription = idInscription;
     }
 
-    public int getIdEtudiant() {
-        return idEtudiant;
-    }
-
-    public void setIdEtudiant(int idEtudiant) {
-        this.idEtudiant = idEtudiant;
-    }
-
-    public int getIdPaiment() {
-        return idPaiment;
-    }
-
-    public void setIdPaiment(int idPaiment) {
-        this.idPaiment = idPaiment;
-    }
-
-    public int getIdPrEnCharg() {
-        return idPrEnCharg;
-    }
-
-    public void setIdPrEnCharg(int idPrEnCharg) {
-        this.idPrEnCharg = idPrEnCharg;
-    }
+   
 
     public Date getDateInscription() {
         return dateInscription;
@@ -83,9 +61,7 @@ public class Inscriptions {
         this.dateAnnulInscription = dateAnnulInscription;
     }
 
-    public int getCreditInscription() {
-        return creditInscription;
-    }
+  
 
     public void setCreditInscription(int creditInscription) {
         this.creditInscription = creditInscription;

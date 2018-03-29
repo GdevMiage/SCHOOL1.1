@@ -7,7 +7,7 @@ public class Paiements {
     
     private int idPaiement;
     private Inscriptions inscription;
-    private Tarifs idTarifs;
+    private Tarifs tarifs;
     private int nbrSessionPaiment;
     private int nbrMatierePaiment;
     private double montantPaiement;
@@ -21,10 +21,10 @@ public class Paiements {
     private Date dateTransfPaiement;
     private int trigrTranfPaiment;
 
-    public Paiements(int idPaiement, int idInscription, int idTarifs, int nbrSessionPaiment, int nbrMatierePaiment, double montantPaiement, int modePaiement, Date datePaiement, int trigrPaiment, Date dateEncais1Paiement, Date dateEncais2Paiement, Date dateEncais3Paiement, int trigrEncaisPaiment, Date dateTransfPaiement, int trigrTranfPaiment) {
+    public Paiements(int idPaiement, Inscriptions inscription, Tarifs tarifs, int nbrSessionPaiment, int nbrMatierePaiment, double montantPaiement, int modePaiement, Date datePaiement, int trigrPaiment, Date dateEncais1Paiement, Date dateEncais2Paiement, Date dateEncais3Paiement, int trigrEncaisPaiment, Date dateTransfPaiement, int trigrTranfPaiment) {
         this.idPaiement = idPaiement;
-        this.idInscription = idInscription;
-        this.idTarifs = idTarifs;
+        this.inscription = inscription;
+        this.tarifs = tarifs;
         this.nbrSessionPaiment = nbrSessionPaiment;
         this.nbrMatierePaiment = nbrMatierePaiment;
         this.montantPaiement = montantPaiement;
@@ -47,20 +47,20 @@ public class Paiements {
         this.idPaiement = idPaiement;
     }
 
-    public int getIdInscription() {
-        return idInscription;
+    public Inscriptions getInscription() {
+        return inscription;
     }
 
-    public void setIdInscription(int idInscription) {
-        this.idInscription = idInscription;
+    public void setInscription(Inscriptions inscription) {
+        this.inscription = inscription;
     }
 
-    public int getIdTarifs() {
-        return idTarifs;
+    public Tarifs getTarifs() {
+        return tarifs;
     }
 
-    public void setIdTarifs(int idTarifs) {
-        this.idTarifs = idTarifs;
+    public void setTarifs(Tarifs tarifs) {
+        this.tarifs = tarifs;
     }
 
     public int getNbrSessionPaiment() {

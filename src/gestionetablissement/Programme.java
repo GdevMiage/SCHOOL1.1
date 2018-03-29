@@ -10,12 +10,12 @@ public class Programme {
    private Groupes groupe; 
    private Horaires horaire;
 
-    public Programme(int idLecon, int idSupport, int idSeance, int idGroupe, int idHoraire) {
+    public Programme(int idLecon, Supports support, Seances seance, Groupes groupe, Horaires idHoraire) {
         this.idLecon = idLecon;
-        this.idSupport = idSupport;
-        this.idSeance = idSeance;
-        this.idGroupe = idGroupe;
-        this.idHoraire = idHoraire;
+        this.support = support;
+        this.seance = seance;
+        this.groupe = groupe;
+        this.horaire = idHoraire;
     }
 
     public int getIdLecon() {
@@ -26,38 +26,39 @@ public class Programme {
         this.idLecon = idLecon;
     }
 
-    public int getIdSupport() {
-        return idSupport;
+    public Supports getSupport() {
+        return support;
     }
 
-    public void setIdSupport(int idSupport) {
-        this.idSupport = idSupport;
+    public void setSupport(Supports support) {
+        this.support = support;
     }
 
-    public int getIdSeance() {
-        return idSeance;
+    public Seances getSeance() {
+        return seance;
     }
 
-    public void setIdSeance(int idSeance) {
-        this.idSeance = idSeance;
+    public void setSeance(Seances seance) {
+        this.seance = seance;
     }
 
-    public int getIdGroupe() {
-        return idGroupe;
+    public Groupes getGroupe() {
+        return groupe;
     }
 
-    public void setIdGroupe(int idGroupe) {
-        this.idGroupe = idGroupe;
+    public void setGroupe(Groupes groupe) {
+        this.groupe = groupe;
     }
 
-    public int getIdHoraire() {
-        return idHoraire;
+    public Horaires getHoraire() {
+        return horaire;
     }
 
-    public void setIdHoraire(int idHoraire) {
-        this.idHoraire = idHoraire;
+    public void setHoraire(Horaires horaire) {
+        this.horaire = horaire;
     }
-   
+
+
    
    
    

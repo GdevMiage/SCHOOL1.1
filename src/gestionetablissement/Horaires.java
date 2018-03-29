@@ -8,15 +8,15 @@ public class Horaires {
   private Sessions session;
   private Jours jour;
   private Debuts debut;
-  private Fins Fin;
+  private Fins fin;
   private String libelHoraire;
 
-    public Horaires(int idHoraire, String isSession, int idJours, int idDebut, int idFin, String libelHoraire) {
+    public Horaires(int idHoraire, Sessions session, Jours jour, Debuts debut, Fins fin, String libelHoraire) {
         this.idHoraire = idHoraire;
-        this.isSession = isSession;
-        this.idJours = idJours;
-        this.idDebut = idDebut;
-        this.idFin = idFin;
+        this.session = session;
+        this.jour = jour;
+        this.debut = debut;
+        this.fin = fin;
         this.libelHoraire = libelHoraire;
     }
 
@@ -28,37 +28,41 @@ public class Horaires {
         this.idHoraire = idHoraire;
     }
 
-    public String getIsSession() {
-        return isSession;
+    public Sessions getSession() {
+        return session;
     }
 
-    public void setIsSession(String isSession) {
-        this.isSession = isSession;
+    public void setSession(Sessions session) {
+        this.session = session;
     }
 
-    public int getIdJours() {
-        return idJours;
+    public Jours getJour() {
+        return jour;
     }
 
-    public void setIdJours(int idJours) {
-        this.idJours = idJours;
+    public void setJour(Jours jour) {
+        this.jour = jour;
     }
 
-    public int getIdDebut() {
-        return idDebut;
+    public Debuts getDebut() {
+        return debut;
     }
 
-    public void setIdDebut(int idDebut) {
-        this.idDebut = idDebut;
+    public void setDebut(Debuts debut) {
+        this.debut = debut;
     }
 
-    public int getIdFin() {
-        return idFin;
+    public Fins getFin() {
+        return fin;
     }
 
-    public void setIdFin(int idFin) {
-        this.idFin = idFin;
+    public void setFin(Fins fin) {
+        this.fin = fin;
     }
+
+
+
+   
 
     public String getLibelHoraire() {
         return libelHoraire;

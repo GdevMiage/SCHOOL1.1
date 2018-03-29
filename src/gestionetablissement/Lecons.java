@@ -10,9 +10,9 @@ public class Lecons {
     private String pagDebLecon;
     private String pagFinLecon;
 
-    public Lecons(int idLecon, int idSupport, String libelLecon, String pagDebLecon, String pagFinLecon) {
+    public Lecons(int idLecon, Supports support, String libelLecon, String pagDebLecon, String pagFinLecon) {
         this.idLecon = idLecon;
-        this.idSupport = idSupport;
+        this.support = support;
         this.libelLecon = libelLecon;
         this.pagDebLecon = pagDebLecon;
         this.pagFinLecon = pagFinLecon;
@@ -26,13 +26,14 @@ public class Lecons {
         this.idLecon = idLecon;
     }
 
-    public int getIdSupport() {
-        return idSupport;
+    public Supports getSupport() {
+        return support;
     }
 
-    public void setIdSupport(int idSupport) {
-        this.idSupport = idSupport;
+    public void setSupport(Supports support) {
+        this.support = support;
     }
+
 
     public String getLibelLecon() {
         return libelLecon;
