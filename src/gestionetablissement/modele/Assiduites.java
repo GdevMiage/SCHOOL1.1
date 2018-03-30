@@ -5,15 +5,15 @@ import java.util.Date;
 
 
 public class Assiduites {
-    
+     
     
    private int idAssiduite;
    private Inscriptions inscription;
    private Seances seance;
-   private String etatAssiduite;//a revoir avec type ennumere
+   private String etatAssiduite;//a  revoir   type ennumere
    private Date datRelancAssiduite;
    private String commAssiduite;
-   private String docAssiduite; //a revoir pdf
+   private String docAssiduite; //a   pdf
 
     public Assiduites(int idAssiduite, Inscriptions inscription, Seances seance, String etatAssiduite, Date datRelancAssiduite, String commAssiduite, String docAssiduite) {
         this.idAssiduite = idAssiduite;
