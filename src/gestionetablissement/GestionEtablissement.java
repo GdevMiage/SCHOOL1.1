@@ -71,7 +71,7 @@ public class GestionEtablissement extends Application {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+       
     public User getLoggedUser() {
         return loggedUser;
     }
