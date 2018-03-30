@@ -1,17 +1,19 @@
 
 package gestionetablissement.modele;
 
+import java.util.Date;
+
 
 public class Horaires {
     
   private int idHoraire;
   private Sessions session;
-  private Jours jour;
-  private Debuts debut;
-  private Fins fin;
+  private Date jour;
+  private Date debut;
+  private Date fin;
   private String libelHoraire;
 
-    public Horaires(int idHoraire, Sessions session, Jours jour, Debuts debut, Fins fin, String libelHoraire) {
+    public Horaires(int idHoraire, Sessions session, Date jour, Date debut, Date fin, String libelHoraire) {
         this.idHoraire = idHoraire;
         this.session = session;
         this.jour = jour;
@@ -36,27 +38,27 @@ public class Horaires {
         this.session = session;
     }
 
-    public Jours getJour() {
+    public Date getJour() {
         return jour;
     }
 
-    public void setJour(Jours jour) {
+    public void setJour(Date jour) {
         this.jour = jour;
     }
 
-    public Debuts getDebut() {
+    public Date getDebut() {
         return debut;
     }
 
-    public void setDebut(Debuts debut) {
+    public void setDebut(Date debut) {
         this.debut = debut;
     }
 
-    public Fins getFin() {
+    public Date getFin() {
         return fin;
     }
 
-    public void setFin(Fins fin) {
+    public void setFin(Date fin) {
         this.fin = fin;
     }
 

@@ -6,13 +6,13 @@ import java.util.Date;
 
 public class Sessions {
   private int idSession;
-  private Annees annee;
+  private Date annee;
   private String libelSession;
   private Date dateDebutSession;
   private Date dateFinSession;
-  private Jours[] joursFerieSession;
+  private Date[] joursFerieSession;
 
-    public Sessions(int idSession, Annees annee, String libelSession, Date dateDebutSession, Date dateFinSession, Jours[] joursFerieSession) {
+    public Sessions(int idSession, Date annee, String libelSession, Date dateDebutSession, Date dateFinSession, Date[] joursFerieSession) {
         this.idSession = idSession;
         this.annee = annee;
         this.libelSession = libelSession;
@@ -55,19 +55,19 @@ public class Sessions {
         this.dateFinSession = dateFinSession;
     }
 
-    public Annees getAnnee() {
+    public Date getAnnee() {
         return annee;
     }
 
-    public void setAnnee(Annees annee) {
+    public void setAnnee(Date annee) {
         this.annee = annee;
     }
 
-    public Jours[] getJoursFerieSession() {
+    public Date[] getJoursFerieSession() {
         return joursFerieSession;
     }
 
-    public void setJoursFerieSession(Jours[] joursFerieSession) {
+    public void setJoursFerieSession(Date[] joursFerieSession) {
         this.joursFerieSession = joursFerieSession;
     }
 
