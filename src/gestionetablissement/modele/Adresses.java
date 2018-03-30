@@ -3,7 +3,7 @@ package gestionetablissement.modele;
 
 
 public class Adresses {
-  private int idAdress;
+  private int idAdresse;
   private Individus [] listeIndividus;
   private int batAdresse;
   private int noAdresse;
@@ -14,7 +14,7 @@ public class Adresses {
 
   
     public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
-        this.idAdress = idAdresse;
+        this.idAdresse = idAdresse;
         this.listeIndividus = individus;
         this.batAdresse = batAdresse;
         this.noAdresse = noAdresse;
