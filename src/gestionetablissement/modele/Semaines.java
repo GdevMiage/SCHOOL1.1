@@ -1,5 +1,5 @@
 
-package gestionetablissement;
+package gestionetablissement.modele;
 
 
 public class Semaines {

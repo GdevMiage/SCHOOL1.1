@@ -1,35 +1,22 @@
  
-package gestionetablissement;
+package gestionetablissement.modele;
+
+import java.util.Date;
 
 /**
  *
  * @author salim
  */
-public class Secretaire {
+public class Secretaire extends Individus {
     
-   private int  idSecretaire;
-    private Affectations affectation;
+  
 
-    public Secretaire(int idSecretaire, Affectations affectation) {
-        this.idSecretaire = idSecretaire;
-        this.affectation = affectation;
+    public Secretaire(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, String domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu, Affectations affectation) {
+       super(idIndividu,nomIndividu,prenomIndividu,affectation,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu);
+       
     }
 
-    public int getIdSecretaire() {
-        return idSecretaire;
-    }
 
-    public void setIdSecretaire(int idSecretaire) {
-        this.idSecretaire = idSecretaire;
-    }
-
-    public Affectations getAffectation() {
-        return affectation;
-    }
-
-    public void setAffectation(Affectations affectation) {
-        this.affectation = affectation;
-    }
 
 
     

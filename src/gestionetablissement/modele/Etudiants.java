@@ -1,24 +1,18 @@
  
-package gestionetablissement;
+package gestionetablissement.modele;
+
+import java.util.Date;
 
  
-public class Etudiants   {
+public class Etudiants extends Individus  {
     
-    private int idEtudiant;
-    private Affectations affectation;
+ 
 
-    public Etudiants(int idEtudiant, Affectations affectation) {
-        this.idEtudiant = idEtudiant;
-        this.affectation = affectation;
+    public Etudiants(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, String domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu, Affectations affectation) {
+       super(idIndividu,nomIndividu,prenomIndividu,affectation,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu);
+       
     }
 
-    public int getIdEtudiant() {
-        return idEtudiant;
-    }
-
-    public void setIdEtudiant(int idEtudiant) {
-        this.idEtudiant = idEtudiant;
-    }
 
 
     

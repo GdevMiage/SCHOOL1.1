@@ -1,5 +1,5 @@
 
-package gestionetablissement;
+package gestionetablissement.modele;
 
 import java.util.Date;
 
@@ -7,23 +7,25 @@ import java.util.Date;
 public class Individus {
      int idIndividu;
     private String nomIndividu;
-     String prenomIndividu; 
-     String genreIndividu; 
-     Date datNaisIndividu; 
-     String lieuNaisIndividu; 
-     String nivEtudIndividu;//a revoir
-     String domEtudIndividu;//a revoir 
-     String profIndividu; 
-     String domCompetIndividu; 
-     String langMatIndividu; 
-     String langParlIndividu; 
-     String photoIndividu;
-     String rectoPIDIndividu;
-     String versoPIDIndividu; 
+    private String prenomIndividu; 
+    private String genreIndividu; 
+    private Date datNaisIndividu; 
+    private String lieuNaisIndividu; 
+    private String nivEtudIndividu;//a revoir
+    private String domEtudIndividu;//a revoir 
+    private String profIndividu; 
+    private Affectations affectation;
+    private String domCompetIndividu; 
+    private String langMatIndividu; 
+    private String langParlIndividu; 
+    private String photoIndividu;
+    private String rectoPIDIndividu;
+    private String versoPIDIndividu; 
 
-    public Individus(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, String domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu) {
+    public Individus(int idIndividu, String nomIndividu, String prenomIndividu,Affectations affectation ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, String domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu) {
         this.idIndividu = idIndividu;
         this.nomIndividu = nomIndividu;
+        this.affectation = affectation;
         this.prenomIndividu = prenomIndividu;
         this.genreIndividu = genreIndividu;
         this.datNaisIndividu = datNaisIndividu;
@@ -37,6 +39,14 @@ public class Individus {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
+    }
+
+    public Affectations getAffectation() {
+        return affectation;
+    }
+
+    public void setAffectation(Affectations affectation) {
+        this.affectation = affectation;
     }
 
     public int getIdIndividu() {

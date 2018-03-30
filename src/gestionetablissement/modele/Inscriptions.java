@@ -1,6 +1,6 @@
 
 
-package gestionetablissement;
+package gestionetablissement.modele;
 
 import java.util.Date;
 

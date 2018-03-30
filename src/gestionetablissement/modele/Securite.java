@@ -1,32 +1,18 @@
 
-package gestionetablissement;
+package gestionetablissement.modele;
+
+import java.util.Date;
 
 
-public class Securite {
+public class Securite extends Individus {
     
-   private int idSecurite;
-   private Affectations affectation;
 
-    public Securite(int idSecurite, Affectations affectation) {
-        this.idSecurite = idSecurite;
-        this.affectation = affectation;
+
+    public Securite(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, String domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu, Affectations affectation) {
+       super(idIndividu,nomIndividu,prenomIndividu,affectation,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu);
+       
     }
 
-    public int getIdSecurite() {
-        return idSecurite;
-    }
-
-    public void setIdSecurite(int idSecurite) {
-        this.idSecurite = idSecurite;
-    }
-
-    public Affectations getAffectation() {
-        return affectation;
-    }
-
-    public void setAffectation(Affectations affectation) {
-        this.affectation = affectation;
-    }
 
 
    
