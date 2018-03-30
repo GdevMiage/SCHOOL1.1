@@ -12,9 +12,9 @@ public class Sessions {
   private Date dateFinSession;
   private Jours[] joursFerieSession;
 
-    public Sessions(int idSession, int idAnnee, String libelSession, Date dateDebutSession, Date dateFinSession, String joursFerieSession) {
+    public Sessions(int idSession, Annees annee, String libelSession, Date dateDebutSession, Date dateFinSession, Jours[] joursFerieSession) {
         this.idSession = idSession;
-        this.idAnnee = idAnnee;
+        this.annee = annee;
         this.libelSession = libelSession;
         this.dateDebutSession = dateDebutSession;
         this.dateFinSession = dateFinSession;
@@ -29,13 +29,7 @@ public class Sessions {
         this.idSession = idSession;
     }
 
-    public int getIdAnnee() {
-        return idAnnee;
-    }
-
-    public void setIdAnnee(int idAnnee) {
-        this.idAnnee = idAnnee;
-    }
+   
 
     public String getLibelSession() {
         return libelSession;
@@ -61,14 +55,23 @@ public class Sessions {
         this.dateFinSession = dateFinSession;
     }
 
-    public String getJoursFerieSession() {
+    public Annees getAnnee() {
+        return annee;
+    }
+
+    public void setAnnee(Annees annee) {
+        this.annee = annee;
+    }
+
+    public Jours[] getJoursFerieSession() {
         return joursFerieSession;
     }
 
-    public void setJoursFerieSession(String joursFerieSession) {
+    public void setJoursFerieSession(Jours[] joursFerieSession) {
         this.joursFerieSession = joursFerieSession;
     }
-  
+
+
   
   
   

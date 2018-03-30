@@ -11,9 +11,9 @@ public class TacheAFaires {
    private String commTacheAFaire;
    private String ficheTacheAFaire;
 
-    public TacheAFaires(int idTacheAFaire, int idReunion, String libelTacheAFaire, String echTacheAFaire, String emettTacheAFaire, String commTacheAFaire, String ficheTacheAFaire) {
+    public TacheAFaires(int idTacheAFaire, Reunions reunion, String libelTacheAFaire, String echTacheAFaire, String emettTacheAFaire, String commTacheAFaire, String ficheTacheAFaire) {
         this.idTacheAFaire = idTacheAFaire;
-        this.idReunion = idReunion;
+        this.reunion = reunion;
         this.libelTacheAFaire = libelTacheAFaire;
         this.echTacheAFaire = echTacheAFaire;
         this.emettTacheAFaire = emettTacheAFaire;
@@ -29,14 +29,15 @@ public class TacheAFaires {
         this.idTacheAFaire = idTacheAFaire;
     }
 
-    public int getIdReunion() {
-        return idReunion;
+    public Reunions getReunion() {
+        return reunion;
     }
 
-    public void setIdReunion(int idReunion) {
-        this.idReunion = idReunion;
+    public void setReunion(Reunions reunion) {
+        this.reunion = reunion;
     }
 
+   
     public String getLibelTacheAFaire() {
         return libelTacheAFaire;
     }

@@ -7,9 +7,9 @@ public class Securite {
    private int idSecurite;
    private Affectations affectation;
 
-    public Securite(int idSecurite, int idAffectation) {
+    public Securite(int idSecurite, Affectations affectation) {
         this.idSecurite = idSecurite;
-        this.idAffectation = idAffectation;
+        this.affectation = affectation;
     }
 
     public int getIdSecurite() {
@@ -20,13 +20,15 @@ public class Securite {
         this.idSecurite = idSecurite;
     }
 
-    public int getIdAffectation() {
-        return idAffectation;
+    public Affectations getAffectation() {
+        return affectation;
     }
 
-    public void setIdAffectation(int idAffectation) {
-        this.idAffectation = idAffectation;
+    public void setAffectation(Affectations affectation) {
+        this.affectation = affectation;
     }
+
+
    
    
    

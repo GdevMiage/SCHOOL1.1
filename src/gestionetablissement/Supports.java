@@ -10,10 +10,10 @@ public class Supports {
     private String libelSupport;
     private String titreSupport;
 
-    public Supports(int idSupport, int idMatière, int idtypeDocs, String libelSupport, String titreSupport) {
+    public Supports(int idSupport, Matieres matiere, TypeDocs typeDocs, String libelSupport, String titreSupport) {
         this.idSupport = idSupport;
-        this.idMatière = idMatière;
-        this.idtypeDocs = idtypeDocs;
+        this.matiere = matiere;
+        this.typeDocs = typeDocs;
         this.libelSupport = libelSupport;
         this.titreSupport = titreSupport;
     }
@@ -26,21 +26,7 @@ public class Supports {
         this.idSupport = idSupport;
     }
 
-    public int getIdMatière() {
-        return idMatière;
-    }
-
-    public void setIdMatière(int idMatière) {
-        this.idMatière = idMatière;
-    }
-
-    public int getIdtypeDocs() {
-        return idtypeDocs;
-    }
-
-    public void setIdtypeDocs(int idtypeDocs) {
-        this.idtypeDocs = idtypeDocs;
-    }
+  
 
     public String getLibelSupport() {
         return libelSupport;

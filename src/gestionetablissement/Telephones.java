@@ -13,9 +13,9 @@ public class Telephones {
   private String fixeContactTelehone;
   private String lienContactTelephone;
 
-    public Telephones(int idTelephone, int idIndividu, int mobileTelephone, int fixeTelephone, String prenomContactTelephone, String nomContactTelephone, String mobileContactTelephone, String fixeContactTelehone, String lienContactTelephone) {
+    public Telephones(int idTelephone, Individus individu, int mobileTelephone, int fixeTelephone, String prenomContactTelephone, String nomContactTelephone, String mobileContactTelephone, String fixeContactTelehone, String lienContactTelephone) {
         this.idTelephone = idTelephone;
-        this.idIndividu = idIndividu;
+        this.individu = individu;
         this.mobileTelephone = mobileTelephone;
         this.fixeTelephone = fixeTelephone;
         this.prenomContactTelephone = prenomContactTelephone;
@@ -33,13 +33,15 @@ public class Telephones {
         this.idTelephone = idTelephone;
     }
 
-    public int getIdIndividu() {
-        return idIndividu;
+    public Individus getIndividu() {
+        return individu;
     }
 
-    public void setIdIndividu(int idIndividu) {
-        this.idIndividu = idIndividu;
+    public void setIndividu(Individus individu) {
+        this.individu = individu;
     }
+
+ 
 
     public int getMobileTelephone() {
         return mobileTelephone;
