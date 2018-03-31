@@ -49,36 +49,11 @@
         <Image url="@../../../../../../Desktop/image%20prijet/AGENTS.png" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
-    <Button layoutX="82.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="49.01171875" text="BACK" />
-    <ImageView id="back_2.png" fitHeight="50.0" fitWidth="49.0" layoutX="83.0" layoutY="14.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/back_2.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <Button layoutX="19.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="HOME" />
-    <ImageView id="home-128.png" fitHeight="50.0" fitWidth="50.0" layoutX="19.0" layoutY="14.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/home-128.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <Button layoutX="914.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="REDUIRE" />
-    <Button layoutX="948.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="AGRENDIR" />
-    <Button layoutX="984.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="EXIT" />
-    <ImageView id="001-minus.png" fitHeight="23.0" fitWidth="26.0" layoutX="914.0" layoutY="14.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/001-minus.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <ImageView id="004-multiply.png" fitHeight="23.0" fitWidth="26.0" layoutX="984.0" layoutY="14.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/004-multiply.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <ImageView id="7204.png" fitHeight="30.999900817871094" fitWidth="32.000099182128906" layoutX="948.0" layoutY="10.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/7204.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
+    <Button layoutX="82.0" layoutY="13.0" mnemonicParsing="false" opacity="0.0" prefHeight="42.0" prefWidth="33.0" text="BACK" />
+    <Button layoutX="19.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="42.0" prefWidth="33.0" text="HOME" />
+    <Button layoutX="866.0" layoutY="26.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="REDUIRE" />
+    <Button layoutX="910.0" layoutY="26.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="AGRENDIR" />
+    <Button layoutX="954.0" layoutY="26.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="EXIT" />
   </children>
   <stylesheets>
     <URL value="@../administrationview.css" />

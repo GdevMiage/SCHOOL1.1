@@ -59,18 +59,8 @@
         <InnerShadow />
       </effect>
     </Button>
-    <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="44.0" text="HOME" />
-    <Button layoutX="101.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="44.0" text="BACK" />
-    <ImageView id="home-128.png" fitHeight="44.0" fitWidth="55.0" layoutX="22.0" layoutY="14.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/home-128.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <ImageView id="back_2.png" fitHeight="44.0" fitWidth="50.0" layoutX="101.0" layoutY="14.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/back_2.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
+    <Button layoutX="22.0" layoutY="14.0" minWidth="26.0" mnemonicParsing="false" opacity="0.0" prefHeight="44.000099999997474" prefWidth="26.0" text="HOME" />
+    <Button layoutX="80.0" layoutY="15.0" mnemonicParsing="false" opacity="0.0" prefHeight="44.000099999997474" prefWidth="45.0" text="BACK" />
     <ImageView id="39155.png" fitHeight="69.0" fitWidth="78.0" layoutX="764.0" layoutY="514.0">
       <image>
         <Image url="@../../../../../../Desktop/image%20prijet/39155.png" preserveRatio="true" smooth="true" />
@@ -101,24 +91,9 @@
         <Image url="@../../../../../../Desktop/image%20prijet/User-Group-icon.png" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
-    <Button layoutX="915.0" layoutY="13.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="REDUIRE" />
-    <Button layoutX="951.0" layoutY="13.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="AGRENDIR" />
-    <Button layoutX="984.0" layoutY="13.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="EXIT" />
-    <ImageView id="7204.png" fitHeight="30.0" fitWidth="33.000099182128906" layoutX="948.0" layoutY="10.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/7204.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <ImageView id="004-multiply.png" fitHeight="23.0" fitWidth="26.0" layoutX="984.0" layoutY="14.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/004-multiply.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <ImageView id="001-minus.png" fitHeight="23.0" fitWidth="26.0" layoutX="915.0" layoutY="13.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/001-minus.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
+    <Button layoutX="865.0" layoutY="25.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="REDUIRE" />
+    <Button layoutX="915.0" layoutY="25.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="19.0" text="AGRENDIR" />
+    <Button layoutX="953.0" layoutY="25.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="EXIT" />
   </children>
   <stylesheets>
     <URL value="@../gestionentites.css" />
