@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="767.0" prefWidth="1024.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gestionetablissement.vue.GestionComptableController">
+  <children>
+    <ImageView id="COMPTABLE.png" fitHeight="73.0" fitWidth="85.0" layoutX="276.0" layoutY="160.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/COMPTABLE.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Text layoutX="502.0" layoutY="199.0" scaleX="6.416689428545464" scaleY="7.891825746451297" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION COMPTABLE">
+      <font>
+        <Font size="5.0" />
+      </font>
+    </Text>
+    <Button layoutX="83.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="55.0" text="BACK" />
+    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" text="HOME" />
+    <ImageView id="back_2.png" fitHeight="39.0" fitWidth="55.000099999997474" layoutX="83.0" layoutY="14.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/back_2.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="home-128.png" fitHeight="39.0" fitWidth="55.0001220703125" layoutX="14.0" layoutY="14.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/home-128.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button alignment="BOTTOM_CENTER" cancelButton="false" contentDisplay="LEFT" defaultButton="false" layoutX="562.0" layoutY="332.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="224.0" text="GESTION DES FRAIS" textOverrun="CLIP">
+      <effect>
+        <InnerShadow />
+      </effect>
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.094" green="0.000" red="0.200" fx:id="x2" />
+      </textFill>
+    </Button>
+    <Button alignment="BOTTOM_CENTER" cancelButton="false" contentDisplay="LEFT" defaultButton="false" font="$x1" layoutX="223.0" layoutY="332.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="224.0" text="GESTION DES PEIMENTS" textFill="$x2" textOverrun="CLIP">
+      <effect>
+        <InnerShadow />
+      </effect>
+    </Button>
+    <ImageView id="70a029.png" fitHeight="65.0" fitWidth="85.0" layoutX="632.0" layoutY="332.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/70a029.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="Payment_card_credit_pay_cash.png" fitHeight="73.0" fitWidth="85.0" layoutX="293.0" layoutY="332.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/Payment_card_credit_pay_cash.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button layoutX="914.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="REDUIRE" />
+    <Button layoutX="950.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="AGRENDIR" />
+    <Button layoutX="984.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="EXIT" />
+    <ImageView id="001-minus.png" fitHeight="23.0" fitWidth="26.0" layoutX="914.0" layoutY="14.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/001-minus.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="004-multiply.png" fitHeight="23.0" fitWidth="26.0" layoutX="984.0" layoutY="15.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/004-multiply.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="7204.png" fitHeight="30.0" fitWidth="35.0" layoutX="946.0" layoutY="11.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/7204.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+  </children>
+  <stylesheets>
+    <URL value="@../gestioncomptable.css" />
+  </stylesheets>
+</AnchorPane>

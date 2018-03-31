@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass, background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gestionetablissement.vue.InscriptionsController">
+  <children>
+    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="37.0" text="home" />
+    <Button layoutX="87.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="37.0" text="back" />
+    <ImageView id="home-128.png" fitHeight="37.0" fitWidth="56.0" layoutX="14.0" layoutY="14.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/home-128.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="back_2.png" fitHeight="37.0" fitWidth="56.0" layoutX="87.0" layoutY="14.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/back_2.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="Inscription-CERCO.png" fitHeight="72.0" fitWidth="94.0" layoutX="261.0" layoutY="164.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/Inscription-CERCO.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Text layoutX="512.0" layoutY="202.0" scaleX="10.305805540850539" scaleY="6.159272158843784" strokeType="OUTSIDE" strokeWidth="0.0" text="INSCRIPTIONS">
+      <font>
+        <Font size="5.0" />
+      </font>
+    </Text>
+    <Button alignment="BOTTOM_CENTER" cancelButton="false" contentDisplay="LEFT" defaultButton="false" layoutX="188.0" layoutY="384.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="224.0" text="INSCRIPTION" textOverrun="CLIP">
+      <effect>
+        <InnerShadow />
+      </effect>
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.094" green="0.000" red="0.200" fx:id="x2" />
+      </textFill>
+    </Button>
+    <Button alignment="BOTTOM_CENTER" cancelButton="false" contentDisplay="LEFT" defaultButton="false" font="$x1" layoutX="588.0" layoutY="384.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="224.0" text="AFFECTATION" textFill="$x2" textOverrun="CLIP">
+      <effect>
+        <InnerShadow />
+      </effect>
+    </Button>
+    <ImageView id="user.png" fitHeight="75.0" fitWidth="94.0" layoutX="253.0" layoutY="391.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/user.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="choose-way-geometry-select-assort-256.png" fitHeight="75.0" fitWidth="94.0" layoutX="653.0" layoutY="391.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/choose-way-geometry-select-assort-256.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button layoutX="914.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="REDUIRE" />
+    <Button layoutX="950.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="AGRENDIR" />
+    <Button layoutX="984.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="EXIT" />
+    <ImageView id="004-multiply.png" fitHeight="23.0" fitWidth="26.0" layoutX="984.0" layoutY="14.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/004-multiply.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="001-minus.png" fitHeight="23.0" fitWidth="26.0" layoutX="914.0" layoutY="15.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/001-minus.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="7204.png" fitHeight="28.0" fitWidth="33.0" layoutX="947.0" layoutY="12.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/7204.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+  </children>
+  <stylesheets>
+    <URL value="@../inscriptions.css" />
+  </stylesheets>
+</AnchorPane>
