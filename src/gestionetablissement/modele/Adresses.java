@@ -25,11 +25,11 @@ public class Adresses {
     }
 
     public int getIdAdresse() {
-        return idAdress;
+        return idAdresse;
     }
 
     public void setIdAdresse(int idAdresse) {
-        this.idAdress = idAdresse;
+        this.idAdresse = idAdresse;
     }
 
     public Individus[] getListeIndividus() {
