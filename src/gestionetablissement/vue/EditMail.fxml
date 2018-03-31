@@ -62,13 +62,8 @@
       </image>
     </ImageView>
     <Button layoutX="914.0" layoutY="16.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="REDUIRE" />
-    <Button layoutX="950.0" layoutY="15.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="AGRENDIR" />
+    <Button alignment="CENTER_RIGHT" layoutX="950.0" layoutY="15.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="AGRENDIR" />
     <Button layoutX="984.0" layoutY="14.0" minHeight="14.0" minWidth="13.999900000002526" mnemonicParsing="false" opacity="0.0" prefHeight="23.0" prefWidth="26.0" text="EXIT" />
-    <ImageView id="7204.png" fitHeight="33.999900000002526" fitWidth="35.0" layoutX="946.0" layoutY="9.0">
-      <image>
-        <Image url="@../../../../../../Desktop/image%20prijet/7204.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
     <ImageView id="004-multiply.png" fitHeight="23.0" fitWidth="28.0" layoutX="983.0" layoutY="15.0">
       <image>
         <Image url="@../../../../../../Desktop/image%20prijet/004-multiply.png" preserveRatio="true" smooth="true" />
@@ -77,6 +72,11 @@
     <ImageView id="001-minus.png" fitHeight="23.000099999997474" fitWidth="26.0" layoutX="914.0" layoutY="15.0">
       <image>
         <Image url="@../../../../../../Desktop/image%20prijet/001-minus.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="7204.png" fitHeight="33.999900000002526" fitWidth="35.0" layoutX="946.0" layoutY="9.0">
+      <image>
+        <Image url="@../../../../../../Desktop/image%20prijet/7204.png" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
   </children>
