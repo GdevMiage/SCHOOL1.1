@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionetablissement.controleur.GestionEtudiantsController">
+    <stylesheets>
+        <URL value="@gestionetudiants.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <left>
+            <HBox prefHeight="758.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="758.0" prefWidth="381.0">
+                     <children>
+                        <Text fill="#bf3636" strokeType="OUTSIDE" strokeWidth="0.0" text="Etudiants" textAlignment="CENTER" wrappingWidth="401.13671875">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField prefHeight="44.0" prefWidth="402.0" promptText="Search">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <VBox prefHeight="636.0" prefWidth="402.0">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <TableView prefHeight="633.0" prefWidth="402.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="N°" />
+                                  <TableColumn prefWidth="122.0" text="Nom" />
+                                    <TableColumn prefWidth="204.0" text="Prénom" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </left>
+         <center>
+            <HBox prefHeight="758.0" prefWidth="464.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane prefHeight="758.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Informations">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="661.0" prefWidth="537.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+                                       <children>
+                                          <VBox prefHeight="257.0" prefWidth="494.0">
+                                             <children>
+                                                <HBox prefHeight="257.0" prefWidth="494.0">
+                                                   <children>
+                                                      <ImageView fitHeight="215.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                         <image>
+                                                            <Image url="@../assets/image/Lyes.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="404.0" prefWidth="537.0">
+                                             <children>
+                                                <HBox prefHeight="405.0" prefWidth="537.0">
+                                                   <children>
+                                                      <VBox prefHeight="405.0" prefWidth="104.0">
+                                                         <children>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="idEtudiant">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Nom">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Prenom">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Label">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="127.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Label">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Label">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Label">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Label">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label prefHeight="44.0" prefWidth="150.0" styleClass="fx-14" stylesheets="@../adminview.css" text="Label">
+                                                               <padding>
+                                                                  <Insets bottom="2.0" />
+                                                               </padding>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="405.0" prefWidth="315.0">
+                                                         <children>
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                            <TextFlow prefHeight="44.0" prefWidth="315.0" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                      <Tab text="Historique des inscriptions">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                        <Tab text="Retards">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Absences">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Notes">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Appréciation">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Modules validés">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="729.0" prefWidth="585.0" />
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionetablissement.vue.AdminViewController">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.controleur.AdminViewController">
     <stylesheets>
         <URL value="@adminview.css" />
     </stylesheets>
@@ -19,50 +20,597 @@
          <left>
             <HBox prefHeight="661.0" prefWidth="1023.0" BorderPane.alignment="CENTER">
                <children>
-                  <TabPane prefHeight="656.0" prefWidth="1023.0" tabClosingPolicy="UNAVAILABLE">
+                  <TabPane prefHeight="686.0" prefWidth="1023.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
+                        <Tab text="GESTION DES ENTITES">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
+                                       <left>
+                                          <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des entités" underline="true" wrappingWidth="206.13671875">
+                                                         <styleClass>
+                                                            <String fx:value="fx-16" />
+                                                            <String fx:value="back-white" />
+                                                            <String fx:value="txt-center" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEtudiant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Gestion des étudiants" textOverrun="CLIP">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/icons8_User_48px_1.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEnseignant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Gestion des enseignats" textOverrun="CLIP">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/teacher%20(1).png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showMatiere" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Gestion des matieres" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/matiere.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showGroupe" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Gestion des groupes" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/groupe.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showSalle" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Gestion des salles" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/salle.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showShcoolSession" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Session SCHOOL" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/sessionschool.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets right="10.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </left>
+                                       <center>
+                                          <VBox prefHeight="632.0" prefWidth="723.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets top="30.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
                       <Tab text="ADMINISTRATION">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0" />
-                        </content>
-                      </Tab>
-                      <Tab text="GESTION DES ENTITES">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0">
+                                 <children>
+                                    <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
+                                       <center>
+                                          <VBox prefHeight="632.0" prefWidth="723.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets top="30.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <HBox prefHeight="632.0" prefWidth="244.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                   <children>
+                                                      <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Administration" underline="true" wrappingWidth="206.13671875">
+                                                         <styleClass>
+                                                            <String fx:value="fx-16" />
+                                                            <String fx:value="back-white" />
+                                                            <String fx:value="txt-center" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEtudiant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Etablissement" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/etablissement.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEnseignant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Agents" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/agents.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets right="10.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </left>
+                                    </BorderPane>
+                                 </children></AnchorPane>
                         </content>
                       </Tab>
                         <Tab text="GESTION COMPTABLE">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0">
                                  <children>
-                                    <VBox prefHeight="631.0" prefWidth="316.0" />
+                                    <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
+                                       <center>
+                                          <VBox prefHeight="632.0" prefWidth="723.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets top="30.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <HBox prefHeight="632.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                   <children>
+                                                      <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des entités" underline="true" wrappingWidth="206.13671875">
+                                                         <styleClass>
+                                                            <String fx:value="fx-16" />
+                                                            <String fx:value="back-white" />
+                                                            <String fx:value="txt-center" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEtudiant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Peiments" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/peiments.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEnseignant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Frais" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/frais.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets right="10.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </left>
+                                    </BorderPane>
                                  </children>
                               </AnchorPane>
                            </content>
                         </Tab>
-                        <Tab text="ADMINISTRATION">
+                        <Tab text="SUIVI PEDAGOGIQUE">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0">
                                  <children>
-                                    <VBox prefHeight="631.0" prefWidth="316.0" />
+                                    <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
+                                       <center>
+                                          <VBox prefHeight="632.0" prefWidth="723.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets top="30.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                   <children>
+                                                      <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Suivi pédagogique" underline="true" wrappingWidth="206.13671875">
+                                                         <styleClass>
+                                                            <String fx:value="fx-16" />
+                                                            <String fx:value="back-white" />
+                                                            <String fx:value="txt-center" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEtudiant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEnseignant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showMatiere" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showGroupe" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showSalle" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showShcoolSession" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets right="10.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </left>
+                                    </BorderPane>
                                  </children>
                               </AnchorPane>
                            </content>
                         </Tab>
-                        <Tab text="ADMINISTRATION">
+                        <Tab text="INSCRIPTION">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0">
                                  <children>
-                                    <VBox prefHeight="631.0" prefWidth="316.0" />
+                                    <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
+                                       <center>
+                                          <VBox prefHeight="632.0" prefWidth="723.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets top="30.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                   <children>
+                                                      <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscriptions" underline="true" wrappingWidth="206.13671875">
+                                                         <styleClass>
+                                                            <String fx:value="fx-16" />
+                                                            <String fx:value="back-white" />
+                                                            <String fx:value="txt-center" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEtudiant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Inscription" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/Inscription.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEnseignant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" text="Affectation" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../assets/image/affectation.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets right="10.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </left>
+                                    </BorderPane>
                                  </children>
                               </AnchorPane>
                            </content>
                         </Tab>
-                        <Tab text="ADMINISTRATION">
+                        <Tab text="EDIT&amp;MAIL">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0">
                                  <children>
-                                    <VBox prefHeight="631.0" prefWidth="316.0" />
+                                    <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
+                                       <center>
+                                          <VBox prefHeight="632.0" prefWidth="723.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets top="30.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                   <children>
+                                                      <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit&amp;Mailing" underline="true" wrappingWidth="206.13671875">
+                                                         <styleClass>
+                                                            <String fx:value="fx-16" />
+                                                            <String fx:value="back-white" />
+                                                            <String fx:value="txt-center" />
+                                                         </styleClass>
+                                                      </Text>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEtudiant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showEnseignant" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showMatiere" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showGroupe" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showSalle" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                         <children>
+                                                            <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#showShcoolSession" prefHeight="45.0" prefWidth="239.0" styleClass="back-light-grey" stylesheets="@../adminview.css" textOverrun="CLIP">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </graphic>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets right="10.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </left>
+                                    </BorderPane>
                                  </children>
                               </AnchorPane>
                            </content>
