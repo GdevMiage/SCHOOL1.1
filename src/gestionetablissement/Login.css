@@ -38,12 +38,20 @@
  * Contributor(s):
  */
 .background {
-    -fx-background-image: url("assets/image/CoarseGrid.png");
+    -fx-background-image: url("assets\image\CoarseGrid.png");
     -fx-background-repeat: repeat;
     -fx-background-color:
         linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
         linear-gradient(#20262b, #191d22),
         radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+.bac1 {
+    
+
+
+
+-fx-background-image: url("..\assets\image\bac1.jpg");
+
 }
 
 .top-segment {
@@ -119,10 +127,10 @@
     -fx-padding: 10 20 10 20;
 }
 
-.button:focused, .button:hover {
+.button:pressed {
     -fx-background-color:
         rgba(255, 255, 255, 0.08),
-        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.0),
         #090a0c,
         linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
         linear-gradient(#3f4950, #23282e),
