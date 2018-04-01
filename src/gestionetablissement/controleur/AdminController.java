@@ -1,6 +1,6 @@
-package Admin;
+package gestionetablissement.controleur;
 
-import dbUtil.dbConnection;
+//import dbUtil.dbConnection;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,8 +19,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class AdminController
-  implements Initializable
+public class AdminController  implements Initializable
 {
   @FXML
   private TextField id;
@@ -33,7 +32,7 @@ public class AdminController
   @FXML
   private DatePicker dob;
   @FXML
-  private TableView<StudentData> studenttable;
+  /*private TableView<StudentData> studenttable;
   @FXML
   private TableColumn<StudentData, String> idcolumn;
   @FXML
@@ -113,5 +112,10 @@ public class AdminController
     this.lastname.setText("");
     this.email.setText("");
     this.dob.setValue(null);
+  }*/
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   }
-}

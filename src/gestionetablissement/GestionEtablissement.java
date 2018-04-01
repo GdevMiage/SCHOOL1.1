@@ -66,6 +66,7 @@ public class GestionEtablissement extends Application {
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             gotoLogin();
+            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
