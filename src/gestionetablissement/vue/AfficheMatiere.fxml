@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionetablissement.vue.AfficheMatiereController">
+    <stylesheets>
+        <URL value="@affichematiere.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="739.0" prefWidth="1024.0">
+         <center>
+            <HBox prefHeight="467.0" prefWidth="953.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="427.0" prefWidth="160.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="164.0" text="ID Matiere">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="54.0" prefWidth="164.0" text="Nom matiere">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="54.0" prefWidth="164.0" text="Niveau">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="54.0" prefWidth="164.0" text="Libelle">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="54.0" prefWidth="164.0" text="Langlibelle">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="427.0" prefWidth="668.0">
+                     <children>
+                        <TextArea editable="false" prefHeight="54.0" prefWidth="607.0">
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+         <top>
+            <VBox alignment="CENTER_LEFT" prefHeight="252.0" prefWidth="558.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <HBox>
+                     <children>
+                        <ImageView fitHeight="178.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../assets/image/languages.png" />
+                           </image>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="181.0" text="Modifier la matiere">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/image/modifier.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets left="400.0" top="10.0" />
+                                 </HBox.margin>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="178.0" text="Supprimer la matiere">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/image/supprimer.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="400.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="70.0" right="200.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
