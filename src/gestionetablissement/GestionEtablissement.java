@@ -69,6 +69,7 @@ public class GestionEtablissement extends Application {
             gotoLogin();
             primaryStage.setResizable(false);
             primaryStage.show();
+            primaryStage.setOnCloseRequest(event -> {userLogout();primaryStage.close();System.out.println("Closed");});
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
