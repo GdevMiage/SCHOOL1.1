@@ -31,6 +31,7 @@
  */
 package gestionetablissement;
 
+import gestionetablissement.controleur.AdminViewController;
 import gestionetablissement.controleur.LoginController;
 import gestionetablissement.controleur.ProfileController;
 import java.io.InputStream;
@@ -80,7 +81,7 @@ public class GestionEtablissement extends Application {
     public boolean userLogging(String userId, String password){
         if (Authenticator.validate(userId, password)) {
             loggedUser = User.of(userId);
-            gotoProfile();
+            gotoAdminView();
             return true;
         } else {
             return false;
@@ -100,7 +101,16 @@ public class GestionEtablissement extends Application {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
+    
+  private void gotoAdminView() {
+        try {
+            AdminViewController adminView = (AdminViewController) replaceSceneContent("vue/adminview.fxml");
+            adminView.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     private void gotoLogin() {
         try {
             LoginController login = (LoginController) replaceSceneContent("vue/login.fxml");
@@ -121,7 +131,7 @@ public class GestionEtablissement extends Application {
         } finally {
             in.close();
         } 
-        Scene scene = new Scene(page, 800, 600);
+        Scene scene = new Scene(page, 1024, 768);
         stage.setScene(scene);
         stage.sizeToScene();
         return (Initializable) loader.getController();
