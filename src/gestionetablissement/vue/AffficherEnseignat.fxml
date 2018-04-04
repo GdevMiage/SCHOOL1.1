@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionetablissement.vue.AffficherEnseignatController">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.vue.AffficherEnseignatController">
     <stylesheets>
         <URL value="@affficherenseignat.css" />
     </stylesheets>
@@ -282,11 +282,8 @@
                                        <children>
                                           <TableView prefHeight="700.0" prefWidth="1025.0">
                                              <columns>
-                                                <TableColumn prefWidth="115.0" text="1" />
-                                                <TableColumn minWidth="0.0" prefWidth="189.0" text="2" />
-                                                <TableColumn minWidth="8.0" prefWidth="145.0" text="3" />
-                                                <TableColumn prefWidth="114.0" text="4" />
-                                                <TableColumn maxWidth="1.7976931348623157E308" prefWidth="460.0" text="5" />
+                                                <TableColumn prefWidth="34.0" text="ID" />
+                                                <TableColumn prefWidth="778.0" text="Competence " />
                                              </columns>
                                           </TableView>
                                        </children>
