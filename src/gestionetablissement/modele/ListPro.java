@@ -5,14 +5,19 @@
  */
 package gestionetablissement.modele;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 /**
  *
  * @author Ouadie
  */
-public class ListPro<T> extends HashSet {
+public class ListPro<T> implements Collection {
 
     /**
      * les differentes liste qu'on va travailler dessus pour 
@@ -70,14 +75,146 @@ public ListPro(){
 
 
 
- public void add(){
-    /*
-	T entite = new Client();
-	client.ajoutClient();
-	this.getMetier().add(client);
-	this.getAinserer().add(client);
-	return client;
-*/
- }
+    @Override
+    public int size() {
+        return this.metier.size();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return this.metier.isEmpty();
+    }
+
+    @Override
+    public boolean contains(Object o) {
+       return this.metier.contains(o);
+    }
     
+    @Override
+    public boolean add(Object e) {
+      /*
+       * Ajout l'objet dans notre liste métier pour qu'il apparait dans notre interface
+       * et dans la liste a inserer pour la parcourir au moment de l'enregistrement du travail 
+       */
+        try{
+            if(!this.getMetier().contains((T)e)){
+                    this.getMetier().add((T)e);
+                   this.getAinserer().add((T)e);
+                   return true;   
+            }
+        }catch(Exception exception){
+            
+            System.out.println(exception);
+        }
+        return false;
+    }
+    
+    @Override
+    public boolean remove(Object o) {
+        /*
+       * Supression de l'objet de notre liste métier pour qu'il n'apparait plus dans notre interface
+       * et l'ajouter a la  la liste a supprimer pour la parcourir au moment de l'enregistrement du travail 
+       */
+        try{
+            if(this.getMetier().contains((T)o)){
+                    this.asupprimer.add((T)o);
+                    this.metier.remove((T)o);
+                   return true;   
+            }
+        }catch(Exception exception){
+            
+            System.out.println(exception);
+        }
+        return false;    
+    }
+
+    @Override
+    public boolean containsAll(Collection clctn) {
+       return this.metier.containsAll(clctn);
+    }
+
+    @Override
+    public boolean addAll(Collection clctn) {
+           Iterator<T> it = clctn.iterator();
+         try{
+             while(it.hasNext()){
+               T entite = it.next();
+               this.add(entite);
+           }return true;
+         }catch(Exception ex){
+             System.out.println(ex);
+             return false;
+         }
+           
+    }
+
+    @Override
+    public boolean removeAll(Collection clctn) {
+                 Iterator<T> it = clctn.iterator();
+         try{
+             while(it.hasNext()){
+               T entite = it.next();
+               this.remove(entite);
+           }return true;
+         }catch(Exception ex){
+             System.out.println(ex);
+             return false;
+         }
+    }
+
+    @Override
+    public boolean retainAll(Collection clctn) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void clear() {
+          metier = new HashSet<T>();
+	asupprimer = new HashSet<T>();
+	amodifier = new HashSet<T>();
+	ainserer  = new HashSet<T>();
+    }
+
+    @Override
+    public Iterator iterator() {
+        return this.metier.iterator();
+    }
+
+    @Override
+    public Object[] toArray() {
+        return this.metier.toArray();
+    }
+
+    @Override
+    public Object[] toArray(Object[] ts) {
+        return this.metier.toArray(ts);
+
+    }
+
+    @Override
+    public boolean removeIf(Predicate prdct) {
+        return Collection.super.removeIf(prdct); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Spliterator spliterator() {
+        return Collection.super.spliterator(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Stream stream() {
+        return Collection.super.stream(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Stream parallelStream() {
+        return Collection.super.parallelStream(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void forEach(Consumer cnsmr) {
+        Collection.super.forEach(cnsmr); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
 }
