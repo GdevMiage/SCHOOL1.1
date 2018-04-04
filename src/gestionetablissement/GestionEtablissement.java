@@ -46,6 +46,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import gestionetablissement.modele.User;
 import gestionetablissement.securite.Authenticator;
+import gestionetablissement.securite.dbConnect;
 
 /**
  * GestionEtablissement Application. This class handles navigation and user session.
@@ -107,6 +108,7 @@ public class GestionEtablissement extends Application {
   private void gotoAdminView() {
         try {
             AdminViewController adminView = (AdminViewController) replaceSceneContent("vue/adminview.fxml");
+          
             adminView.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);

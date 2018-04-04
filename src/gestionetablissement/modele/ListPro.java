@@ -16,6 +16,7 @@ import java.util.stream.Stream;
 /**
  *
  * @author Ouadie
+ * @param <T>
  */
 public class ListPro<T> implements Collection {
 
@@ -33,10 +34,10 @@ private HashSet<T> ainserer  ;
 //le constructeur par defaut de la liste
 
 public ListPro(){
-        metier = new HashSet<T>();
-	asupprimer = new HashSet<T>();
-	amodifier = new HashSet<T>();
-	ainserer  = new HashSet<T>();
+        metier = new HashSet<>();
+	asupprimer = new HashSet<>();
+	amodifier = new HashSet<>();
+	ainserer  = new HashSet<>();
 }
 
 
@@ -169,10 +170,10 @@ public ListPro(){
 
     @Override
     public void clear() {
-          metier = new HashSet<T>();
-	asupprimer = new HashSet<T>();
-	amodifier = new HashSet<T>();
-	ainserer  = new HashSet<T>();
+          metier = new HashSet <>();
+	asupprimer = new HashSet<>();
+	amodifier = new HashSet<>();
+	ainserer  = new HashSet<>();
     }
 
     @Override
