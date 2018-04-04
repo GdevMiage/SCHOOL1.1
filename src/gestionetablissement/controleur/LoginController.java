@@ -59,15 +59,9 @@ public class LoginController extends AnchorPane implements Initializable {
     @FXML
     Label errorMessage;
 
-    private GestionEtablissement application = new GestionEtablissement() ;
+    private GestionEtablissement application  ;
     
-     /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-        Application.launch(GestionEtablissement.class, (java.lang.String[])null);
-    }
+
     
     
     

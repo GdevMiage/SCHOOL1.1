@@ -57,7 +57,16 @@ public class GestionEtablissement extends Application {
     private User loggedUser;
     private final double MINIMUM_WINDOW_WIDTH = 390.0;
     private final double MINIMUM_WINDOW_HEIGHT = 500.0;
-
+    
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Application.launch(GestionEtablissement.class, (java.lang.String[])null);
+      
+    }
    
 
     @Override
@@ -107,7 +116,8 @@ public class GestionEtablissement extends Application {
     
   private void gotoAdminView() {
         try {
-            AdminViewController adminView = (AdminViewController) replaceSceneContent("vue/adminview.fxml");
+            AdminViewController adminView;
+            adminView = (AdminViewController) replaceSceneContent("vue/adminview.fxml");
           
             adminView.setApp(this);
         } catch (Exception ex) {
@@ -128,11 +138,14 @@ public class GestionEtablissement extends Application {
         InputStream in = GestionEtablissement.class.getResourceAsStream(fxml);
         loader.setBuilderFactory(new JavaFXBuilderFactory());
         loader.setLocation(GestionEtablissement.class.getResource(fxml));
+       
         AnchorPane page;
         try {
             page = (AnchorPane) loader.load(in);
         } finally {
-            in.close();
+            System.out.println("hhhhhhhhhhhhhhhhhhhh"+fxml+"**"+GestionEtablissement.class.getResource(fxml));
+             in.close();
+            
         } 
         Scene scene = new Scene(page, 1024, 768);
         stage.setScene(scene);
