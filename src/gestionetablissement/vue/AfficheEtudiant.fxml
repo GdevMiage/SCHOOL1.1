@@ -513,7 +513,7 @@
                                        <children>
                                           <TableView prefHeight="700.0" prefWidth="1025.0">
                                              <columns>
-                                                <TableColumn prefWidth="133.0" text="Module" />
+                                                <TableColumn prefWidth="133.0" text="Matiéte" />
                                                 <TableColumn minWidth="0.0" prefWidth="169.0" text="Enseignat" />
                                                 <TableColumn prefWidth="149.0" text="Date" />
                                                 <TableColumn prefWidth="573.0" text="Commentaire" />
@@ -575,7 +575,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="19.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../assets/image/validr.png" />
+                                                      <Image url="@../assets/image/supprimer.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
