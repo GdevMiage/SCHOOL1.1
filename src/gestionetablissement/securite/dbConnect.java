@@ -52,7 +52,7 @@ public class dbConnect {
         return this.statement.executeQuery(requette);
     }
          /**
-     *  methode pour les autres statement avec avec un type de retour void
+     *  methode pour les autres statement avec avec un type de retour void1
      * @param requette // Requette de type String a executer
      * @return  // elle ne retourne rien 
      * @throws SQLException 

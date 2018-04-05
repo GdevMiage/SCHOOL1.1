@@ -34,6 +34,10 @@ package gestionetablissement;
 import gestionetablissement.controleur.AdminViewController;
 import gestionetablissement.controleur.LoginController;
 import gestionetablissement.controleur.ProfileController;
+import gestionetablissement.modele.Adresses;
+import gestionetablissement.modele.Individus;
+import gestionetablissement.modele.ListPro;
+import gestionetablissement.modele.Sessions;
 import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -65,9 +69,10 @@ public class GestionEtablissement extends Application {
     public static void main(String[] args) {
         
         Application.launch(GestionEtablissement.class, (java.lang.String[])null);
+     
       
     }
-   
+ 
 
     @Override
     public void start(Stage primaryStage) {

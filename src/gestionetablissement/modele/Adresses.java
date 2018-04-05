@@ -4,7 +4,7 @@ package gestionetablissement.modele;
 
 public class Adresses {
   private int idAdresse;
-  private Individus [] listeIndividus;
+
   private int batAdresse;
   private int noAdresse;
   private String rueAdresse; 
@@ -12,10 +12,12 @@ public class Adresses {
   private String villeAdresse;
   private String paysAdresse;
 
-  
+  public Adresses(){
+      
+  }
     public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;
-        this.listeIndividus = individus;
+      
         this.batAdresse = batAdresse;
         this.noAdresse = noAdresse;
         this.rueAdresse = rueAdresse;
@@ -32,13 +34,7 @@ public class Adresses {
         this.idAdresse = idAdresse;
     }
 
-    public Individus[] getListeIndividus() {
-        return listeIndividus;
-    }
 
-    public void setListeIndividus(Individus[] listeIndividus) {
-        this.listeIndividus = listeIndividus;
-    }
 
  
 

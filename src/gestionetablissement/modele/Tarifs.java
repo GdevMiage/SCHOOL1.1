@@ -6,16 +6,19 @@ public class Tarifs {
     
     private int idTarif;
     private double fraisInscTarif;
-    private double cotisTarif;  // a revoir 
-    private double remDurTarif; // a revoir 
-    private double remModTarif;  // a revoir 
-
+    private double cotisTarif;   
+    private double remDurTarif; 
+ 
+    public Tarifs(){
+        
+    }
+    
     public Tarifs(int idTarif, double fraisInscTarif, double cotisTarif, double remDurTarif, double remModTarif) {
         this.idTarif = idTarif;
         this.fraisInscTarif = fraisInscTarif;
         this.cotisTarif = cotisTarif;
         this.remDurTarif = remDurTarif;
-        this.remModTarif = remModTarif;
+
     }
 
     public int getIdTarif() {
@@ -50,13 +53,6 @@ public class Tarifs {
         this.remDurTarif = remDurTarif;
     }
 
-    public double getRemModTarif() {
-        return remModTarif;
-    }
 
-    public void setRemModTarif(double remModTarif) {
-        this.remModTarif = remModTarif;
-    }
-    
     
 }

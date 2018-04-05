@@ -7,8 +7,8 @@ import java.util.Date;
 public class Affectations {
     
    private int idAffectation;
-   private Contrats contrat;
-   private int trigrAffectation;
+   private Contrats contrat ;
+   
    private String loginAffectation;
    private String motPasseAffectation; 
    private Date dateEntrAffectation; 
@@ -18,9 +18,9 @@ public class Affectations {
    private String referentAffectation; 
    private boolean validAffectation;
 
-    public Affectations(int idAffectation, Contrats contrat, int trigrAffectation, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, String referentAffectation, boolean validAffectation) {
+    public Affectations(int idAffectation, int trigrAffectation, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, String referentAffectation, boolean validAffectation) {
         this.idAffectation = idAffectation;
-        this.contrat = contrat;
+        this.contrat =  new Contrats();
         this.trigrAffectation = trigrAffectation;
         this.loginAffectation = loginAffectation;
         this.motPasseAffectation = motPasseAffectation;
