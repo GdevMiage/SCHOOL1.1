@@ -7,19 +7,26 @@ import java.util.Date;
 public class Horaires {
     
   private int idHoraire;
-  private Sessions session;
+  
   private Date jour;
   private Date debut;
   private Date fin;
   private String libelHoraire;
-
-    public Horaires(int idHoraire, Sessions session, Date jour, Date debut, Date fin, String libelHoraire) {
+  private ListPro<Horaires> listeHoraire;
+  
+    public Horaires(){
+        
+    }
+  
+    public Horaires(int idHoraire, Date jour, Date debut, Date fin, String libelHoraire,ListPro<Horaires> listeHoraire) {
         this.idHoraire = idHoraire;
-        this.session = session;
+       
         this.jour = jour;
         this.debut = debut;
         this.fin = fin;
         this.libelHoraire = libelHoraire;
+        this.listeHoraire = listeHoraire;
+        listeHoraire.add(this);
     }
 
     public int getIdHoraire() {
@@ -30,13 +37,7 @@ public class Horaires {
         this.idHoraire = idHoraire;
     }
 
-    public Sessions getSession() {
-        return session;
-    }
 
-    public void setSession(Sessions session) {
-        this.session = session;
-    }
 
     public Date getJour() {
         return jour;

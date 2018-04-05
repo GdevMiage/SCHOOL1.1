@@ -37,6 +37,7 @@ import gestionetablissement.controleur.ProfileController;
 import gestionetablissement.modele.Adresses;
 import gestionetablissement.modele.Individus;
 import gestionetablissement.modele.ListPro;
+import gestionetablissement.modele.Salles;
 import gestionetablissement.modele.Sessions;
 import java.io.InputStream;
 import java.util.logging.Level;
@@ -59,6 +60,7 @@ public class GestionEtablissement extends Application {
 
     private Stage stage;
     private User loggedUser;
+    private Sessions sessionSchoolActuelle ;
     private final double MINIMUM_WINDOW_WIDTH = 390.0;
     private final double MINIMUM_WINDOW_HEIGHT = 500.0;
     
@@ -69,7 +71,9 @@ public class GestionEtablissement extends Application {
     public static void main(String[] args) {
         
         Application.launch(GestionEtablissement.class, (java.lang.String[])null);
-     
+        ListPro<Salles> listeSalle= new ListPro();
+        Salles s;
+        s = new Salles(1,"",1,listeSalle);
       
     }
  

@@ -13,7 +13,11 @@ public class Plannings {
   private String horSaPlanning;
   private String horDimPlanning;
   private String libelPlanning; 
-
+   
+  
+    public Plannings(){
+        
+    }
     public Plannings(int idPlanning, String horLunPlanning, String horMarPlanning, String horMerPlanning, String horJeuPlanning, String horVenPlanning, String horSaPlanning, String horDimPlanning, String libelPlanning) {
         this.idPlanning = idPlanning;
         this.horLunPlanning = horLunPlanning;

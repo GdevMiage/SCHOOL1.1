@@ -8,17 +8,18 @@ public class Tarifs {
     private double fraisInscTarif;
     private double cotisTarif;   
     private double remDurTarif; 
- 
+    private ListPro<Tarifs> listeTarif;
     public Tarifs(){
         
     }
     
-    public Tarifs(int idTarif, double fraisInscTarif, double cotisTarif, double remDurTarif, double remModTarif) {
+    public Tarifs(int idTarif, double fraisInscTarif, double cotisTarif, double remDurTarif, double remModTarif,ListPro<Tarifs> listeTarif) {
         this.idTarif = idTarif;
         this.fraisInscTarif = fraisInscTarif;
         this.cotisTarif = cotisTarif;
         this.remDurTarif = remDurTarif;
-
+        this.listeTarif = listeTarif;
+        listeTarif.add(this);
     }
 
     public int getIdTarif() {
