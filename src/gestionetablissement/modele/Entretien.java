@@ -6,7 +6,7 @@ import java.util.Date;
  
 public class Entretien extends Individus {
     
-private ListPro<Entretien> listeAgentEntretien;
+    private ListPro<Entretien> listeAgentEntretien;
 
 
     public Entretien(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu, Affectations affectation) {

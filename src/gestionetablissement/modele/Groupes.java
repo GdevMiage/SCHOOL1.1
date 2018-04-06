@@ -1,43 +1,77 @@
 
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
 public class Groupes {
     
  private int idGroupe;
- private Sessions session;
- private Plannings planning;
- private Salles salle;
- private Modules module;
- private Competence competence;
- private String libelGroupe;
- private String genreGroupe;
- private String commentGroupe;
- private String effSuplemGroupe;
- private String seanSuplGroupe; 
- private Date dateExamGroupe;
- private Date heurePauseHoraire;   
- private Date dureePauseHoraire;
+ private ArrayList<Sessions>    listeSession;
+ private ArrayList<Plannings>   listePlanning;
+ private ArrayList<Salles>      listeSalles;
+ private ArrayList<Modules>     listeModules;
+ private ArrayList<Enseignants> listeEnseignants;
+ private ArrayList<Etudiants>   listeEtudiants;
+ private ArrayList<String>      listeCompetence;
+ private int                    capacite;
+ private String                 libelGroupe;
+ private String                 commentGroupe;
+ private String                 effSuplemGroupe;
+ private ArrayList<Seances>     seanSuplGroupe; 
+ private ArrayList<Seances>     seanceGroupe; 
+ private ArrayList<Date>        dateExamGroupe;  
+ private int                    dureePauseHoraire;
+ private ListPro<Groupes>       listeGroupe;
 
-    public Groupes(int idGroupe, Sessions session, Plannings planning, Salles salle, Modules module, Competence competence, String libelGroupe, String genreGroupe, String commentGroupe, String effSuplemGroupe, String seanSuplGroupe, Date dateExamGroupe, Date heurePauseHoraire, Date dureePauseHoraire) {
+    public Groupes(int idGroupe, ArrayList<Sessions>    listeSession, ArrayList<Plannings>   listePlanning,
+            ArrayList<Salles> listeSalles, ArrayList<Modules>listeModules,ArrayList<Enseignants> listeEnseignants,
+           ArrayList<Etudiants> listeEtudiants,ArrayList<String>listeCompetence,int capacite,
+            String libelGroupe, String commentGroupe, String effSuplemGroupe,
+            ArrayList<Seances>     seanceGroupe,ArrayList<Seances> seanSuplGroupe, ArrayList<Date> dateExamGroupe, int dureePauseHoraire) {
         this.idGroupe = idGroupe;
-        this.session = session;
-        this.planning = planning;
-        this.salle = salle;
-        this.module = module;
-        this.competence = competence;
+        this.listeSession = listeSession;
+        this.listeSalles =listeSalles ;
+        this.listePlanning =listePlanning ;
+        this.listeModules = listeModules;
+        this.listeEtudiants = listeEtudiants;
+        this.listeEnseignants = listeEnseignants;
+        this.listeCompetence = listeCompetence;
         this.libelGroupe = libelGroupe;
-        this.genreGroupe = genreGroupe;
         this.commentGroupe = commentGroupe;
         this.effSuplemGroupe = effSuplemGroupe;
-        this.seanSuplGroupe = seanSuplGroupe;
+        this.seanceGroupe = seanceGroupe;
+        this.seanSuplGroupe =seanSuplGroupe ;
         this.dateExamGroupe = dateExamGroupe;
-        this.heurePauseHoraire = heurePauseHoraire;
         this.dureePauseHoraire = dureePauseHoraire;
     }
-
+  public Groupes(int idGroupe, ArrayList<Sessions>    listeSession, ArrayList<Plannings>   listePlanning,
+            ArrayList<Salles> listeSalles, ArrayList<Modules>listeModules,ArrayList<Enseignants> listeEnseignants,
+           ArrayList<Etudiants> listeEtudiants,ArrayList<String>listeCompetence,int capacite,
+            String libelGroupe, String commentGroupe, String effSuplemGroupe,
+            ArrayList<Seances>     seanceGroupe,ArrayList<Seances> seanSuplGroupe
+          , ArrayList<Date> dateExamGroupe, int dureePauseHoraire,ListPro<Groupes>listeGroupe) {
+      
+        this.idGroupe = idGroupe;
+        this.listeSession = listeSession;
+        this.listeSalles =listeSalles ;
+        this.listePlanning =listePlanning ;
+        this.listeModules = listeModules;
+        this.listeEtudiants = listeEtudiants;
+        this.listeEnseignants = listeEnseignants;
+        this.listeCompetence = listeCompetence;
+        this.libelGroupe = libelGroupe;
+        this.commentGroupe = commentGroupe;
+        this.effSuplemGroupe = effSuplemGroupe;
+        this.seanceGroupe = seanceGroupe;
+        this.seanSuplGroupe =seanSuplGroupe ;
+        this.dateExamGroupe = dateExamGroupe;
+        this.dureePauseHoraire = dureePauseHoraire;
+        this.listeGroupe = listeGroupe;
+        listeGroupe.add(this);
+    }
+  
     public int getIdGroupe() {
         return idGroupe;
     }
@@ -54,13 +88,7 @@ public class Groupes {
         this.libelGroupe = libelGroupe;
     }
 
-    public String getGenreGroupe() {
-        return genreGroupe;
-    }
-
-    public void setGenreGroupe(String genreGroupe) {
-        this.genreGroupe = genreGroupe;
-    }
+    
 
     public String getCommentGroupe() {
         return commentGroupe;
@@ -78,21 +106,6 @@ public class Groupes {
         this.effSuplemGroupe = effSuplemGroupe;
     }
 
-    public String getSeanSuplGroupe() {
-        return seanSuplGroupe;
-    }
-
-    public void setSeanSuplGroupe(String seanSuplGroupe) {
-        this.seanSuplGroupe = seanSuplGroupe;
-    }
-
-    public Date getDateExamGroupe() {
-        return dateExamGroupe;
-    }
-
-    public void setDateExamGroupe(Date dateExamGroupe) {
-        this.dateExamGroupe = dateExamGroupe;
-    }
 
 
  

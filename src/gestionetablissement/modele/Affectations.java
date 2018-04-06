@@ -15,11 +15,14 @@ public class Affectations {
    private Date dateSortAffectation; 
    private String commAffectation; 
    private String ficheAffectation;
-   private Individus individus; 
+   private Individus individus;
+   private Individus referentAffectation;
    private ListPro <Affectations> listeAffectations;
    
    
-    public Affectations(int idAffectation,String contrat, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, Individus individus) {
+    public Affectations(int idAffectation,String contrat, String loginAffectation,
+            String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, 
+            String commAffectation, String ficheAffectation, Individus individus,Individus referentAffectation) {
         this.idAffectation = idAffectation;
         this.contrat =  contrat;
         this.loginAffectation = loginAffectation;
@@ -29,6 +32,7 @@ public class Affectations {
         this.commAffectation = commAffectation;
         this.ficheAffectation = ficheAffectation;
         this.individus = individus;
+        this.referentAffectation=referentAffectation;
         
     }
    
