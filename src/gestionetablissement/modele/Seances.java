@@ -1,22 +1,27 @@
 
 package gestionetablissement.modele;
 
+import java.util.Date;
+
 
 public class Seances {
     
     private int idSeance;
     private Groupes groupe;
     private Horaires horaire;
-    private String remplacantSeance;
+    private Enseignants enseignant;
     private String rattrapageSeance;
-    private String annulationSeance;
-    private String reportSeance;
-
-    public Seances(int idSeance, Groupes groupe, Horaires horaire, String remplacantSeance, String rattrapageSeance, String annulationSeance, String reportSeance) {
+    private boolean annulationSeance;
+    private Date reportSeance;
+    private Matieres matiere;
+    
+    public Seances(int idSeance, Groupes groupe, Horaires horaire,
+            Enseignants enseignant, String rattrapageSeance,
+            boolean annulationSeance, Date reportSeance) {
         this.idSeance = idSeance;
         this.groupe = groupe;
         this.horaire = horaire;
-        this.remplacantSeance = remplacantSeance;
+        this.enseignant = enseignant;
         this.rattrapageSeance = rattrapageSeance;
         this.annulationSeance = annulationSeance;
         this.reportSeance = reportSeance;
@@ -48,13 +53,7 @@ public class Seances {
 
 
 
-    public String getRemplacantSeance() {
-        return remplacantSeance;
-    }
 
-    public void setRemplacantSeance(String remplacantSeance) {
-        this.remplacantSeance = remplacantSeance;
-    }
 
     public String getRattrapageSeance() {
         return rattrapageSeance;
@@ -64,23 +63,7 @@ public class Seances {
         this.rattrapageSeance = rattrapageSeance;
     }
 
-    public String getAnnulationSeance() {
-        return annulationSeance;
-    }
-
-    public void setAnnulationSeance(String annulationSeance) {
-        this.annulationSeance = annulationSeance;
-    }
-
-    public String getReportSeance() {
-        return reportSeance;
-    }
-
-    public void setReportSeance(String reportSeance) {
-        this.reportSeance = reportSeance;
-    }
-    
-    
+  
     
     
     

@@ -24,7 +24,9 @@ public class Groupes {
  private ArrayList<Date>        dateExamGroupe;  
  private int                    dureePauseHoraire;
  private ListPro<Groupes>       listeGroupe;
-
+public Groupes(){
+    
+}
     public Groupes(int idGroupe, ArrayList<Sessions>    listeSession, ArrayList<Plannings>   listePlanning,
             ArrayList<Salles> listeSalles, ArrayList<Modules>listeModules,ArrayList<Enseignants> listeEnseignants,
            ArrayList<Etudiants> listeEtudiants,ArrayList<String>listeCompetence,int capacite,
@@ -45,6 +47,19 @@ public class Groupes {
         this.seanSuplGroupe =seanSuplGroupe ;
         this.dateExamGroupe = dateExamGroupe;
         this.dureePauseHoraire = dureePauseHoraire;
+    }
+    public Groupes(int idGroupe, Sessions session,
+           int capacite,String libelGroupe, String commentGroupe, 
+           int dureePauseHoraire,ListPro<Groupes>listeGroupe) {
+         this.idGroupe = idGroupe;
+        this.listeSession.add(session);
+        this.libelGroupe = libelGroupe;
+        this.commentGroupe = commentGroupe;
+        this.dateExamGroupe = dateExamGroupe;
+        this.dureePauseHoraire = dureePauseHoraire;
+        this.listeGroupe = listeGroupe;
+        listeGroupe.add(this);
+        
     }
   public Groupes(int idGroupe, ArrayList<Sessions>    listeSession, ArrayList<Plannings>   listePlanning,
             ArrayList<Salles> listeSalles, ArrayList<Modules>listeModules,ArrayList<Enseignants> listeEnseignants,
