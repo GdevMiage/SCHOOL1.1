@@ -1,33 +1,34 @@
  
 package gestionetablissement.modele;
 
+import java.util.Date;
+
  
-public class Entretien {
+public class Entretien extends Individus {
     
-  private int idEntretien;
-  private Affectations affectation;
+private ListPro<Entretien> listeAgentEntretien;
 
-    public Entretien(int idEntretien, Affectations affectation) {
-        this.idEntretien = idEntretien;
-        this.affectation = affectation;
+
+    public Entretien(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu, Affectations affectation) {
+       super(idIndividu,nomIndividu,prenomIndividu,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu,affectation);
+       
+    }
+    
+    public Entretien(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu, Affectations affectation,ListPro<Individus> listeIndividus,ListPro<Entretien> listeAgentEntretien) {
+       super(idIndividu,nomIndividu,prenomIndividu,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu,affectation,listeIndividus);
+       this.listeAgentEntretien=listeAgentEntretien;
+       listeAgentEntretien.add(this);
+       
     }
 
-    public int getIdEntretien() {
-        return idEntretien;
+    public ListPro<Entretien> getListeAgentEntretien() {
+        return listeAgentEntretien;
     }
 
-    public void setIdEntretien(int idEntretien) {
-        this.idEntretien = idEntretien;
+    public void setListeAgentEntretien(ListPro<Entretien> listeAgentEntretien) {
+        this.listeAgentEntretien = listeAgentEntretien;
     }
-
-    public Affectations getAffectation() {
-        return affectation;
-    }
-
-    public void setAffectation(Affectations affectation) {
-        this.affectation = affectation;
-    }
-
+ 
 
     
 }
