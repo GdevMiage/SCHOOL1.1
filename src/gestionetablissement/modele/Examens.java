@@ -1,32 +1,64 @@
 
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
+import java.util.Date;
 
-public class Examens {
+
+public class Examens extends Seances{
     
-  private int idExamen;
-  private Supports support;
-  private String typeExamen;// a revoir type ennumere
-  private String formeExamen;//type ennumere
-  private int baremExamen;//a revoir
-  private String descrExam;
-
-    public Examens(int idExamen, Supports support, String typeExamen, String formeExamen, int baremExamen, String descrExam) {
-        this.idExamen = idExamen;
-        this.support = support;
-        this.typeExamen = typeExamen;
+  private int numExamen;
+  ArrayList<Supports> listeSupports;
+  private String typeExamen; 
+  private String formeExamen; 
+  private int baremExamen; 
+  private String descrExamen;
+  private ListPro<Examens> listeExamens ;
+  
+ public Examens(int idSeance, Groupes groupe, Horaires horaire,
+            Enseignants enseignant, String rattrapageSeance,
+            boolean annulationSeance, Date reportSeance,
+            int numExamen,ArrayList<Supports> listeSupports, 
+            String typeExamen, String formeExamen, int baremExamen,
+            String descrExamen ) {
+     
+     super(idSeance, groupe, horaire,
+             enseignant,  rattrapageSeance,
+             annulationSeance,  reportSeance);
+        
+        this.numExamen = numExamen;
+        this.listeSupports = listeSupports;
         this.formeExamen = formeExamen;
+        this.typeExamen = typeExamen;
         this.baremExamen = baremExamen;
-        this.descrExam = descrExam;
-    }
+        this.descrExamen = descrExamen;
 
-    public int getIdExamen() {
-        return idExamen;
     }
+ public Examens(int idSeance, Groupes groupe, Horaires horaire,
+            Enseignants enseignant, String rattrapageSeance,
+            boolean annulationSeance, Date reportSeance,
+            int numExamen,ArrayList<Supports> listeSupports, 
+            String typeExamen, String formeExamen, int baremExamen,
+            String descrExamen,ListPro<Examens>listeExamens ) {
+     
+     super(idSeance, groupe, horaire,
+             enseignant,  rattrapageSeance,
+             annulationSeance,  reportSeance);
+        
+        this.numExamen = numExamen;
+        this.listeSupports = listeSupports;
+        this.formeExamen = formeExamen;
+        this.typeExamen = typeExamen;
+        this.baremExamen = baremExamen;
+        this.descrExamen = descrExamen;
+        this.listeExamens=listeExamens;
+        listeExamens.add(this);
+    }
+ 
+  
+    
 
-    public void setIdExamen(int idExamen) {
-        this.idExamen = idExamen;
-    }
+ 
 
 
     public String getTypeExamen() {
@@ -47,13 +79,6 @@ public class Examens {
 
 
 
-    public String getDescrExam() {
-        return descrExam;
-    }
-
-    public void setDescrExam(String descrExam) {
-        this.descrExam = descrExam;
-    }
 
 
   
