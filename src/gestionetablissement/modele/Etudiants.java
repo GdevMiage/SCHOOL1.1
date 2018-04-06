@@ -10,8 +10,6 @@ public class Etudiants extends Individus  {
  private ArrayList<Modules> ListeModules;
  private Inscriptions inscription ;
  private ArrayList<Modules> ListeModulesValide;
- private ArrayList<Assiduites> ListeAbsences;
- private ArrayList<Assiduites> ListePresences;
  private ArrayList<Evaluations> ListeEvaluations;
 
  private ListPro<Etudiants>  listeEtudiants;
@@ -35,6 +33,70 @@ public class Etudiants extends Individus  {
     this.inscription = inscription;
   
 
+    }
+
+    public String getNumEtudiant() {
+        return numEtudiant;
+    }
+
+    public void setNumEtudiant(String numEtudiant) {
+        this.numEtudiant = numEtudiant;
+    }
+
+    public ArrayList<Modules> getListeModules() {
+        return ListeModules;
+    }
+
+    public void setListeModules(ArrayList<Modules> ListeModules) {
+        this.ListeModules = ListeModules;
+    }
+
+    public Inscriptions getInscription() {
+        return inscription;
+    }
+
+    public void setInscription(Inscriptions inscription) {
+        this.inscription = inscription;
+    }
+
+    public ArrayList<Modules> getListeModulesValide() {
+        return ListeModulesValide;
+    }
+
+    public void setListeModulesValide(ArrayList<Modules> ListeModulesValide) {
+        this.ListeModulesValide = ListeModulesValide;
+    }
+
+    public ArrayList<Assiduites> getListeAbsences() {
+        return ListeAbsences;
+    }
+
+    public void setListeAbsences(ArrayList<Assiduites> ListeAbsences) {
+        this.ListeAbsences = ListeAbsences;
+    }
+
+    public ArrayList<Assiduites> getListePresences() {
+        return ListePresences;
+    }
+
+    public void setListePresences(ArrayList<Assiduites> ListePresences) {
+        this.ListePresences = ListePresences;
+    }
+
+    public ArrayList<Evaluations> getListeEvaluations() {
+        return ListeEvaluations;
+    }
+
+    public void setListeEvaluations(ArrayList<Evaluations> ListeEvaluations) {
+        this.ListeEvaluations = ListeEvaluations;
+    }
+
+    public ListPro<Etudiants> getListeEtudiants() {
+        return listeEtudiants;
+    }
+
+    public void setListeEtudiants(ListPro<Etudiants> listeEtudiants) {
+        this.listeEtudiants = listeEtudiants;
     }
     
     

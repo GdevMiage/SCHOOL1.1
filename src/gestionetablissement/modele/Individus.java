@@ -1,6 +1,7 @@
 
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -22,7 +23,8 @@ public class Individus<T> {
     private String versoPIDIndividu; 
     private Affectations affectation;
     private ListPro<Individus> listeIndividusEtablissement;
-    
+    private ArrayList<Assiduites> ListeAbsences;
+    private ArrayList<Assiduites> ListePresences;
 
     public Individus(int idIndividu, String nomIndividu, String prenomIndividu ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,Affectations affectation) {
         this.idIndividu = idIndividu;
@@ -41,6 +43,31 @@ public class Individus<T> {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
+     
+    }
+
+    public ArrayList<Assiduites> getListeAbsences() {
+        return ListeAbsences;
+    }
+
+    public void setListeAbsences(ArrayList<Assiduites> ListeAbsences) {
+        this.ListeAbsences = ListeAbsences;
+    }
+
+    public ArrayList<Assiduites> getListePresences() {
+        return ListePresences;
+    }
+
+    public void setListePresences(ArrayList<Assiduites> ListePresences) {
+        this.ListePresences = ListePresences;
+    }
+
+    public ListPro<Individus> getListeIndividusEtablissement() {
+        return listeIndividusEtablissement;
+    }
+
+    public void setListeIndividusEtablissement(ListPro<Individus> listeIndividusEtablissement) {
+        this.listeIndividusEtablissement = listeIndividusEtablissement;
     }
     
     

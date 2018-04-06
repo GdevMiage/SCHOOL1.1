@@ -1,6 +1,8 @@
 
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 
@@ -14,10 +16,11 @@ public class Seances {
     private boolean annulationSeance;
     private Date reportSeance;
     private Matieres matiere;
+    private ListPro<Assiduites> listeAssiduite;
     
     public Seances(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
-            boolean annulationSeance, Date reportSeance) {
+            boolean annulationSeance, Date reportSeance,ListPro<Assiduites> listeAssiduite) {
         this.idSeance = idSeance;
         this.groupe = groupe;
         this.horaire = horaire;
@@ -25,8 +28,42 @@ public class Seances {
         this.rattrapageSeance = rattrapageSeance;
         this.annulationSeance = annulationSeance;
         this.reportSeance = reportSeance;
+        
     }
 
+    /**
+     *
+     * @param individus
+     * 
+     * 
+     * @return
+     */
+    public boolean faireLaPresence(Individus ...individus){
+        int i;
+        
+        //recuperer les indiv absents 
+        ArrayList<Individus> listeAbsences;
+        listeAbsences = new ArrayList<>();
+        
+        listeAbsences.addAll(Arrays.asList(individus));
+        
+        for( i=0; i<=groupe.getListeEtudiants().size();i++){
+            if( listeAbsences.contains(groupe.getListeEtudiants().get(i))){
+                groupe.getListeEtudiants().get(i).getListePresences().add(new Assiduites(groupe.getListeEtudiants().get(i),this,"absent",reportSeance,"","",listeAssiduite));
+
+            }else{
+                groupe.getListeEtudiants().get(i).getListePresences().add(new Assiduites(groupe.getListeEtudiants().get(i),this,"present",reportSeance,"","",listeAssiduite));
+
+            }
+            if( listeAbsences.contains(enseignant))enseignant.getListeAbsences().add(new Assiduites(enseignant,this,"absent",reportSeance,"","",listeAssiduite));
+            else enseignant.getListeAbsences().add(new Assiduites(enseignant,this,"present",reportSeance,"","",listeAssiduite));
+           
+
+        }
+       
+        
+        return false;
+    }
     public int getIdSeance() {
         return idSeance;
     }

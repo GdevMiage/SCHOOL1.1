@@ -9,8 +9,6 @@ public class Enseignants extends Individus {
     
  private ArrayList<String>     listeCompetence; 
  private ArrayList<String>     listeTache; 
- private ArrayList<Assiduites> listeAbsense; 
- private ArrayList<Assiduites> listePresense; 
  private ArrayList<String>     listeRapport; 
  private ListPro<Enseignants>  listeEnseignants;
 
