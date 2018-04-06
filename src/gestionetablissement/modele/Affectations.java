@@ -7,31 +7,45 @@ import java.util.Date;
 public class Affectations {
     
    private int idAffectation;
-   private Contrats contrat ;
+   private String contrat ;
    
    private String loginAffectation;
    private String motPasseAffectation; 
    private Date dateEntrAffectation; 
-   private Date datesortAffectation; 
+   private Date dateSortAffectation; 
    private String commAffectation; 
    private String ficheAffectation;
-   private String referentAffectation; 
-   private boolean validAffectation;
-
-    public Affectations(int idAffectation, int trigrAffectation, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, String referentAffectation, boolean validAffectation) {
+   private Individus individus; 
+   private ListPro <Affectations> listeAffectations;
+   
+   
+    public Affectations(int idAffectation,String contrat, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, Individus individus) {
         this.idAffectation = idAffectation;
-        this.contrat =  new Contrats();
-        this.trigrAffectation = trigrAffectation;
+        this.contrat =  contrat;
         this.loginAffectation = loginAffectation;
         this.motPasseAffectation = motPasseAffectation;
         this.dateEntrAffectation = dateEntrAffectation;
-        this.datesortAffectation = datesortAffectation;
+        this.dateSortAffectation = datesortAffectation;
         this.commAffectation = commAffectation;
         this.ficheAffectation = ficheAffectation;
-        this.referentAffectation = referentAffectation;
-        this.validAffectation = validAffectation;
+        this.individus = individus;
+        
     }
-
+   
+    public Affectations(int idAffectation,String contrat, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, Individus individus,ListPro <Affectations> listeAffectations) {
+        this.idAffectation = idAffectation;
+        this.contrat =  contrat;
+        this.loginAffectation = loginAffectation;
+        this.motPasseAffectation = motPasseAffectation;
+        this.dateEntrAffectation = dateEntrAffectation;
+        this.dateSortAffectation = datesortAffectation;
+        this.commAffectation = commAffectation;
+        this.ficheAffectation = ficheAffectation;
+        this.individus = individus;
+        
+        this.listeAffectations=listeAffectations;
+        listeAffectations.add(this);
+    }
     public int getIdAffectation() {
         return idAffectation;
     }
@@ -40,24 +54,15 @@ public class Affectations {
         this.idAffectation = idAffectation;
     }
 
-    public Contrats getContrat() {
+    public String getContrat() {
         return contrat;
     }
 
-    public void setContrat(Contrats contrat) {
+    public void setContrat(String contrat) {
         this.contrat = contrat;
     }
 
   
-
-    public int getTrigrAffectation() {
-        return trigrAffectation;
-    }
-
-    public void setTrigrAffectation(int trigrAffectation) {
-        this.trigrAffectation = trigrAffectation;
-    }
-
     public String getLoginAffectation() {
         return loginAffectation;
     }
@@ -82,12 +87,12 @@ public class Affectations {
         this.dateEntrAffectation = dateEntrAffectation;
     }
 
-    public Date getDatesortAffectation() {
-        return datesortAffectation;
+    public Date getDateSortAffectation() {
+        return dateSortAffectation;
     }
 
-    public void setDatesortAffectation(Date datesortAffectation) {
-        this.datesortAffectation = datesortAffectation;
+    public void setDateSortAffectation(Date datesortAffectation) {
+        this.dateSortAffectation = datesortAffectation;
     }
 
     public String getCommAffectation() {
@@ -106,22 +111,8 @@ public class Affectations {
         this.ficheAffectation = ficheAffectation;
     }
 
-    public String getReferentAffectation() {
-        return referentAffectation;
-    }
 
-    public void setReferentAffectation(String referentAffectation) {
-        this.referentAffectation = referentAffectation;
-    }
 
-    public boolean isValidAffectation() {
-        return validAffectation;
-    }
-
-    public void setValidAffectation(boolean validAffectation) {
-        this.validAffectation = validAffectation;
-    }
-   
    
    
    

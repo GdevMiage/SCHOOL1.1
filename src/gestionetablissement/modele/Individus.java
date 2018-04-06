@@ -4,25 +4,27 @@ package gestionetablissement.modele;
 import java.util.Date;
 
 
-public class Individus {
-     int idIndividu;
+public class Individus<T> {
+    private int idIndividu;
     private String nomIndividu;
     private String prenomIndividu; 
     private String genreIndividu; 
     private Date datNaisIndividu; 
     private String lieuNaisIndividu; 
-    private String nivEtudIndividu;//a revoir
-    private String domEtudIndividu;//a revoir 
+    private String nivEtudIndividu;
+    private String domEtudIndividu;
     private String profIndividu; 
-    private Affectations affectation;
-    private String domCompetIndividu; 
+    private Adresses domCompetIndividu; 
     private String langMatIndividu; 
     private String langParlIndividu; 
     private String photoIndividu;
     private String rectoPIDIndividu;
     private String versoPIDIndividu; 
+    private Affectations affectation;
+    private ListPro<Individus> listeIndividusEtablissement;
+    
 
-    public Individus(int idIndividu, String nomIndividu, String prenomIndividu,Affectations affectation ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, String domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu) {
+    public Individus(int idIndividu, String nomIndividu, String prenomIndividu ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,Affectations affectation) {
         this.idIndividu = idIndividu;
         this.nomIndividu = nomIndividu;
         this.affectation = affectation;
@@ -40,7 +42,32 @@ public class Individus {
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
     }
+    
+    
 
+    public Individus() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+   public Individus(int idIndividu, String nomIndividu, String prenomIndividu ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,Affectations affectation,ListPro<Individus> individus) {
+        this.idIndividu = idIndividu;
+        this.nomIndividu = nomIndividu;
+        this.affectation = affectation;
+        this.prenomIndividu = prenomIndividu;
+        this.genreIndividu = genreIndividu;
+        this.datNaisIndividu = datNaisIndividu;
+        this.lieuNaisIndividu = lieuNaisIndividu;
+        this.nivEtudIndividu = nivEtudIndividu;
+        this.domEtudIndividu = domEtudIndividu;
+        this.profIndividu = profIndividu;
+        this.domCompetIndividu = domCompetIndividu;
+        this.langMatIndividu = langMatIndividu;
+        this.langParlIndividu = langParlIndividu;
+        this.photoIndividu = photoIndividu;
+        this.rectoPIDIndividu = rectoPIDIndividu;
+        this.versoPIDIndividu = versoPIDIndividu;
+        this.listeIndividusEtablissement = individus;
+        individus.add(this);
+    }
     public Affectations getAffectation() {
         return affectation;
     }
@@ -121,11 +148,11 @@ public class Individus {
         this.profIndividu = profIndividu;
     }
 
-    public String getDomCompetIndividu() {
+    public Adresses getDomCompetIndividu() {
         return domCompetIndividu;
     }
 
-    public void setDomCompetIndividu(String domCompetIndividu) {
+    public void setDomCompetIndividu(Adresses domCompetIndividu) {
         this.domCompetIndividu = domCompetIndividu;
     }
 
