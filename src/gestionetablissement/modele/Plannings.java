@@ -1,6 +1,8 @@
 
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
+
 
 public class Plannings {
     
@@ -13,12 +15,13 @@ public class Plannings {
   private String horSaPlanning;
   private String horDimPlanning;
   private String libelPlanning; 
-   
+  private ArrayList<Sessions> session;
+  private ListPro<Plannings> listePlannings ;
   
     public Plannings(){
         
     }
-    public Plannings(int idPlanning, String horLunPlanning, String horMarPlanning, String horMerPlanning, String horJeuPlanning, String horVenPlanning, String horSaPlanning, String horDimPlanning, String libelPlanning) {
+    public Plannings(int idPlanning, String horLunPlanning, String horMarPlanning, String horMerPlanning, String horJeuPlanning, String horVenPlanning, String horSaPlanning, String horDimPlanning, String libelPlanning,Sessions session,ListPro<Plannings> plan) {
         this.idPlanning = idPlanning;
         this.horLunPlanning = horLunPlanning;
         this.horMarPlanning = horMarPlanning;
@@ -28,6 +31,10 @@ public class Plannings {
         this.horSaPlanning = horSaPlanning;
         this.horDimPlanning = horDimPlanning;
         this.libelPlanning = libelPlanning;
+        this.session.add(session);
+        this.listePlannings=plan;
+        plan.add(this);
+        
     }
 
     public int getIdPlanning() {

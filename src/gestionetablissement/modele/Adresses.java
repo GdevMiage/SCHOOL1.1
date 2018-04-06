@@ -11,11 +11,12 @@ public class Adresses {
   private int cpAdresse;
   private String villeAdresse;
   private String paysAdresse;
-
+  private ListPro<Adresses> listeAdresse;
+  
   public Adresses(){
       
   }
-    public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
+      public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;
       
         this.batAdresse = batAdresse;
@@ -24,6 +25,19 @@ public class Adresses {
         this.cpAdresse = cpAdresse;
         this.villeAdresse = villeAdresse;
         this.paysAdresse = paysAdresse;
+    }
+      
+    public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse,ListPro<Adresses> listeAdresse) {
+        this.idAdresse = idAdresse;
+      
+        this.batAdresse = batAdresse;
+        this.noAdresse = noAdresse;
+        this.rueAdresse = rueAdresse;
+        this.cpAdresse = cpAdresse;
+        this.villeAdresse = villeAdresse;
+        this.paysAdresse = paysAdresse;
+        this.listeAdresse =listeAdresse;
+        listeAdresse.add(this);
     }
 
     public int getIdAdresse() {

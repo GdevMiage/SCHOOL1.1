@@ -17,7 +17,16 @@ public class Horaires {
     public Horaires(){
         
     }
+    
+   public Horaires(int idHoraire, Date jour, Date debut, Date fin, String libelHoraire) {
+        this.idHoraire = idHoraire;
+       
+        this.jour = jour;
+        this.debut = debut;
+        this.fin = fin;
+        this.libelHoraire = libelHoraire;
   
+    }
     public Horaires(int idHoraire, Date jour, Date debut, Date fin, String libelHoraire,ListPro<Horaires> listeHoraire) {
         this.idHoraire = idHoraire;
        

@@ -26,7 +26,13 @@ public class Salles {
         this.listeSalle = listeSalle;
         listeSalle.add(this);
     }
-
+   public Salles(int idSalle, String libelSalle,int capaSalle) {
+        this.idSalle = idSalle;
+        this.libelSalle = libelSalle;
+        this.capaSalle = capaSalle;
+        
+       
+    }
     public int getIdSalle() {
         return idSalle;
     }
