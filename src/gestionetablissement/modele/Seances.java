@@ -17,6 +17,7 @@ public class Seances {
     private Date reportSeance;
     private Matieres matiere;
     private ListPro<Assiduites> listeAssiduite;
+    private ArrayList listeAssiduiteSeance;
     
     public Seances(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
@@ -64,6 +65,8 @@ public class Seances {
         
         return false;
     }
+    
+    
     public int getIdSeance() {
         return idSeance;
     }

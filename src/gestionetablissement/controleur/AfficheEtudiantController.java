@@ -7,6 +7,8 @@ package gestionetablissement.controleur;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.fxml.Initializable;
 
 /**
@@ -14,7 +16,9 @@ import javafx.fxml.Initializable;
  *
  * @author lyess
  */
-public class AfficheEtudiantController implements Initializable {
+
+
+public class AfficheEtudiantController implements Initializable,Observable   {
 
     /**
      * Initializes the controller class.
@@ -23,5 +27,15 @@ public class AfficheEtudiantController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @Override
+    public void addListener(InvalidationListener listener) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removeListener(InvalidationListener listener) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
