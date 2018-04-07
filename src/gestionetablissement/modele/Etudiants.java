@@ -67,21 +67,9 @@ public class Etudiants extends Individus  {
         this.ListeModulesValide = ListeModulesValide;
     }
 
-    public ArrayList<Assiduites> getListeAbsences() {
-        return ListeAbsences;
-    }
 
-    public void setListeAbsences(ArrayList<Assiduites> ListeAbsences) {
-        this.ListeAbsences = ListeAbsences;
-    }
 
-    public ArrayList<Assiduites> getListePresences() {
-        return ListePresences;
-    }
-
-    public void setListePresences(ArrayList<Assiduites> ListePresences) {
-        this.ListePresences = ListePresences;
-    }
+   
 
     public ArrayList<Evaluations> getListeEvaluations() {
         return ListeEvaluations;

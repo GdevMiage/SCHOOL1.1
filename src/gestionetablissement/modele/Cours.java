@@ -19,14 +19,14 @@ public class Cours extends Seances {
     
  public Cours(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
-            boolean annulationSeance, Date reportSeance,
+            boolean annulationSeance, Date reportSeance,ListPro<Assiduites> listeAssiduite,
             int idCours,ArrayList<Supports> listeSupports, 
             String typeDocCours, String libelCours, String niveauCours,
             String partieCours, int volHorCours, String descriptifCours) {
      
      super( idSeance,  groupe,  horaire,
              enseignant,  rattrapageSeance,
-             annulationSeance,  reportSeance);
+             annulationSeance,  reportSeance, listeAssiduite);
         
         this.idCours = idCours;
         this.listeSupports = listeSupports;
@@ -39,14 +39,14 @@ public class Cours extends Seances {
     }
  public Cours(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
-            boolean annulationSeance, Date reportSeance,
+            boolean annulationSeance, Date reportSeance,ListPro<Assiduites> listeAssiduite,
             int idCours,ArrayList<Supports> listeSupports, 
             String typeDocCours, String libelCours, String niveauCours,
             String partieCours, int volHorCours, String descriptifCours,ListPro<Cours> listeCours) {
      
      super( idSeance,  groupe,  horaire,
              enseignant,  rattrapageSeance,
-             annulationSeance,  reportSeance);
+             annulationSeance,  reportSeance,listeAssiduite);
         
         this.idCours = idCours;
         this.listeSupports = listeSupports;

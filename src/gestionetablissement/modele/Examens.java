@@ -17,14 +17,14 @@ public class Examens extends Seances{
   
  public Examens(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
-            boolean annulationSeance, Date reportSeance,
+            boolean annulationSeance, Date reportSeance,ListPro<Assiduites> listeAssiduite,
             int numExamen,ArrayList<Supports> listeSupports, 
             String typeExamen, String formeExamen, int baremExamen,
             String descrExamen ) {
      
      super(idSeance, groupe, horaire,
              enseignant,  rattrapageSeance,
-             annulationSeance,  reportSeance);
+             annulationSeance,  reportSeance,listeAssiduite);
         
         this.numExamen = numExamen;
         this.listeSupports = listeSupports;
@@ -36,14 +36,14 @@ public class Examens extends Seances{
     }
  public Examens(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
-            boolean annulationSeance, Date reportSeance,
+            boolean annulationSeance, Date reportSeance,ListPro<Assiduites> listeAssiduite,
             int numExamen,ArrayList<Supports> listeSupports, 
             String typeExamen, String formeExamen, int baremExamen,
             String descrExamen,ListPro<Examens>listeExamens ) {
      
      super(idSeance, groupe, horaire,
              enseignant,  rattrapageSeance,
-             annulationSeance,  reportSeance);
+             annulationSeance,  reportSeance,listeAssiduite);
         
         this.numExamen = numExamen;
         this.listeSupports = listeSupports;
