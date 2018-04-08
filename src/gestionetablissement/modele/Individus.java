@@ -4,6 +4,7 @@ package gestionetablissement.modele;
 import gestionetablissement.securite.Affectations;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 
 
 public class Individus<T> {
@@ -22,12 +23,19 @@ public class Individus<T> {
     private String photoIndividu;
     private String rectoPIDIndividu;
     private String versoPIDIndividu; 
-    private Affectations affectation;
-    private ListPro<Individus> listeIndividusEtablissement;
+    private Affectations affectation;    
     private ArrayList<Assiduites> ListeAbsences;
     private ArrayList<Assiduites> ListePresences;
-
-    public Individus(int idIndividu, String nomIndividu, String prenomIndividu ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,Affectations affectation) {
+    private static final ListPro<Individus> listeIndividusEtablissement= new ListPro<Individus>();
+    
+    public Individus(int idIndividu, String nomIndividu, 
+           String prenomIndividu ,String genreIndividu, 
+           Date datNaisIndividu, String lieuNaisIndividu, 
+           String nivEtudIndividu, String domEtudIndividu, 
+           String profIndividu, Adresses domCompetIndividu,
+           String langMatIndividu, String langParlIndividu, 
+           String photoIndividu, String rectoPIDIndividu,
+           String versoPIDIndividu,Affectations affectation) {
         this.idIndividu = idIndividu;
         this.nomIndividu = nomIndividu;
         this.affectation = affectation;
@@ -44,9 +52,47 @@ public class Individus<T> {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
-     
+        this.listeIndividusEtablissement.add(this);
+        
     }
-
+    
+    public Individus(int idIndividu, String nomIndividu, 
+           String prenomIndividu ,String genreIndividu, 
+           Date datNaisIndividu, String lieuNaisIndividu, 
+           String nivEtudIndividu, String domEtudIndividu, 
+           String profIndividu, Adresses domCompetIndividu,
+           String langMatIndividu, String langParlIndividu, 
+           String photoIndividu, String rectoPIDIndividu,
+           String versoPIDIndividu) {
+        this.idIndividu = idIndividu;
+        this.nomIndividu = nomIndividu;
+      
+        this.prenomIndividu = prenomIndividu;
+        this.genreIndividu = genreIndividu;
+        this.datNaisIndividu = datNaisIndividu;
+        this.lieuNaisIndividu = lieuNaisIndividu;
+        this.nivEtudIndividu = nivEtudIndividu;
+        this.domEtudIndividu = domEtudIndividu;
+        this.profIndividu = profIndividu;
+        this.domCompetIndividu = domCompetIndividu;
+        this.langMatIndividu = langMatIndividu;
+        this.langParlIndividu = langParlIndividu;
+        this.photoIndividu = photoIndividu;
+        this.rectoPIDIndividu = rectoPIDIndividu;
+        this.versoPIDIndividu = versoPIDIndividu;
+        this.listeIndividusEtablissement.add(this);
+        
+    }
+    /*public static Individus of(String id ){
+        Iterator it = listeIndividusEtablissement.iterator();
+        while(it.hasNext()){
+            Individus indiv = (Individus) it.next();
+            if(id.equals(indiv.getIdIndividu()+)){
+                
+            }
+        }
+        return 
+    }*/
     public ArrayList<Assiduites> getListeAbsences() {
         return ListeAbsences;
     }
@@ -67,34 +113,13 @@ public class Individus<T> {
         return listeIndividusEtablissement;
     }
 
-    public void setListeIndividusEtablissement(ListPro<Individus> listeIndividusEtablissement) {
-        this.listeIndividusEtablissement = listeIndividusEtablissement;
-    }
-    
+
   
     public Individus(int idIndividu) {
         this.idIndividu = idIndividu;
     }
-   public Individus(int idIndividu, String nomIndividu, String prenomIndividu ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,Affectations affectation,ListPro<Individus> individus) {
-        this.idIndividu = idIndividu;
-        this.nomIndividu = nomIndividu;
-        this.affectation = affectation;
-        this.prenomIndividu = prenomIndividu;
-        this.genreIndividu = genreIndividu;
-        this.datNaisIndividu = datNaisIndividu;
-        this.lieuNaisIndividu = lieuNaisIndividu;
-        this.nivEtudIndividu = nivEtudIndividu;
-        this.domEtudIndividu = domEtudIndividu;
-        this.profIndividu = profIndividu;
-        this.domCompetIndividu = domCompetIndividu;
-        this.langMatIndividu = langMatIndividu;
-        this.langParlIndividu = langParlIndividu;
-        this.photoIndividu = photoIndividu;
-        this.rectoPIDIndividu = rectoPIDIndividu;
-        this.versoPIDIndividu = versoPIDIndividu;
-        this.listeIndividusEtablissement = individus;
-        individus.add(this);
-    }
+    
+   
     public Affectations getAffectation() {
         return affectation;
     }

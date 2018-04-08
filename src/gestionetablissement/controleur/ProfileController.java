@@ -47,6 +47,7 @@ import gestionetablissement.modele.User;
 /**
  * Profile Controller.
  */
+/*
 public class ProfileController extends AnchorPane implements Initializable {
 
     @FXML
@@ -130,3 +131,4 @@ public class ProfileController extends AnchorPane implements Initializable {
         ft.play();
     }
 }
+*/

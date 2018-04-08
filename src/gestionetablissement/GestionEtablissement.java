@@ -33,7 +33,7 @@ package gestionetablissement;
 
 import gestionetablissement.controleur.AdminViewController;
 import gestionetablissement.controleur.LoginController;
-import gestionetablissement.controleur.ProfileController;
+
 import gestionetablissement.modele.Adresses;
 import gestionetablissement.modele.Individus;
 import gestionetablissement.modele.ListPro;
@@ -61,7 +61,7 @@ import java.util.Date;
 public class GestionEtablissement extends Application {
 
     private Stage stage;
-    private User loggedUser;
+    private Individus loggedUser;
     private Sessions sessionSchoolActuelle ;
     private final double MINIMUM_WINDOW_WIDTH = 390.0;
     private final double MINIMUM_WINDOW_HEIGHT = 500.0;
@@ -85,8 +85,11 @@ public class GestionEtablissement extends Application {
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             
               ListPro<Affectations> listeAffectation= new ListPro<>();
-             Affectations aff = new Affectations(3,"CDI","wadii","wadii",new Date(),new Date(),"Prof","c://",new Individus(1),listeAffectation);
-             Affectations affi = new Affectations(3,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",new Individus(1),listeAffectation);
+              Individus indi = new Individus(1,"BEN AISSA","Ouadie","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+
+             Affectations aff = new Affectations(3,"CDI","gr","gr",new Date(),new Date(),"Prof","c://",indi,listeAffectation);
+             indi.setAffectation(aff);
+             Affectations affi = new Affectations(4,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",new Individus(1),listeAffectation);
 
        
             gotoLogin();
@@ -99,13 +102,13 @@ public class GestionEtablissement extends Application {
         }
     }
        
-    public User getLoggedUser() {
+    public Individus getLoggedUser() {
         return loggedUser;
     }
         
     public boolean userLogging(String userId, String password){
         if (Affectations.validate(userId, password)) {
-           //loggedUser.s;
+           loggedUser =Affectations.of(userId);
             gotoAdminView();
             return true;
         } else {
@@ -117,7 +120,7 @@ public class GestionEtablissement extends Application {
         loggedUser = null;
         gotoLogin();
     }
-    
+    /*
     private void gotoProfile() {
         try {
             ProfileController profile = (ProfileController) replaceSceneContent("vue/profile.fxml");
@@ -126,7 +129,7 @@ public class GestionEtablissement extends Application {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    */
     
   private void gotoAdminView() {
         try {

@@ -6,6 +6,7 @@
 package gestionetablissement.controleur;
 
 import gestionetablissement.GestionEtablissement;
+import gestionetablissement.modele.Individus;
 import gestionetablissement.modele.User;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,7 +46,7 @@ public class AdminViewController implements Initializable {
     
     public void setApp(GestionEtablissement application){
         this.application = application;
-        User loggedUser = application.getLoggedUser();
+        Individus loggedUser = application.getLoggedUser();
      
       
     }
@@ -68,7 +69,7 @@ public class AdminViewController implements Initializable {
             animateMessage();
             return;
         }
-        User loggedUser = application.getLoggedUser();
+        Individus loggedUser = application.getLoggedUser();
       
         animateMessage();
     }

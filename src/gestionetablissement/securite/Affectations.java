@@ -72,7 +72,18 @@ public class Affectations {
         
         return validUserPassword != null && validUserPassword.equals(password);
     }
-     
+    public static Individus of(String user){
+         Iterator it =listeAffectations.iterator();
+         Individus indiv=null;
+         while(it.hasNext()){
+             Affectations affectation = (Affectations) it.next();
+             if(user.equals(affectation.getLoginAffectation())){
+                 indiv=affectation.getIndividus();
+             }
+         }
+        
+        return indiv;
+    }
     public int getIdAffectation() {
         return idAffectation;
     }
@@ -83,6 +94,22 @@ public class Affectations {
 
     public String getContrat() {
         return contrat;
+    }
+
+    public Individus getIndividus() {
+        return individus;
+    }
+
+    public void setIndividus(Individus individus) {
+        this.individus = individus;
+    }
+
+    public Individus getReferentAffectation() {
+        return referentAffectation;
+    }
+
+    public void setReferentAffectation(Individus referentAffectation) {
+        this.referentAffectation = referentAffectation;
     }
 
     public void setContrat(String contrat) {
