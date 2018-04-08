@@ -1,6 +1,7 @@
  
 package gestionetablissement.modele;
 
+import gestionetablissement.securite.Affectations;
 import java.util.Date;
 
  

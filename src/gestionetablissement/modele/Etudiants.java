@@ -1,6 +1,7 @@
  
 package gestionetablissement.modele;
 
+import gestionetablissement.securite.Affectations;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -14,8 +15,8 @@ public class Etudiants extends Individus  {
 
  private ListPro<Etudiants>  listeEtudiants;
 
-    public Etudiants(){
-        
+    public Etudiants(int id){
+        super(id);
     }
     
     public Etudiants(int idIndividu, String nomIndividu, String prenomIndividu, 

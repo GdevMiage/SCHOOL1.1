@@ -1,6 +1,7 @@
 
 package gestionetablissement.modele;
 
+import gestionetablissement.securite.Affectations;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -70,10 +71,9 @@ public class Individus<T> {
         this.listeIndividusEtablissement = listeIndividusEtablissement;
     }
     
-    
-
-    public Individus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  
+    public Individus(int idIndividu) {
+        this.idIndividu = idIndividu;
     }
    public Individus(int idIndividu, String nomIndividu, String prenomIndividu ,String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,Affectations affectation,ListPro<Individus> individus) {
         this.idIndividu = idIndividu;

@@ -1,7 +1,10 @@
 
-package gestionetablissement.modele;
+package gestionetablissement.securite;
 
+import gestionetablissement.modele.Individus;
+import gestionetablissement.modele.ListPro;
 import java.util.Date;
+import java.util.Iterator;
 
 
 public class Affectations {
@@ -17,7 +20,7 @@ public class Affectations {
    private String ficheAffectation;
    private Individus individus;
    private Individus referentAffectation;
-   private ListPro <Affectations> listeAffectations;
+   private static final ListPro <Affectations> listeAffectations =new ListPro<Affectations>();
    
    
     public Affectations(int idAffectation,String contrat, String loginAffectation,
@@ -36,7 +39,13 @@ public class Affectations {
         
     }
    
-    public Affectations(int idAffectation,String contrat, String loginAffectation, String motPasseAffectation, Date dateEntrAffectation, Date datesortAffectation, String commAffectation, String ficheAffectation, Individus individus,ListPro <Affectations> listeAffectations) {
+    public Affectations(int idAffectation,String contrat,
+            String loginAffectation, String motPasseAffectation,
+            Date dateEntrAffectation, Date datesortAffectation, 
+            String commAffectation, String ficheAffectation, 
+            Individus individus,
+            ListPro <Affectations> listeAffectations) {
+        
         this.idAffectation = idAffectation;
         this.contrat =  contrat;
         this.loginAffectation = loginAffectation;
@@ -47,9 +56,23 @@ public class Affectations {
         this.ficheAffectation = ficheAffectation;
         this.individus = individus;
         
-        this.listeAffectations=listeAffectations;
-        listeAffectations.add(this);
+        //this.listeAffectations=listeAffectations;
+        this.listeAffectations.add(this);    }
+    
+    
+     public static boolean validate(String user, String password){
+         Iterator it =listeAffectations.iterator();
+         String validUserPassword=null ;
+         while(it.hasNext()){
+             Affectations affectation = (Affectations) it.next();
+             if(user.equals(affectation.getLoginAffectation())){
+                 validUserPassword=affectation.getMotPasseAffectation();
+             }
+         }
+        
+        return validUserPassword != null && validUserPassword.equals(password);
     }
+     
     public int getIdAffectation() {
         return idAffectation;
     }

@@ -50,8 +50,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import gestionetablissement.modele.User;
-import gestionetablissement.securite.Authenticator;
+import gestionetablissement.securite.Affectations;
+
 import gestionetablissement.securite.dbConnect;
+import java.util.Date;
 
 /**
  * GestionEtablissement Application. This class handles navigation and user session.
@@ -69,11 +71,7 @@ public class GestionEtablissement extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        Application.launch(GestionEtablissement.class, (java.lang.String[])null);
-        ListPro<Salles> listeSalle= new ListPro();
-        Salles s;
-        s = new Salles(1,"",1,listeSalle);
+           Application.launch(GestionEtablissement.class, (java.lang.String[])null);
       
     }
  
@@ -85,7 +83,14 @@ public class GestionEtablissement extends Application {
             stage.setTitle("School 1.0 ");
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
+            
+              ListPro<Affectations> listeAffectation= new ListPro<>();
+             Affectations aff = new Affectations(3,"CDI","wadii","wadii",new Date(),new Date(),"Prof","c://",new Individus(1),listeAffectation);
+             Affectations affi = new Affectations(3,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",new Individus(1),listeAffectation);
+
+       
             gotoLogin();
+            
             primaryStage.setResizable(false);
             primaryStage.show();
             primaryStage.setOnCloseRequest(event -> {userLogout();primaryStage.close();System.out.println("Closed");});
@@ -99,8 +104,8 @@ public class GestionEtablissement extends Application {
     }
         
     public boolean userLogging(String userId, String password){
-        if (Authenticator.validate(userId, password)) {
-            loggedUser = User.of(userId);
+        if (Affectations.validate(userId, password)) {
+           //loggedUser.s;
             gotoAdminView();
             return true;
         } else {

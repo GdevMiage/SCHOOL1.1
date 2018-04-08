@@ -1,6 +1,7 @@
  
 package gestionetablissement.modele;
 
+import gestionetablissement.securite.Affectations;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,8 +13,8 @@ public class Enseignants extends Individus {
  private ArrayList<String>     listeRapport; 
  private ListPro<Enseignants>  listeEnseignants;
 
-    public Enseignants(){
-        
+    public Enseignants(int id){
+        super(id);
     }
     
     public Enseignants(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu, Affectations affectation,ArrayList<String> listeCompetence,ArrayList<String> listeTache, ArrayList<String> listeRapport) {
