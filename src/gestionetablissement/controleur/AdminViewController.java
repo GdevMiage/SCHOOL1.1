@@ -29,7 +29,6 @@ public class AdminViewController implements Initializable {
     
     //Notre variable d'application
     private GestionEtablissement application;
-    @FXML 
     private Label success;
     
     
