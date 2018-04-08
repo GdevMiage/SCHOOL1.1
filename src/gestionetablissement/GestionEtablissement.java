@@ -84,10 +84,10 @@ public class GestionEtablissement extends Application {
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             
-              ListPro<Affectations> listeAffectation= new ListPro<>();
-              Individus indi = new Individus(1,"BEN AISSA","Ouadie","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+            ListPro<Affectations> listeAffectation= new ListPro<>();
+            Individus indi = new Individus(1,"BEN AISSA","Ouadie","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
 
-             Affectations aff = new Affectations(3,"CDI","gr","gr",new Date(),new Date(),"Prof","c://",indi,listeAffectation);
+             Affectations aff = new Affectations(3,"CDI","Daouda","Daouda",new Date(),new Date(),"Prof","c://",indi,listeAffectation);
              indi.setAffectation(aff);
              Affectations affi = new Affectations(4,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",new Individus(1),listeAffectation);
 

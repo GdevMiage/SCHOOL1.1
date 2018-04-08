@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Reunions {
     private int idReunion;
-    private Seances seance;
+  
     private String libelReunion;
     private Individus[] participantsReunion; 
     private String ODJReunion;  
@@ -21,9 +21,9 @@ public class Reunions {
     private ArrayList<TacheAFaires> listeTacheAFaire;
     private ListPro<Reunions> listeReunions;
     
-    public Reunions(int idReunion, Seances seance, String libelReunion, Individus[] participantsReunion, String ODJReunion, Horaires horaireDebutFin, ArrayList<Individus> presReunion, ArrayList<Individus> abscReunion, String commReunion, String CRReunion,ListPro<Reunions> listeReunions) {
+    public Reunions(int idReunion, String libelReunion, Individus[] participantsReunion, String ODJReunion, Horaires horaireDebutFin, ArrayList<Individus> presReunion, ArrayList<Individus> abscReunion, String commReunion, String CRReunion,ListPro<Reunions> listeReunions) {
         this.idReunion = idReunion;
-        this.seance = seance;
+      
         this.libelReunion = libelReunion;
         this.participantsReunion = participantsReunion;
         this.ODJReunion = ODJReunion;
@@ -103,13 +103,7 @@ public class Reunions {
         this.ODJReunion = ODJReunion;
     }
 
-    public Seances getSeance() {
-        return seance;
-    }
 
-    public void setSeance(Seances seance) {
-        this.seance = seance;
-    }
 
     public Individus[] getParticipantsReunion() {
         return participantsReunion;
