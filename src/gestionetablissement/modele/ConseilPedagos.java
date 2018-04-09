@@ -7,14 +7,30 @@ public class ConseilPedagos {
    private Reunions reunion;
    private String libelConseilPedago;
    private String decisConseilPedago;
-
-    public ConseilPedagos(int idConseilPedago, Reunions reunion, String libelConseilPedago, String decisConseilPedago) {
+   private ListPro<ConseilPedagos> listeConseilPedagos;
+   
+   //constructeur avec l'ajout dans la liste 
+    public ConseilPedagos(int idConseilPedago, Reunions reunion,
+            String libelConseilPedago, String decisConseilPedago,
+            ListPro<ConseilPedagos> listeConseilPedagos) {
+        
         this.idConseilPedago = idConseilPedago;
         this.reunion = reunion;
         this.libelConseilPedago = libelConseilPedago;
         this.decisConseilPedago = decisConseilPedago;
+        this.listeConseilPedagos=listeConseilPedagos;
+        listeConseilPedagos.add(this);
     }
-
+  //constructeur sans ajout a la liste
+    public ConseilPedagos(int idConseilPedago, Reunions reunion,
+            String libelConseilPedago, String decisConseilPedago) {
+        
+        this.idConseilPedago = idConseilPedago;
+        this.reunion = reunion;
+        this.libelConseilPedago = libelConseilPedago;
+        this.decisConseilPedago = decisConseilPedago;
+       
+    }
     public int getIdConseilPedago() {
         return idConseilPedago;
     }

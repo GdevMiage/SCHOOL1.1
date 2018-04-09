@@ -1,30 +1,63 @@
  
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
+import java.util.Date;
 
-public class Cours {
+
+public class Cours extends Seances {
     
     private int idCours;
-    private Supports support;
-    private String typeDocCours; // a revoir
-    private int nbrTypeDocCours;
-    // private int support[1-n]Cours; a revoir
+    private ArrayList<Supports> listeSupports;
+    private String typeDocCours;  
     private String libelCours;
-    private String niveauCours; // a revoir
-    private String partieCours; // a revoir 
-    private int volHorCours; // a revoir
-    private String descriptifCours; // a revoir
-
-    public Cours(int idCours, Supports support, String typeDocCours, int nbrTypeDocCours, String libelCours, String niveauCours, String partieCours, int volHorCours, String descriptifCours) {
+    private String niveauCours; 
+    private String partieCours;  
+    private int volHorCours; 
+    private String descriptifCours; 
+    private ListPro<Cours> listeCours;
+    
+ public Cours(int idSeance, Groupes groupe, Horaires horaire,
+            Enseignants enseignant, String rattrapageSeance,
+            boolean annulationSeance, Date reportSeance,ListPro<Assiduites> listeAssiduite,
+            int idCours,ArrayList<Supports> listeSupports, 
+            String typeDocCours, String libelCours, String niveauCours,
+            String partieCours, int volHorCours, String descriptifCours) {
+     
+     super( idSeance,  groupe,  horaire,
+             enseignant,  rattrapageSeance,
+             annulationSeance,  reportSeance, listeAssiduite);
+        
         this.idCours = idCours;
-        this.support = support;
+        this.listeSupports = listeSupports;
         this.typeDocCours = typeDocCours;
-        this.nbrTypeDocCours = nbrTypeDocCours;
         this.libelCours = libelCours;
         this.niveauCours = niveauCours;
         this.partieCours = partieCours;
         this.volHorCours = volHorCours;
         this.descriptifCours = descriptifCours;
+    }
+ public Cours(int idSeance, Groupes groupe, Horaires horaire,
+            Enseignants enseignant, String rattrapageSeance,
+            boolean annulationSeance, Date reportSeance,ListPro<Assiduites> listeAssiduite,
+            int idCours,ArrayList<Supports> listeSupports, 
+            String typeDocCours, String libelCours, String niveauCours,
+            String partieCours, int volHorCours, String descriptifCours,ListPro<Cours> listeCours) {
+     
+     super( idSeance,  groupe,  horaire,
+             enseignant,  rattrapageSeance,
+             annulationSeance,  reportSeance,listeAssiduite);
+        
+        this.idCours = idCours;
+        this.listeSupports = listeSupports;
+        this.typeDocCours = typeDocCours;
+        this.libelCours = libelCours;
+        this.niveauCours = niveauCours;
+        this.partieCours = partieCours;
+        this.volHorCours = volHorCours;
+        this.descriptifCours = descriptifCours;
+        this.listeCours=listeCours;
+        listeCours.add(this);
     }
 /**
  * 
@@ -38,13 +71,6 @@ public class Cours {
         this.idCours = idCours;
     }
 
-    public Supports getSupport() {
-        return support;
-    }
-
-    public void setSupport(Supports support) {
-        this.support = support;
-    }
 
  
 
@@ -56,13 +82,6 @@ public class Cours {
         this.typeDocCours = typeDocCours;
     }
 
-    public int getNbrTypeDocCours() {
-        return nbrTypeDocCours;
-    }
-
-    public void setNbrTypeDocCours(int nbrTypeDocCours) {
-        this.nbrTypeDocCours = nbrTypeDocCours;
-    }
 
     public String getLibelCours() {
         return libelCours;

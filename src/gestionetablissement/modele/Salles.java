@@ -7,15 +7,32 @@ public class Salles {
     private int idSalle;
     private String libelSalle;
     private int capaSalle;
-    private boolean dispoSalle;
+    private ListPro<Salles> listeSalle;
+    public Salles(){
+        
+    }
 
-    public Salles(int idSalle, String libelSalle, int capaSalle, boolean dispoSalle) {
+    /**
+     *
+     * @param idSalle
+     * @param libelSalle
+     * @param capaSalle
+     * @param listeSalle
+     */
+    public Salles(int idSalle, String libelSalle,int capaSalle, ListPro<Salles> listeSalle) {
         this.idSalle = idSalle;
         this.libelSalle = libelSalle;
         this.capaSalle = capaSalle;
-        this.dispoSalle = dispoSalle;
+        this.listeSalle = listeSalle;
+        listeSalle.add(this);
     }
-
+   public Salles(int idSalle, String libelSalle,int capaSalle) {
+        this.idSalle = idSalle;
+        this.libelSalle = libelSalle;
+        this.capaSalle = capaSalle;
+        
+       
+    }
     public int getIdSalle() {
         return idSalle;
     }
@@ -40,13 +57,6 @@ public class Salles {
         this.capaSalle = capaSalle;
     }
 
-    public boolean isDispoSalle() {
-        return dispoSalle;
-    }
 
-    public void setDispoSalle(boolean dispoSalle) {
-        this.dispoSalle = dispoSalle;
-    }
-    
     
 }

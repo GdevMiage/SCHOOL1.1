@@ -10,14 +10,17 @@ public class ConseilAdmins {
   private String objetConseilAdmin;
   private String decisConseilAdmin;
   private String PVConseilAdmin;
+  private ListPro<ConseilAdmins> listeConseilAdmins;
 
-    public ConseilAdmins(int idConseilAdmin, Reunions reunion, String libelConseilAdmin, String objetConseilAdmin, String decisConseilAdmin, String PVConseilAdmin) {
+    public ConseilAdmins(int idConseilAdmin, Reunions reunion, String libelConseilAdmin, String objetConseilAdmin, String decisConseilAdmin, String PVConseilAdmin,ListPro<ConseilAdmins> listeConseilAdmins) {
         this.idConseilAdmin = idConseilAdmin;
         this.reunion = reunion;
         this.libelConseilAdmin = libelConseilAdmin;
         this.objetConseilAdmin = objetConseilAdmin;
         this.decisConseilAdmin = decisConseilAdmin;
         this.PVConseilAdmin = PVConseilAdmin;
+        this.listeConseilAdmins=listeConseilAdmins;
+        listeConseilAdmins.add(this);
     }
 
     public int getIdConseilAdmin() {

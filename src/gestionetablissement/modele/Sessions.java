@@ -1,6 +1,7 @@
 
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -8,19 +9,31 @@ public class Sessions {
   private int idSession;
   private Date annee;
   private String libelSession;
-  private Date dateDebutSession;
-  private Date dateFinSession;
+  private Horaires debutFinSession ;
   private Date[] joursFerieSession;
-
-    public Sessions(int idSession, Date annee, String libelSession, Date dateDebutSession, Date dateFinSession, Date[] joursFerieSession) {
+  private ArrayList<Groupes> groupe ;
+  private ArrayList<Charges> charges;
+  private ArrayList<Produits> produits;
+  private ListPro<Sessions> ListeSession;
+  
+  
+    public Sessions(int idSession, Date annee, String libelSession, Horaires debutFinSession, Date[] joursFerieSession) {
         this.idSession = idSession;
         this.annee = annee;
         this.libelSession = libelSession;
-        this.dateDebutSession = dateDebutSession;
-        this.dateFinSession = dateFinSession;
+        this.debutFinSession = debutFinSession;
         this.joursFerieSession = joursFerieSession;
+        
     }
-
+     public Sessions(int idSession, Date annee, String libelSession, Horaires debutFinSession, Date[] joursFerieSession,ListPro<Sessions> ListeSession) {
+        this.idSession = idSession;
+        this.annee = annee;
+        this.libelSession = libelSession;
+        this.debutFinSession = debutFinSession;
+        this.joursFerieSession = joursFerieSession;
+        this.ListeSession=ListeSession;
+        ListeSession.add(this);
+    }
     public int getIdSession() {
         return idSession;
     }
@@ -39,21 +52,7 @@ public class Sessions {
         this.libelSession = libelSession;
     }
 
-    public Date getDateDebutSession() {
-        return dateDebutSession;
-    }
 
-    public void setDateDebutSession(Date dateDebutSession) {
-        this.dateDebutSession = dateDebutSession;
-    }
-
-    public Date getDateFinSession() {
-        return dateFinSession;
-    }
-
-    public void setDateFinSession(Date dateFinSession) {
-        this.dateFinSession = dateFinSession;
-    }
 
     public Date getAnnee() {
         return annee;

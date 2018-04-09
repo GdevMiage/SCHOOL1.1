@@ -1,6 +1,8 @@
  
 package gestionetablissement.modele;
 
+import gestionetablissement.securite.Affectations;
+
 
 public class Agents {
     

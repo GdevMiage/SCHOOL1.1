@@ -5,6 +5,8 @@
  */
 package gestionetablissement.controleur;
 
+import gestionetablissement.GestionEtablissement;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
@@ -15,7 +17,7 @@ import javafx.fxml.Initializable;
  * @author lyess
  */
 public class AfficheMatiereController implements Initializable {
-
+private GestionEtablissement application;
     /**
      * Initializes the controller class.
      */
@@ -23,5 +25,11 @@ public class AfficheMatiereController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+        public void setApp(GestionEtablissement application) throws FileNotFoundException{
+        
+        
+      
+     this.application = application;
+      
+    }
 }

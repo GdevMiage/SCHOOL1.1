@@ -6,14 +6,34 @@
 package gestionetablissement.controleur;
 
 import gestionetablissement.GestionEtablissement;
+import gestionetablissement.modele.Individus;
 import gestionetablissement.modele.User;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -24,33 +44,92 @@ import javafx.util.Duration;
  */
 public class AdminViewController implements Initializable {
     
-    
+    private Individus loggedUser;
     
     //Notre variable d'application
     private GestionEtablissement application;
-    @FXML 
     private Label success;
-    
-    
-    
-    
+    @FXML   private  MenuButton menuButon; 
+    @FXML private ImageView imageView;
+    @FXML private VBox vBoxAffichage;
+     @FXML private BorderPane borderPaneAff;
+    AnchorPane notrePage;
+    @FXML private Button gestionEtudiantButton;
+    @FXML private Button gestionMatiere;
+    @FXML private Button gestionEnseignant;
     /**
      * Initializes the controller class.
      */
+            
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
 
     
-    public void setApp(GestionEtablissement application){
-        this.application = application;
-        User loggedUser = application.getLoggedUser();
-     
+    public void setApp(GestionEtablissement application) throws FileNotFoundException{
+        
+        loggedUser = application.getLoggedUser();
+        menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
+        affichePhotoLoggedUser();   
+        gotoGestionEtudiant();
+     this.application = application;
       
     }
-
-
+  @FXML private void gotoGestionEtudiant() {
+        try {
+            AfficheEtudiantController afficheEtudiant = (AfficheEtudiantController) replaceSceneContent("vue/AfficheEtudiant.fxml");
+            afficheEtudiant.setApp(application);
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+  @FXML private void gotoGestionEnseignant() {
+        try {
+            AffficherEnseignatController afficheEtudiant = (AffficherEnseignatController) replaceSceneContent("vue/AffficherEnseignat.fxml");
+            afficheEtudiant.setApp(application);
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    @FXML private void gotoGestionMatiere() {
+        try {
+            AfficheMatiereController afficheEtudiant = (AfficheMatiereController) replaceSceneContent("vue/AfficheMatiere.fxml");
+            afficheEtudiant.setApp(application);
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+ public Initializable replaceSceneContent(String fxml) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        InputStream in = GestionEtablissement.class.getResourceAsStream(fxml);
+        loader.setBuilderFactory(new JavaFXBuilderFactory());
+        loader.setLocation(GestionEtablissement.class.getResource(fxml));
+       
+        AnchorPane page;
+        try {
+            page = (AnchorPane) loader.load(in);
+        } finally {
+            System.out.println("hhhhhhhhhhhhhhhhhhhh"+fxml+"**"+GestionEtablissement.class.getResource(fxml));
+             in.close();
+            
+        } 
+        
+        
+       if(!vBoxAffichage.getChildren().isEmpty()){
+           
+            vBoxAffichage.getChildren().remove(notrePage);
+        }
+        
+        vBoxAffichage.getChildren().add(page);
+       
+       
+       
+       
+        notrePage=page;
+        return (Initializable) loader.getController();
+    }
     public void processLogout(ActionEvent event) {
         if (application == null){
             // We are running in isolated FXML, possibly in Scene Builder.
@@ -68,9 +147,34 @@ public class AdminViewController implements Initializable {
             animateMessage();
             return;
         }
-        User loggedUser = application.getLoggedUser();
+        Individus loggedUser = application.getLoggedUser();
       
         animateMessage();
+    }
+    private void affichePhotoLoggedUser() throws FileNotFoundException
+    {Image image=null;
+        Exception exception = null;
+        try{
+             image = new Image(getClass().getResource(loggedUser.getPhotoIndividu()).toString()) ;
+        }catch(Exception e){
+            
+        }
+        if(loggedUser.getPhotoIndividu()==null ||loggedUser.getPhotoIndividu()==""){
+            image = new Image(getClass().getResource("..\\assets\\image\\admin.png").toString());
+        }
+        imageView.setImage(image);
+  
+         imageView.setFitWidth(45);
+         imageView.setFitHeight(45);
+         Circle circle = new Circle();
+        
+        circle.setRadius(20.0f);
+        circle.setCenterX(40.0f/2);
+        circle.setCenterY(40.0f/2);
+       imageView.setClip(circle);
+         imageView.setPreserveRatio(true);
+         imageView.setSmooth(true);
+         imageView.setCache(true);
     }
     
         private void animateMessage() {

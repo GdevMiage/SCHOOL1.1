@@ -4,24 +4,40 @@ package gestionetablissement.modele;
 
 public class Adresses {
   private int idAdresse;
-  private Individus [] listeIndividus;
+
   private int batAdresse;
   private int noAdresse;
   private String rueAdresse; 
   private int cpAdresse;
   private String villeAdresse;
   private String paysAdresse;
-
+  private ListPro<Adresses> listeAdresse;
   
-    public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
+  public Adresses(){
+      
+  }
+      public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;
-        this.listeIndividus = individus;
+      
         this.batAdresse = batAdresse;
         this.noAdresse = noAdresse;
         this.rueAdresse = rueAdresse;
         this.cpAdresse = cpAdresse;
         this.villeAdresse = villeAdresse;
         this.paysAdresse = paysAdresse;
+    }
+      
+    public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse,ListPro<Adresses> listeAdresse) {
+        this.idAdresse = idAdresse;
+      
+        this.batAdresse = batAdresse;
+        this.noAdresse = noAdresse;
+        this.rueAdresse = rueAdresse;
+        this.cpAdresse = cpAdresse;
+        this.villeAdresse = villeAdresse;
+        this.paysAdresse = paysAdresse;
+        this.listeAdresse =listeAdresse;
+        listeAdresse.add(this);
     }
 
     public int getIdAdresse() {
@@ -32,13 +48,7 @@ public class Adresses {
         this.idAdresse = idAdresse;
     }
 
-    public Individus[] getListeIndividus() {
-        return listeIndividus;
-    }
 
-    public void setListeIndividus(Individus[] listeIndividus) {
-        this.listeIndividus = listeIndividus;
-    }
 
  
 

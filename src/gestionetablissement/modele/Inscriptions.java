@@ -2,6 +2,7 @@
 
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
 import java.util.Date;
 
  
@@ -14,9 +15,20 @@ public class Inscriptions {
     private Date dateInscription;
     private Date dateAbandInscription;
     private Date dateAnnulInscription;
-    private double creditInscription; //a revoir
-
-    public Inscriptions(int idInscription, Etudiants etudiant, Paiements paiement, PrEnCharg prEnCharg, Date dateInscription, Date dateAbandInscription, Date dateAnnulInscription, int creditInscription) {
+    private double creditInscription; 
+    private ArrayList<Modules> listeAchat ;
+    private ArrayList<Groupes> listeGroupes;
+    private ListPro<Inscriptions> listeInscriptions;
+    
+    public Inscriptions(){
+        
+    }
+    public Inscriptions(int idInscription, Etudiants etudiant, 
+            Paiements paiement, PrEnCharg prEnCharg, Date dateInscription,
+            Date dateAbandInscription, Date dateAnnulInscription,
+            double creditInscription,ArrayList<Modules> listeAchat,
+            ArrayList<Groupes> listeGroupes,ListPro<Inscriptions> listeInscriptions) {
+        
         this.idInscription = idInscription;
         this.etudiant = etudiant;
         this.paiement = paiement;
@@ -25,6 +37,10 @@ public class Inscriptions {
         this.dateAbandInscription = dateAbandInscription;
         this.dateAnnulInscription = dateAnnulInscription;
         this.creditInscription = creditInscription;
+        this.listeAchat=listeAchat;
+        this.listeGroupes=listeGroupes;
+        this.listeInscriptions=listeInscriptions;
+        listeInscriptions.add(this);
     }
 
     public int getIdInscription() {

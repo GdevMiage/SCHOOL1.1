@@ -8,21 +8,34 @@ public class Assiduites {
      
     
    private int idAssiduite;
-   private Inscriptions inscription;
+   private Individus individus;
    private Seances seance;
-   private String etatAssiduite;//a  revoir   type ennumere
+   private String etatAssiduite;
    private Date datRelancAssiduite;
    private String commAssiduite;
-   private String docAssiduite; //a   pdf
+   private String docAssiduite;
+   private ListPro<Assiduites> listeAssiduites;
 
-    public Assiduites(int idAssiduite, Inscriptions inscription, Seances seance, String etatAssiduite, Date datRelancAssiduite, String commAssiduite, String docAssiduite) {
+    public Assiduites(int idAssiduite, Individus individus, Seances seance, String etatAssiduite, Date datRelancAssiduite, String commAssiduite, String docAssiduite) {
         this.idAssiduite = idAssiduite;
-        this.inscription = inscription;
+        this.individus = individus;
         this.seance = seance;
         this.etatAssiduite = etatAssiduite;
         this.datRelancAssiduite = datRelancAssiduite;
         this.commAssiduite = commAssiduite;
         this.docAssiduite = docAssiduite;
+    }
+       public Assiduites( Individus individus, Seances seance, String etatAssiduite, Date datRelancAssiduite, String commAssiduite, String docAssiduite,ListPro<Assiduites> listeAssiduites) {
+        this.idAssiduite = listeAssiduites.size()+1;
+        this.individus = individus;
+        this.seance = seance;
+        this.etatAssiduite = etatAssiduite;
+        this.datRelancAssiduite = datRelancAssiduite;
+        this.commAssiduite = commAssiduite;
+        this.docAssiduite = docAssiduite;
+        this.listeAssiduites = listeAssiduites;
+        individus.getListePresences().add(this);
+        listeAssiduites.add(this);
     }
 
     public int getIdAssiduite() {

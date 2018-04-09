@@ -6,16 +6,20 @@ public class Tarifs {
     
     private int idTarif;
     private double fraisInscTarif;
-    private double cotisTarif;  // a revoir 
-    private double remDurTarif; // a revoir 
-    private double remModTarif;  // a revoir 
-
-    public Tarifs(int idTarif, double fraisInscTarif, double cotisTarif, double remDurTarif, double remModTarif) {
+    private double cotisTarif;   
+    private double remDurTarif; 
+    private ListPro<Tarifs> listeTarif;
+    public Tarifs(){
+        
+    }
+    
+    public Tarifs(int idTarif, double fraisInscTarif, double cotisTarif, double remDurTarif, double remModTarif,ListPro<Tarifs> listeTarif) {
         this.idTarif = idTarif;
         this.fraisInscTarif = fraisInscTarif;
         this.cotisTarif = cotisTarif;
         this.remDurTarif = remDurTarif;
-        this.remModTarif = remModTarif;
+        this.listeTarif = listeTarif;
+        listeTarif.add(this);
     }
 
     public int getIdTarif() {
@@ -50,13 +54,6 @@ public class Tarifs {
         this.remDurTarif = remDurTarif;
     }
 
-    public double getRemModTarif() {
-        return remModTarif;
-    }
 
-    public void setRemModTarif(double remModTarif) {
-        this.remModTarif = remModTarif;
-    }
-    
     
 }

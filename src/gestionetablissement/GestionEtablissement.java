@@ -33,7 +33,12 @@ package gestionetablissement;
 
 import gestionetablissement.controleur.AdminViewController;
 import gestionetablissement.controleur.LoginController;
-import gestionetablissement.controleur.ProfileController;
+
+import gestionetablissement.modele.Adresses;
+import gestionetablissement.modele.Individus;
+import gestionetablissement.modele.ListPro;
+import gestionetablissement.modele.Salles;
+import gestionetablissement.modele.Sessions;
 import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -45,8 +50,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import gestionetablissement.modele.User;
-import gestionetablissement.securite.Authenticator;
+import gestionetablissement.securite.Affectations;
+
 import gestionetablissement.securite.dbConnect;
+import java.util.Date;
 
 /**
  * GestionEtablissement Application. This class handles navigation and user session.
@@ -54,7 +61,8 @@ import gestionetablissement.securite.dbConnect;
 public class GestionEtablissement extends Application {
 
     private Stage stage;
-    private User loggedUser;
+    private Individus loggedUser;
+    private Sessions sessionSchoolActuelle ;
     private final double MINIMUM_WINDOW_WIDTH = 390.0;
     private final double MINIMUM_WINDOW_HEIGHT = 500.0;
     
@@ -63,11 +71,10 @@ public class GestionEtablissement extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        Application.launch(GestionEtablissement.class, (java.lang.String[])null);
+           Application.launch(GestionEtablissement.class, (java.lang.String[])null);
       
     }
-   
+ 
 
     @Override
     public void start(Stage primaryStage) {
@@ -76,7 +83,17 @@ public class GestionEtablissement extends Application {
             stage.setTitle("School 1.0 ");
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
+            
+            ListPro<Affectations> listeAffectation= new ListPro<>();                                                                       
+            Individus indi = new Individus(1,"Ben","Aissa","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\ouadie.jpg","","");
+
+             Affectations aff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indi,listeAffectation);
+             indi.setAffectation(aff);
+             Affectations affi = new Affectations(4,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",new Individus(1),listeAffectation);
+
+       
             gotoLogin();
+            
             primaryStage.setResizable(false);
             primaryStage.show();
             primaryStage.setOnCloseRequest(event -> {userLogout();primaryStage.close();System.out.println("Closed");});
@@ -85,13 +102,13 @@ public class GestionEtablissement extends Application {
         }
     }
        
-    public User getLoggedUser() {
+    public Individus getLoggedUser() {
         return loggedUser;
     }
         
     public boolean userLogging(String userId, String password){
-        if (Authenticator.validate(userId, password)) {
-            loggedUser = User.of(userId);
+        if (Affectations.validate(userId, password)) {
+           loggedUser =Affectations.of(userId);
             gotoAdminView();
             return true;
         } else {
@@ -103,7 +120,7 @@ public class GestionEtablissement extends Application {
         loggedUser = null;
         gotoLogin();
     }
-    
+    /*
     private void gotoProfile() {
         try {
             ProfileController profile = (ProfileController) replaceSceneContent("vue/profile.fxml");
@@ -112,7 +129,7 @@ public class GestionEtablissement extends Application {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    */
     
   private void gotoAdminView() {
         try {
@@ -143,7 +160,7 @@ public class GestionEtablissement extends Application {
         try {
             page = (AnchorPane) loader.load(in);
         } finally {
-            System.out.println("hhhhhhhhhhhhhhhhhhhh"+fxml+"**"+GestionEtablissement.class.getResource(fxml));
+            System.out.println("test2"+fxml+"**"+GestionEtablissement.class.getResource(fxml));
              in.close();
             
         } 

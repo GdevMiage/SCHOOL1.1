@@ -11,17 +11,22 @@ public class Paiements {
     private int nbrSessionPaiment;
     private int nbrMatierePaiment;
     private double montantPaiement;
-    private int modePaiement; // a revoir
+    private String modePaiement; 
     private Date datePaiement;
-    private int trigrPaiment; // a revoir
+    private int trigrPaiment; 
     private Date dateEncais1Paiement;
     private Date dateEncais2Paiement;
     private Date dateEncais3Paiement;
     private int trigrEncaisPaiment;
     private Date dateTransfPaiement;
     private int trigrTranfPaiment;
-
-    public Paiements(int idPaiement, Inscriptions inscription, Tarifs tarifs, int nbrSessionPaiment, int nbrMatierePaiment, double montantPaiement, int modePaiement, Date datePaiement, int trigrPaiment, Date dateEncais1Paiement, Date dateEncais2Paiement, Date dateEncais3Paiement, int trigrEncaisPaiment, Date dateTransfPaiement, int trigrTranfPaiment) {
+    private ListPro<Paiements> listePaiement ;
+    public Paiements(){
+        
+        
+    }
+    
+    public Paiements(int idPaiement, Inscriptions inscription, Tarifs tarifs, int nbrSessionPaiment, int nbrMatierePaiment, double montantPaiement, String modePaiement, Date datePaiement, int trigrPaiment, Date dateEncais1Paiement, Date dateEncais2Paiement, Date dateEncais3Paiement, int trigrEncaisPaiment, Date dateTransfPaiement, int trigrTranfPaiment,ListPro<Paiements> listePaiements) {
         this.idPaiement = idPaiement;
         this.inscription = inscription;
         this.tarifs = tarifs;
@@ -37,6 +42,9 @@ public class Paiements {
         this.trigrEncaisPaiment = trigrEncaisPaiment;
         this.dateTransfPaiement = dateTransfPaiement;
         this.trigrTranfPaiment = trigrTranfPaiment;
+        this.listePaiement = listePaiements;
+        listePaiements.add(this);
+        
     }
 
     public int getIdPaiement() {
@@ -87,11 +95,11 @@ public class Paiements {
         this.montantPaiement = montantPaiement;
     }
 
-    public int getModePaiement() {
+    public String getModePaiement() {
         return modePaiement;
     }
 
-    public void setModePaiement(int modePaiement) {
+    public void setModePaiement(String modePaiement) {
         this.modePaiement = modePaiement;
     }
 
