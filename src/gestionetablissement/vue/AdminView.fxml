@@ -35,14 +35,14 @@
                            <children>
                               <HBox prefHeight="100.0" prefWidth="132.0">
                                  <children>
-                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
+                                    <ImageView fx:id="imageView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                      <!-- <image>
                                           <Image url="@../assets/image/admin.png" />
-                                       </image>
+                                       </image>-->
                                     </ImageView>
-                                    <MenuButton mnemonicParsing="false" prefHeight="19.0" prefWidth="25.0" styleClass="back-transparent">
+                                    <MenuButton fx:id="menuButon" mnemonicParsing="false" prefHeight="19.0" prefWidth="25.0" styleClass="back-transparent">
                                       <items>
-                                        <MenuItem mnemonicParsing="false" text="Deconnexion" />
+                                        <MenuItem fx:id="deconnexionItem" mnemonicParsing="false" onAction="#processLogout" text="Deconnexion" />
                                         <MenuItem mnemonicParsing="false" text="Voir mon profil" />
                                       </items>
                                     </MenuButton>
