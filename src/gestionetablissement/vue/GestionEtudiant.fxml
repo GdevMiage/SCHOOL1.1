@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.vue.GestionEtudiantController">
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="690.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.vue.GestionEtudiantController">
     <stylesheets>
         <URL value="@gestionetudiant.css" />
     </stylesheets>

@@ -3,9 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/SecretaireViewController.java</file>
             <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/securite/dbConnect.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/Individus.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/AjouterEtudiantController.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/GestionEtudiant.fxml</file>
             <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/ListPro.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/SecretaireView.fxml</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/ModifierEtudiantController.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/ajouteretudiant.css</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/GestionEtudiantController.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/gestionetudiant.css</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/ModifierEtudiant.fxml</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/Individus.java</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modifieretudiant.css</file>
+            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/secretaireview.css</file>
         </group>
     </open-files>
 </project-private>
