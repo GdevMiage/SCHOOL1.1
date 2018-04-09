@@ -30,6 +30,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -51,6 +52,8 @@ public class AdminViewController implements Initializable {
     @FXML   private  MenuButton menuButon; 
     @FXML private ImageView imageView;
     @FXML private VBox vBoxAffichage;
+     @FXML private BorderPane borderPaneAff;
+    AnchorPane notrePage;
     @FXML private Button gestionEtudiantButton;
     @FXML private Button gestionMatiere;
     @FXML private Button gestionEnseignant;
@@ -91,7 +94,7 @@ public class AdminViewController implements Initializable {
     }
     @FXML private void gotoGestionMatiere() {
         try {
-            AfficheMatiereController afficheEtudiant = (AfficheMatiereController) replaceSceneContent("vue/AffficherEnseignat.fxml");
+            AfficheMatiereController afficheEtudiant = (AfficheMatiereController) replaceSceneContent("vue/AfficheMatiere.fxml");
             afficheEtudiant.setApp(application);
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
@@ -112,13 +115,19 @@ public class AdminViewController implements Initializable {
              in.close();
             
         } 
-        vBoxAffichage.getChildren().clear();
         
-       vBoxAffichage.getChildren().add(page);
-       
-       
-       
         
+       if(!vBoxAffichage.getChildren().isEmpty()){
+           
+            vBoxAffichage.getChildren().remove(notrePage);
+        }
+        
+        vBoxAffichage.getChildren().add(page);
+       
+       
+       
+       
+        notrePage=page;
         return (Initializable) loader.getController();
     }
     public void processLogout(ActionEvent event) {

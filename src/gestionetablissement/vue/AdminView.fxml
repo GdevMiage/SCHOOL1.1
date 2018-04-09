@@ -65,7 +65,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
+                                          <BorderPane fx:id="borderPaneAff" prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
                                              <left>
                                                 <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
                                                    <children>
