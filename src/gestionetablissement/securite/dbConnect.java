@@ -27,7 +27,8 @@ public class dbConnect {
 	{
 	    try {
                   Class.forName("com.mysql.jdbc.Driver");
-	          Connection  conn = DriverManager.getConnection("jdbc:mysql://localhost/magasinfo1","root", "");
+	          Connection  conn;
+                conn = DriverManager.getConnection("jdbc:mysql://gdev.eb2a.com/eb2a_21845942_School","eb2a_21845942", "gdevmiage2018");
                   this.statement =  conn.createStatement();  
                 } catch (ClassNotFoundException | SQLException e) {
 	    }

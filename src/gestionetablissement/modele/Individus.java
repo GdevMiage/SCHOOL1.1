@@ -28,6 +28,12 @@ public class Individus<T> {
     private ArrayList<Assiduites> ListePresences;
     private static final ListPro<Individus> listeIndividusEtablissement= new ListPro<Individus>();
     
+    //variable de classe pour definr les id des nouv individus
+    private static int nbIndiv=0;
+    {
+        nbIndiv=nbIndiv+1;
+    }
+    
     public Individus(int idIndividu, String nomIndividu, 
            String prenomIndividu ,String genreIndividu, 
            Date datNaisIndividu, String lieuNaisIndividu, 
@@ -55,7 +61,33 @@ public class Individus<T> {
         this.listeIndividusEtablissement.add(this);
         
     }
-    
+     public Individus( String nomIndividu, 
+           String prenomIndividu ,String genreIndividu, 
+           Date datNaisIndividu, String lieuNaisIndividu, 
+           String nivEtudIndividu, String domEtudIndividu, 
+           String profIndividu, Adresses domCompetIndividu,
+           String langMatIndividu, String langParlIndividu, 
+           String photoIndividu, String rectoPIDIndividu,
+           String versoPIDIndividu,Affectations affectation) {
+        this.idIndividu = Integer.parseInt("2018"+(Individus.nbIndiv+1));
+        this.nomIndividu = nomIndividu;
+        this.affectation = affectation;
+        this.prenomIndividu = prenomIndividu;
+        this.genreIndividu = genreIndividu;
+        this.datNaisIndividu = datNaisIndividu;
+        this.lieuNaisIndividu = lieuNaisIndividu;
+        this.nivEtudIndividu = nivEtudIndividu;
+        this.domEtudIndividu = domEtudIndividu;
+        this.profIndividu = profIndividu;
+        this.domCompetIndividu = domCompetIndividu;
+        this.langMatIndividu = langMatIndividu;
+        this.langParlIndividu = langParlIndividu;
+        this.photoIndividu = photoIndividu;
+        this.rectoPIDIndividu = rectoPIDIndividu;
+        this.versoPIDIndividu = versoPIDIndividu;
+        this.listeIndividusEtablissement.add(this);
+        
+    }
     public Individus(int idIndividu, String nomIndividu, 
            String prenomIndividu ,String genreIndividu, 
            Date datNaisIndividu, String lieuNaisIndividu, 
@@ -80,6 +112,35 @@ public class Individus<T> {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
+        this.listeIndividusEtablissement.add(this);
+        
+    }
+    
+    public Individus(String nomIndividu, 
+           String prenomIndividu ,String genreIndividu, 
+           Date datNaisIndividu, String lieuNaisIndividu, 
+           String nivEtudIndividu, String domEtudIndividu, 
+           String profIndividu, Adresses domCompetIndividu,
+           String langMatIndividu, String langParlIndividu, 
+           String photoIndividu, String rectoPIDIndividu,
+           String versoPIDIndividu) {
+        
+        this.nomIndividu = nomIndividu;
+      
+        this.prenomIndividu = prenomIndividu;
+        this.genreIndividu = genreIndividu;
+        this.datNaisIndividu = datNaisIndividu;
+        this.lieuNaisIndividu = lieuNaisIndividu;
+        this.nivEtudIndividu = nivEtudIndividu;
+        this.domEtudIndividu = domEtudIndividu;
+        this.profIndividu = profIndividu;
+        this.domCompetIndividu = domCompetIndividu;
+        this.langMatIndividu = langMatIndividu;
+        this.langParlIndividu = langParlIndividu;
+        this.photoIndividu = photoIndividu;
+        this.rectoPIDIndividu = rectoPIDIndividu;
+        this.versoPIDIndividu = versoPIDIndividu;
+        this.idIndividu = Integer.parseInt("2018"+(Individus.nbIndiv+1));
         this.listeIndividusEtablissement.add(this);
         
     }

@@ -18,13 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de données :  `gestionetablissement`
---
-CREATE DATABASE IF NOT EXISTS `gestionetablissement` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `gestionetablissement`;
 
--- --------------------------------------------------------
 
 --
 -- Structure de la table `adresse`
