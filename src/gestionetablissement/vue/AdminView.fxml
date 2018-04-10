@@ -20,14 +20,14 @@
          <left>
             <VBox alignment="CENTER_LEFT" prefHeight="747.0" prefWidth="1023.0">
                <children>
-                  <HBox alignment="TOP_RIGHT" style="-fx-background-color: #38aaef29;">
+                  <HBox alignment="TOP_RIGHT" prefHeight="163.0" prefWidth="1023.0" style="-fx-background-color: #38aaef29;">
                      <children>
                         <ImageView fitHeight="115.0" fitWidth="297.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../assets/image/logo1.png" />
                            </image>
                            <HBox.margin>
-                              <Insets />
+                              <Insets top="10.0" />
                            </HBox.margin>
                         </ImageView>
                         <HBox prefHeight="115.0" prefWidth="271.0" />
@@ -35,12 +35,12 @@
                            <children>
                               <HBox prefHeight="100.0" prefWidth="132.0">
                                  <children>
-                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="imageView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../assets/image/admin.png" />
                                        </image>
                                     </ImageView>
-                                    <MenuButton mnemonicParsing="false" prefHeight="19.0" prefWidth="25.0" styleClass="back-transparent">
+                                    <MenuButton fx:id="menuButon" mnemonicParsing="false" prefHeight="19.0" prefWidth="25.0" styleClass="back-transparent">
                                       <items>
                                         <MenuItem mnemonicParsing="false" text="Deconnexion" />
                                         <MenuItem mnemonicParsing="false" text="Voir mon profil" />
@@ -52,7 +52,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="654.0" prefWidth="1023.0" BorderPane.alignment="CENTER">
+                  <HBox fx:id="GrandFenetreHbox" prefHeight="649.0" prefWidth="1023.0" BorderPane.alignment="CENTER">
                      <children>
                         <TabPane prefHeight="746.0" prefWidth="1023.0" tabClosingPolicy="UNAVAILABLE">
                           <tabs>
@@ -64,7 +64,7 @@
                                              <left>
                                                 <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
                                                    <children>
-                                                      <VBox prefHeight="626.0" prefWidth="297.0" styleClass="back-white">
+                                                      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="297.0" styleClass="back-white">
                                                          <padding>
                                                             <Insets top="20.0" />
                                                          </padding>
@@ -78,12 +78,15 @@
                                                                   <String fx:value="back-white" />
                                                                   <String fx:value="txt-center" />
                                                                </styleClass>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="10.0" />
+                                                               </VBox.margin>
                                                             </Text>
                                                             <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
                                                                <children>
-                                                                  <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" prefHeight="45.0" prefWidth="239.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Gestion des étudiants" textOverrun="CLIP">
+                                                                  <Button fx:id="gestionEtudiantButton" alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onAction="#gotoGestionEtudiant" prefHeight="45.0" prefWidth="239.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Gestion des étudiants" textOverrun="CLIP">
                                                                      <VBox.margin>
-                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                        <Insets left="20.0" right="20.0" />
                                                                      </VBox.margin>
                                                                      <graphic>
                                                                         <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
@@ -103,9 +106,9 @@
                                                             </VBox>
                                                             <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
                                                                <children>
-                                                                  <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" prefHeight="45.0" prefWidth="239.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Gestion des enseignats" textOverrun="CLIP">
+                                                                  <Button fx:id="gestionEnseingnantButton" alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onAction="#gotoGestionEnseignant" prefHeight="45.0" prefWidth="239.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Gestion des enseignats" textOverrun="CLIP">
                                                                      <VBox.margin>
-                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                        <Insets left="20.0" right="20.0" />
                                                                      </VBox.margin>
                                                                      <graphic>
                                                                         <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
@@ -134,7 +137,7 @@
                                                                         </ImageView>
                                                                      </graphic>
                                                                      <VBox.margin>
-                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                        <Insets left="20.0" right="20.0" />
                                                                      </VBox.margin>
                                                                      <font>
                                                                         <Font name="System Italic" size="16.0" />
@@ -156,7 +159,7 @@
                                                                         </ImageView>
                                                                      </graphic>
                                                                      <VBox.margin>
-                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                        <Insets left="20.0" right="20.0" />
                                                                      </VBox.margin>
                                                                      <font>
                                                                         <Font name="System Italic" size="16.0" />
@@ -178,7 +181,7 @@
                                                                         </ImageView>
                                                                      </graphic>
                                                                      <VBox.margin>
-                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                        <Insets left="20.0" right="20.0" />
                                                                      </VBox.margin>
                                                                      <font>
                                                                         <Font name="System Italic" size="16.0" />
@@ -191,7 +194,7 @@
                                                             </VBox>
                                                             <VBox prefHeight="68.0" prefWidth="287.0" styleClass="hover-hand">
                                                                <children>
-                                                                  <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" prefHeight="45.0" prefWidth="239.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Session SCHOOL" textOverrun="CLIP">
+                                                                  <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" prefHeight="31.0" prefWidth="239.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Session SCHOOL" textOverrun="CLIP">
                                                                      <graphic>
                                                                         <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                                                            <image>
@@ -200,7 +203,7 @@
                                                                         </ImageView>
                                                                      </graphic>
                                                                      <VBox.margin>
-                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                        <Insets bottom="20.0" left="20.0" right="20.0" />
                                                                      </VBox.margin>
                                                                      <font>
                                                                         <Font name="System Italic" size="16.0" />
@@ -222,7 +225,7 @@
                                              <center>
                                                 <VBox prefHeight="602.0" prefWidth="711.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
                                                    <BorderPane.margin>
-                                                      <Insets top="30.0" />
+                                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                                    </BorderPane.margin>
                                                    <padding>
                                                       <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />

@@ -10,53 +10,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionetablissement.vue.GestionEnseignatController">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.controleur.GestionEnseignatController">
     <stylesheets>
         <URL value="@gestionenseignat.css" />
     </stylesheets>
    <children>
       <VBox prefHeight="778.0" prefWidth="1034.0">
          <children>
-            <HBox prefHeight="111.0" prefWidth="1024.0" style="-fx-background-color: #66ff0c;">
-               <children>
-                  <VBox alignment="TOP_RIGHT" prefHeight="105.0" prefWidth="645.0">
-                     <children>
-                        <ImageView fitHeight="234.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/image/logo1.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="147.0" prefWidth="388.0">
-                     <children>
-                        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="59.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../assets/image/admin.png" />
-                                 </image>
-                              </ImageView>
-                              <MenuButton mnemonicParsing="false" prefHeight="12.0" prefWidth="18.0" styleClass="back-transparent" stylesheets="@../adminview.css">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Profil" />
-                                    <MenuItem mnemonicParsing="false" text="Deconnexion" />
-                                 </items>
-                                 <HBox.margin>
-                                    <Insets top="20.0" />
-                                 </HBox.margin>
-                              </MenuButton>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
             <HBox prefHeight="35.0" prefWidth="1024.0">
                <children>
+                  <Button fx:id="returnButton" contentDisplay="RIGHT" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#revenirAdminView" prefHeight="27.0" prefWidth="40.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Button" textFill="TRANSPARENT">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="31.0">
+                           <image>
+                              <Image url="@../assets/image/icons8_Back_Arrow_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
                   <TextField prefHeight="25.0" prefWidth="262.0" promptText="checher par ID">
                      <HBox.margin>
                         <Insets top="5.0" />
@@ -67,9 +41,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="28.0" fitWidth="27.0">
                            <image>
-                              <Image url="@../assets/image/search%20(1).png" />
+                              <Image url="@../assets/image/icons8_Search_48px.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -87,9 +61,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="28.0" fitWidth="27.0">
                            <image>
-                              <Image url="@../assets/image/search%20(1).png" />
+                              <Image url="@../assets/image/icons8_Search_48px.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -107,9 +81,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/image/search%20(1).png" />
+                              <Image url="@../assets/image/icons8_Search_48px.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -118,9 +92,6 @@
                      </HBox.margin>
                   </Button>
                </children>
-               <VBox.margin>
-                  <Insets left="5.0" right="5.0" />
-               </VBox.margin>
             </HBox>
             <SplitPane dividerPositions="0.3409090909090909" prefHeight="618.0" prefWidth="1024.0">
                <items>

@@ -31,6 +31,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -53,8 +54,10 @@ public class AdminViewController implements Initializable {
     @FXML private ImageView imageView;
     @FXML private VBox vBoxAffichage;
      @FXML private BorderPane borderPaneAff;
-    AnchorPane notrePage;
+     private AnchorPane notrePage;
+    @FXML private HBox GrandFenetreHbox;
     @FXML private Button gestionEtudiantButton;
+    @FXML private Button gestionEnseingnantButton;
     @FXML private Button gestionMatiere;
     @FXML private Button gestionEnseignant;
     /**
@@ -68,26 +71,28 @@ public class AdminViewController implements Initializable {
 
     
     public void setApp(GestionEtablissement application) throws FileNotFoundException{
-        
+        this.application = application;
         loggedUser = application.getLoggedUser();
+        System.out.println(loggedUser.getNomIndividu()+"test5");
         menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
         affichePhotoLoggedUser();   
-        gotoGestionEtudiant();
-     this.application = application;
+        
+     
       
     }
   @FXML private void gotoGestionEtudiant() {
         try {
-            AfficheEtudiantController afficheEtudiant = (AfficheEtudiantController) replaceSceneContent("vue/AfficheEtudiant.fxml");
-            afficheEtudiant.setApp(application);
+            GestionEtudiantController gestionEtudiant = (GestionEtudiantController) replaceSceneContent("vue/GestionEtudiant.fxml");
+            gestionEtudiant.setApp(application);
+            System.out.println("test verif bouton");
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
   @FXML private void gotoGestionEnseignant() {
         try {
-            AffficherEnseignatController afficheEtudiant = (AffficherEnseignatController) replaceSceneContent("vue/AffficherEnseignat.fxml");
-            afficheEtudiant.setApp(application);
+            GestionEnseignatController gestionEnseignant = (GestionEnseignatController) replaceSceneContent("vue/GestionEnseignat.fxml");
+            gestionEnseignant.setApp(application);
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -101,13 +106,16 @@ public class AdminViewController implements Initializable {
         }
     }
     
- public Initializable replaceSceneContent(String fxml) throws Exception {
+
+ 
+  public Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         InputStream in = GestionEtablissement.class.getResourceAsStream(fxml);
         loader.setBuilderFactory(new JavaFXBuilderFactory());
         loader.setLocation(GestionEtablissement.class.getResource(fxml));
        
         AnchorPane page;
+       
         try {
             page = (AnchorPane) loader.load(in);
         } finally {
@@ -117,17 +125,18 @@ public class AdminViewController implements Initializable {
         } 
         
         
-       if(!vBoxAffichage.getChildren().isEmpty()){
+       if(!GrandFenetreHbox.getChildren().isEmpty()){
            
-            vBoxAffichage.getChildren().remove(notrePage);
+            GrandFenetreHbox.getChildren().removeAll();
         }
         
-        vBoxAffichage.getChildren().add(page);
+        GrandFenetreHbox.getChildren().add(page);
        
        
        
        
         notrePage=page;
+        application.init();
         return (Initializable) loader.getController();
     }
     public void processLogout(ActionEvent event) {
@@ -162,7 +171,7 @@ public class AdminViewController implements Initializable {
         if(loggedUser.getPhotoIndividu()==null ||loggedUser.getPhotoIndividu()==""){
             image = new Image(getClass().getResource("..\\assets\\image\\admin.png").toString());
         }
-        imageView.setImage(image);
+             imageView.setImage(image);
   
          imageView.setFitWidth(45);
          imageView.setFitHeight(45);

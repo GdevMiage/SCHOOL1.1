@@ -87,17 +87,16 @@ public class GestionEtablissement extends Application {
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             
             ListPro<Affectations> listeAffectation= new ListPro<>();                                                                       
-<<<<<<< HEAD
+
             Individus indi = new Individus("Ben","Aissa","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\ouadie.jpg","","");
            System.out.println(indi.getIdIndividu());
-=======
-            Individus indi = new Individus(1,"Ben","Aissa","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\lyes.jpg","","");
 
->>>>>>> 2e93540eabab873f4d36e8b77e360851a960dfff
-             Affectations aff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indi,listeAffectation);
+           //Individus indiv = new Individus("Ben","Aissa","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\lyes.jpg","","");
+
+            Affectations aff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indi,listeAffectation);
              indi.setAffectation(aff);
              
-             //Affectations affi = new Affectations(4,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",client,listeAffectation);
+            // Affectations affi = new Affectations(4,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",indiv,listeAffectation);
 
        
             gotoLogin();
@@ -139,7 +138,7 @@ public class GestionEtablissement extends Application {
     }
     */
     
-  private void gotoAdminView() {
+  public void gotoAdminView() {
         try {
             AdminViewController adminView;
             adminView = (AdminViewController) replaceSceneContent("vue/adminview.fxml");
@@ -172,7 +171,7 @@ public class GestionEtablissement extends Application {
              in.close();
             
         } 
-        Scene scene = new Scene(page, 1024, 768);
+        Scene scene = new Scene(page, 1024, 743);
         stage.setScene(scene);
         stage.sizeToScene();
         return (Initializable) loader.getController();

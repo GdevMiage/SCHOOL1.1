@@ -5,9 +5,14 @@
  */
 package gestionetablissement.controleur;
 
+import gestionetablissement.GestionEtablissement;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -15,7 +20,8 @@ import javafx.fxml.Initializable;
  * @author lyess
  */
 public class GestionEtudiantController implements Initializable {
-
+private GestionEtablissement application;  
+@FXML Button returnButton;
     /**
      * Initializes the controller class.
      */
@@ -23,5 +29,17 @@ public class GestionEtudiantController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    void setApp(GestionEtablissement application) {
+       this.application = application;    }
+    
+    
+      @FXML private void revenirAdminView() {
+        try {
+            application.gotoAdminView();
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }

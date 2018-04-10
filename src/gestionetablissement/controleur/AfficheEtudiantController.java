@@ -22,7 +22,7 @@ import javafx.scene.control.MenuItem;
 
 
 public class AfficheEtudiantController implements Initializable,Observable   {
-private GestionEtablissement application;
+private GestionEtablissement application;  
     /**
      * Initializes the controller class.
      */
