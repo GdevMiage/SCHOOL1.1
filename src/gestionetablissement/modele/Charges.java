@@ -8,6 +8,11 @@ public class Charges {
     private String nomCharge;
     private String typeCharge; // a revoir 
     private double montCharge;
+    public static final ListPro<Charges> listeCharges = new ListPro<Charges>();
+   
+    {
+        this.listeCharges.add(this);
+    }
 
     public Charges(int idCharge, String nomCharge, String typeCharge, double montCharge) {
         this.idCharge = idCharge;
