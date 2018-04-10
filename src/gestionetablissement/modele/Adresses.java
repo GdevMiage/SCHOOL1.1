@@ -1,6 +1,11 @@
 
 package gestionetablissement.modele;
 
+import static gestionetablissement.modele.Individus.listeIndividusEtablissement;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Iterator;
+
 
 public class Adresses {
   private int idAdresse;
@@ -16,10 +21,45 @@ public class Adresses {
   
   public static final ListPro<Adresses> listeAdresse = new ListPro<Adresses>();
    
-    private static int nbAdresses=0;
     {
-        nbAdresses=nbAdresses+1;
         this.listeAdresse.add(this);
+    }
+  
+        //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listeAdresse.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Adresses adressePlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  adressePlusGrandId=  (Adresses) it.next();
+        while(it.hasNext()){
+            Adresses ads = (Adresses) it.next();
+            vide=false;
+            if(ads.getIdAdresse()>adressePlusGrandId.getIdAdresse()) adressePlusGrandId =ads;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(adressePlusGrandId.getIdAdresse()+1);return adressePlusGrandId.getIdAdresse()+1;}
+        
+        
+    }
+    
+    public static ArrayList<Adresses> of(String id ){
+        Iterator it = listeAdresse.iterator();
+        ArrayList<Adresses> listRecherche=null;
+        while(it.hasNext()){
+            Adresses ads = (Adresses) it.next();
+            String idd = ads.getIdAdresse()+"";
+            if(idd.indexOf(id)!=0){
+                
+                listRecherche.add(ads);
+            }
+        }
+        return listRecherche;
     }
     
   public Adresses(){
@@ -37,7 +77,7 @@ public class Adresses {
     }
       public Adresses(  int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;
-         this.idAdresse = Integer.parseInt("2018"+(Adresses.nbAdresses+1));
+         this.idAdresse = Adresses.definirId();
         this.batAdresse = batAdresse;
         this.noAdresse = noAdresse;
         this.rueAdresse = rueAdresse;
