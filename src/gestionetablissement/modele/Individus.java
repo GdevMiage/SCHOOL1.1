@@ -3,7 +3,9 @@ package gestionetablissement.modele;
 
 import gestionetablissement.securite.Affectations;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 
 
@@ -28,23 +30,18 @@ public class Individus<T> {
     private Affectations affectation;    
     private ArrayList<Assiduites> ListeAbsences;
     private ArrayList<Assiduites> ListePresences;
-    public static final ListPro<Individus> listeIndividusEtablissement= new ListPro<Individus>();
-
-    public static int getNbIndiv() {
-        return nbIndiv;
+  
+    public static final ListPro<Individus> listeIndividusEtablissement= new ListPro<Individus>(); 
+    {
+        this.listeIndividusEtablissement.add(this);
     }
-
-    public static void setNbIndiv(int nbIndiv) {
-        Individus.nbIndiv = nbIndiv;
-    }
+    
+   
     
     //variable de classe pour definr les id des nouv individus
-    private static int nbIndiv=0;
-    {
-        nbIndiv=nbIndiv+1;
-    }
+
     
-    public Individus(int idIndividu, String nomIndividu, 
+    public Individus( String nomIndividu, 
            String prenomIndividu ,String genreIndividu, 
            Date datNaisIndividu, String lieuNaisIndividu, 
            String nivEtudIndividu, String domEtudIndividu, 
@@ -52,7 +49,7 @@ public class Individus<T> {
            String langMatIndividu, String langParlIndividu, 
            String photoIndividu, String rectoPIDIndividu,
            String versoPIDIndividu,String tel,String mail,Affectations affectation) {
-        this.idIndividu = idIndividu;
+        this.idIndividu = definirId();
         this.nomIndividu = nomIndividu;
         this.affectation = affectation;
         this.prenomIndividu = prenomIndividu;
@@ -70,9 +67,10 @@ public class Individus<T> {
         this.versoPIDIndividu = versoPIDIndividu;
         this.tel=tel;
         this.mail=mail;
-        this.listeIndividusEtablissement.add(this);
+        
         
     }
+     
      public Individus( String nomIndividu, 
            String prenomIndividu ,String genreIndividu, 
            Date datNaisIndividu, String lieuNaisIndividu, 
@@ -80,37 +78,8 @@ public class Individus<T> {
            String profIndividu, Adresses domCompetIndividu,
            String langMatIndividu, String langParlIndividu, 
            String photoIndividu, String rectoPIDIndividu,
-           String versoPIDIndividu,String tel,String mail,Affectations affectation) {
-        this.idIndividu = Integer.parseInt("2018"+(Individus.nbIndiv+1));
-        this.nomIndividu = nomIndividu;
-        this.affectation = affectation;
-        this.prenomIndividu = prenomIndividu;
-        this.genreIndividu = genreIndividu;
-        this.datNaisIndividu = datNaisIndividu;
-        this.lieuNaisIndividu = lieuNaisIndividu;
-        this.nivEtudIndividu = nivEtudIndividu;
-        this.domEtudIndividu = domEtudIndividu;
-        this.profIndividu = profIndividu;
-        this.domCompetIndividu = domCompetIndividu;
-        this.langMatIndividu = langMatIndividu;
-        this.langParlIndividu = langParlIndividu;
-        this.photoIndividu = photoIndividu;
-        this.rectoPIDIndividu = rectoPIDIndividu;
-        this.versoPIDIndividu = versoPIDIndividu;
-        this.tel=tel;
-        this.mail=mail;
-        this.listeIndividusEtablissement.add(this);
-        
-    }
-    public Individus(int idIndividu, String nomIndividu, 
-           String prenomIndividu ,String genreIndividu, 
-           Date datNaisIndividu, String lieuNaisIndividu, 
-           String nivEtudIndividu, String domEtudIndividu, 
-           String profIndividu, Adresses domCompetIndividu,
-           String langMatIndividu, String langParlIndividu, 
-           String photoIndividu, String rectoPIDIndividu,
            String versoPIDIndividu,String tel,String mail) {
-        this.idIndividu = idIndividu;
+        this.idIndividu = definirId();
         this.nomIndividu = nomIndividu;
       
         this.prenomIndividu = prenomIndividu;
@@ -128,40 +97,11 @@ public class Individus<T> {
         this.versoPIDIndividu = versoPIDIndividu;
         this.tel=tel;
         this.mail=mail;
-        this.listeIndividusEtablissement.add(this);
+        
         
     }
-    
-    public Individus(String nomIndividu, 
-           String prenomIndividu ,String genreIndividu, 
-           Date datNaisIndividu, String lieuNaisIndividu, 
-           String nivEtudIndividu, String domEtudIndividu, 
-           String profIndividu, Adresses domCompetIndividu,
-           String langMatIndividu, String langParlIndividu, 
-           String photoIndividu, String rectoPIDIndividu,
-           String versoPIDIndividu,String tel,String mail) {
-        
-        this.nomIndividu = nomIndividu;
-      
-        this.prenomIndividu = prenomIndividu;
-        this.genreIndividu = genreIndividu;
-        this.datNaisIndividu = datNaisIndividu;
-        this.lieuNaisIndividu = lieuNaisIndividu;
-        this.nivEtudIndividu = nivEtudIndividu;
-        this.domEtudIndividu = domEtudIndividu;
-        this.profIndividu = profIndividu;
-        this.domCompetIndividu = domCompetIndividu;
-        this.langMatIndividu = langMatIndividu;
-        this.langParlIndividu = langParlIndividu;
-        this.photoIndividu = photoIndividu;
-        this.rectoPIDIndividu = rectoPIDIndividu;
-        this.versoPIDIndividu = versoPIDIndividu;
-        this.tel=tel;
-        this.mail=mail;
-        this.idIndividu = Integer.parseInt("2018"+(Individus.nbIndiv+1));
-        this.listeIndividusEtablissement.add(this);
-        
-    }
+     
+  
 
     public String getTel() {
         return tel;
@@ -182,6 +122,29 @@ public class Individus<T> {
             }
         }
         return listRecherche;
+    }
+    
+    //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listeIndividusEtablissement.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Individus indivPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  indivPlusGrandId=  (Individus) it.next();
+        while(it.hasNext()){
+            Individus indiv = (Individus) it.next();
+            vide=false;
+            if(indiv.getIdIndividu()>indivPlusGrandId.getIdIndividu()) indivPlusGrandId =indiv;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(indivPlusGrandId.getIdIndividu()+1);return indivPlusGrandId.getIdIndividu()+1;}
+        
+        
     }
     public ArrayList<Assiduites> getListeAbsences() {
         return ListeAbsences;

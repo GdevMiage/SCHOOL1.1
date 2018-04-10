@@ -19,23 +19,7 @@ public class Etudiants extends Individus  {
         super(id);
     }
     
-    public Etudiants(int idIndividu, String nomIndividu, String prenomIndividu, 
-        String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu,
-        String nivEtudIndividu, String domEtudIndividu, 
-        String profIndividu, Adresses domCompetIndividu, String langMatIndividu,
-        String langParlIndividu, String photoIndividu, String rectoPIDIndividu,
-        String versoPIDIndividu,String tel,String mail, Affectations affectation,Inscriptions inscription ,
-        String numEtudiant ) {
-    super(idIndividu,nomIndividu,prenomIndividu,genreIndividu,
-            datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,
-            domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,
-            langParlIndividu,photoIndividu,rectoPIDIndividu,
-            versoPIDIndividu,tel, mail,affectation);
-    this.inscription = inscription;
-  
-
-    }
-  public Etudiants( String nomIndividu, String prenomIndividu, 
+    public Etudiants(String nomIndividu, String prenomIndividu, 
         String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu,
         String nivEtudIndividu, String domEtudIndividu, 
         String profIndividu, Adresses domCompetIndividu, String langMatIndividu,
@@ -46,11 +30,12 @@ public class Etudiants extends Individus  {
             datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,
             domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,
             langParlIndividu,photoIndividu,rectoPIDIndividu,
-            versoPIDIndividu, tel, mail,affectation);
+            versoPIDIndividu,tel, mail,affectation);
     this.inscription = inscription;
   
 
     }
+
    public Etudiants( String nomIndividu, String prenomIndividu, 
         String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu,
         String nivEtudIndividu, String domEtudIndividu, 
@@ -62,7 +47,7 @@ public class Etudiants extends Individus  {
             domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,
             langParlIndividu,photoIndividu,rectoPIDIndividu,
             versoPIDIndividu, tel, mail);
-    this.inscription = inscription;
+    
   
 
     }

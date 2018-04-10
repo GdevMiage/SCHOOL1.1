@@ -11,12 +11,21 @@ public class Adresses {
   private int cpAdresse;
   private String villeAdresse;
   private String paysAdresse;
-  private ListPro<Adresses> listeAdresse;
   
+//liste et methode statique pour enregistrer nos données 
+  
+  public static final ListPro<Adresses> listeAdresse = new ListPro<Adresses>();
+   
+    private static int nbAdresses=0;
+    {
+        nbAdresses=nbAdresses+1;
+        this.listeAdresse.add(this);
+    }
+    
   public Adresses(){
       
   }
-      public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
+      public Adresses(int idAdresse, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;
       
         this.batAdresse = batAdresse;
@@ -26,18 +35,15 @@ public class Adresses {
         this.villeAdresse = villeAdresse;
         this.paysAdresse = paysAdresse;
     }
-      
-    public Adresses(int idAdresse, Individus [] individus, int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse,ListPro<Adresses> listeAdresse) {
+      public Adresses(  int batAdresse, int noAdresse, String rueAdresse, int cpAdresse, String villeAdresse, String paysAdresse) {
         this.idAdresse = idAdresse;
-      
+         this.idAdresse = Integer.parseInt("2018"+(Adresses.nbAdresses+1));
         this.batAdresse = batAdresse;
         this.noAdresse = noAdresse;
         this.rueAdresse = rueAdresse;
         this.cpAdresse = cpAdresse;
         this.villeAdresse = villeAdresse;
         this.paysAdresse = paysAdresse;
-        this.listeAdresse =listeAdresse;
-        listeAdresse.add(this);
     }
 
     public int getIdAdresse() {

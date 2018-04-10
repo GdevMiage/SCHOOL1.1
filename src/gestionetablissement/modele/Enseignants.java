@@ -17,25 +17,15 @@ public class Enseignants extends Individus {
         super(id);
     }
     
-    public Enseignants(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,String tel,String mail, Affectations affectation,ArrayList<String> listeCompetence,ArrayList<String> listeTache, ArrayList<String> listeRapport) {
-       super(idIndividu,nomIndividu,prenomIndividu,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu, tel,mail,affectation);
+    public Enseignants( String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,String tel,String mail, Affectations affectation,ArrayList<String> listeCompetence,ArrayList<String> listeTache, ArrayList<String> listeRapport) {
+       super(nomIndividu,prenomIndividu,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu, tel,mail,affectation);
        this.listeCompetence=listeCompetence;
        this.listeCompetence=listeRapport;
        this.listeCompetence=listeTache;
 
     }
     
-    public Enseignants(int idIndividu, String nomIndividu, String prenomIndividu, String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu, String nivEtudIndividu, String domEtudIndividu, String profIndividu, Adresses domCompetIndividu, String langMatIndividu, String langParlIndividu, String photoIndividu, String rectoPIDIndividu, String versoPIDIndividu,String tel,String mail, Affectations affectation,ListPro<Individus> listeIndividus,ListPro<Enseignants> listeEnseignants) {
-       super(idIndividu,nomIndividu,prenomIndividu,genreIndividu,datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,langParlIndividu,photoIndividu,rectoPIDIndividu,versoPIDIndividu, tel,mail,affectation);
-        this.listeCompetence=listeCompetence;
-       this.listeCompetence=listeRapport;
-       this.listeCompetence=listeTache;
 
-       this.listeEnseignants=listeEnseignants;
-       listeEnseignants.add(this);
-       
-       
-    }
 
 
 

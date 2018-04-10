@@ -102,8 +102,8 @@
                      <children>
                         <TableView fx:id="etudiantTableView" layoutX="-4.0" layoutY="-2.0" onMousePressed="#afficheIndividusSelectionner" prefHeight="618.0" prefWidth="347.0">
                           <columns>
-                            <TableColumn fx:id="numCol" prefWidth="55.0" text="N°" />
-                            <TableColumn fx:id="nomCol" prefWidth="149.0" text="Nom" />
+                            <TableColumn fx:id="numCol" prefWidth="94.0" text="N°" />
+                            <TableColumn fx:id="nomCol" prefWidth="110.0" text="Nom" />
                               <TableColumn fx:id="prenomCol" prefWidth="142.0" text="Prénom" />
                           </columns>
                         </TableView>
