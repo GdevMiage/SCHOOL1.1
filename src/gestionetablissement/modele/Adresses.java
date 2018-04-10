@@ -19,44 +19,44 @@ public class Adresses {
   
 //liste et methode statique pour enregistrer nos données 
   
-  public static final ListPro<Modules> listeModules = new ListPro<Modules>();
+  public static final ListPro<Adresses> listeAdresse = new ListPro<Adresses>();
    
     {
-        this.listeModules.add(this);
+        this.listeAdresse.add(this);
     }
   
         //pour definir a chaque fois les ID
     public static int definirId(){
-        Iterator it = listeModules.iterator();
+        Iterator it = listeAdresse.iterator();
         
         //année actuelle 
        
         int annee =Calendar.getInstance().get(Calendar.YEAR);
         
-        Modules ModulesPlusGrandId=null;
+        Adresses adressePlusGrandId=null;
         boolean vide =true;
-        if(it.hasNext())  ModulesPlusGrandId=  (Modules) it.next();
+        if(it.hasNext())  adressePlusGrandId=  (Adresses) it.next();
         while(it.hasNext()){
-            Modules Modules= (Modules) it.next();
+            Adresses ads = (Adresses) it.next();
             vide=false;
-            if(Modules.getIdModule()>ModulesPlusGrandId.getIdModule()) ModulesPlusGrandId =Modules;
+            if(ads.getIdAdresse()>adressePlusGrandId.getIdAdresse()) adressePlusGrandId =ads;
         }
             
             if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
-            else {System.out.println(ModulesPlusGrandId.getIdModule()+1);return ModulesPlusGrandId.getIdModule()+1;}
+            else {System.out.println(adressePlusGrandId.getIdAdresse()+1);return adressePlusGrandId.getIdAdresse()+1;}
         
         
     }
     
-    public static ArrayList<Modules> of(String id ){
-        Iterator it = listeModules.iterator();
-        ArrayList<Modules> listRecherche=null;
+    public static ArrayList<Adresses> of(String id ){
+        Iterator it = listeAdresse.iterator();
+        ArrayList<Adresses> listRecherche=null;
         while(it.hasNext()){
-            Modules Modules = (Modules) it.next();
-            String idd = Modules.getIdModule()+"";
+            Adresses ads = (Adresses) it.next();
+            String idd = ads.getIdAdresse()+"";
             if(idd.indexOf(id)!=0){
                 
-                listRecherche.add(Modules);
+                listRecherche.add(ads);
             }
         }
         return listRecherche;
