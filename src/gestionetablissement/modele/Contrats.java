@@ -16,6 +16,12 @@ public class Contrats {
    private float indemnitéContrat;
    private String materielContrat; 
    private String contratContrat;
+   public static final ListPro<Contrats> listeContrats = new ListPro<Contrats>();
+   
+    {
+        this.listeContrats.add(this);
+    }
+  
 
    //constructeur
     public Contrats(int idContrat, Statuts status, Fonctions fonction, Individus individus, String libelContrat, Date dateEntrContrat, Date datesortContrat, float salaireContrat, float indemnitéContrat, String materielContrat, String contratContrat) {
