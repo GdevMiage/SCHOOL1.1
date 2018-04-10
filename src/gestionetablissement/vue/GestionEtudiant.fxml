@@ -100,11 +100,11 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="348.0">
                      <children>
-                        <TableView layoutX="-4.0" layoutY="-2.0" prefHeight="618.0" prefWidth="347.0">
+                        <TableView fx:id="etudiantTableView" layoutX="-4.0" layoutY="-2.0" prefHeight="618.0" prefWidth="347.0">
                           <columns>
-                            <TableColumn prefWidth="55.0" text="N°" />
-                            <TableColumn prefWidth="149.0" text="Nom" />
-                              <TableColumn prefWidth="142.0" text="Prénom" />
+                            <TableColumn fx:id="numCol" prefWidth="55.0" text="N°" />
+                            <TableColumn fx:id="nomCol" prefWidth="149.0" text="Nom" />
+                              <TableColumn fx:id="prenomCol" prefWidth="142.0" text="Prénom" />
                           </columns>
                         </TableView>
                      </children>

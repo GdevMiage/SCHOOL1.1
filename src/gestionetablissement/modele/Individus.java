@@ -26,7 +26,7 @@ public class Individus<T> {
     private Affectations affectation;    
     private ArrayList<Assiduites> ListeAbsences;
     private ArrayList<Assiduites> ListePresences;
-    private static final ListPro<Individus> listeIndividusEtablissement= new ListPro<Individus>();
+    public static final ListPro<Individus> listeIndividusEtablissement= new ListPro<Individus>();
     
     //variable de classe pour definr les id des nouv individus
     private static int nbIndiv=0;
