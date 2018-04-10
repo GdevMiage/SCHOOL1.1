@@ -15,7 +15,13 @@ public class Cours extends Seances {
     private String partieCours;  
     private int volHorCours; 
     private String descriptifCours; 
-    private ListPro<Cours> listeCours;
+    
+    
+    public static final ListPro<Cours> listeCours = new ListPro<Cours>();
+   
+    {
+        this.listeCours.add(this);
+    }
     
  public Cours(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
@@ -56,8 +62,7 @@ public class Cours extends Seances {
         this.partieCours = partieCours;
         this.volHorCours = volHorCours;
         this.descriptifCours = descriptifCours;
-        this.listeCours=listeCours;
-        listeCours.add(this);
+        
     }
 /**
  * 
