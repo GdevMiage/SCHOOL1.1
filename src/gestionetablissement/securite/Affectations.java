@@ -43,8 +43,7 @@ public class Affectations {
             String loginAffectation, String motPasseAffectation,
             Date dateEntrAffectation, Date datesortAffectation, 
             String commAffectation, String ficheAffectation, 
-            Individus individus,
-            ListPro <Affectations> listeAffectations) {
+            Individus individus) {
         
         this.idAffectation = idAffectation;
         this.contrat =  contrat;

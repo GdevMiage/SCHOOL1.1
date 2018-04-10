@@ -86,19 +86,23 @@ public class GestionEtablissement extends Application {
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             
-            ListPro<Affectations> listeAffectation= new ListPro<>();                                                                       
-
-            Individus indi = new Individus("Ben","Aissa","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\ouadie.jpg","","");
-           System.out.println(indi.getIdIndividu());
-
-           //Individus indiv = new Individus("Ben","Aissa","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\lyes.jpg","","");
-
-            Affectations aff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indi,listeAffectation);
-             indi.setAffectation(aff);
+     Individus indi = new Individus("BEN AISSA","Ouadie","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\ouadie.jpg","","");
+            Individus indii = new Individus("AOUALI","Salim","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+            Individus indiii = new Individus("BELKHIRI","Lyes","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\lyes.jpg","","");
+            Individus indiiii = new Individus("BENNARB","Lallou","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+            Individus indiiiii = new Individus("PAPE","Daouda","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+            Individus indiiiiii = new Individus("BOUDEN","Rabye","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+            Individus indiiiiiii = new Individus("HAMMAMI","Hamma","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+            Individus indiiiiiiii = new Individus("BRIK","Jallel","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","");
+             Affectations aff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indi);
+             Affectations afff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indii);
+             Affectations affff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiii);
+             Affectations afffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiii);
+             Affectations affffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiii);
+             Affectations afffffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiiii);
+             Affectations affffffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiiiii);
+             Affectations afffffffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiiiiii);
              
-            // Affectations affi = new Affectations(4,"CDI","dev","dev",new Date(),new Date(),"Prof","c://",indiv,listeAffectation);
-
-       
             gotoLogin();
             
             primaryStage.setResizable(false);
