@@ -8,6 +8,11 @@ public class Agents {
     
     private int idAgent;
     private Affectations affectation;
+    private static ListPro<Agents> listeAgents;
+    
+    {
+        this.listeAgents.add(this);
+    }
 
     public Agents(int idAgent, Affectations affectation) {
         this.idAgent = idAgent;
