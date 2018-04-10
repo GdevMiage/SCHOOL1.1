@@ -130,6 +130,11 @@
                                                       <Font name="System Italic" size="18.0" />
                                                    </font>
                                                 </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Niveau">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
                                                 <Label prefHeight="54.0" prefWidth="164.0" text="Groupe">
                                                    <VBox.margin>
                                                       <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -211,6 +216,7 @@
                                                       <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                                    </VBox.margin>
                                                 </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0" />
                                                 <TextArea editable="false" prefHeight="54.0" prefWidth="668.0" />
                                                 <TextArea editable="false" prefHeight="54.0" prefWidth="668.0" />
                                              </children>
