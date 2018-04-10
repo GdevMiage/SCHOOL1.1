@@ -14,6 +14,11 @@ public class Documents {
     private String reliureDocument;  // a revoir
     private String texteDocument;  // a revoir
     private String couvDocument;  // a revoir
+    public static final ListPro<Documents> listeDocuments = new ListPro<Documents>();
+   
+    {
+        this.listeDocuments.add(this);
+    }
 
     public Documents(int idDocument, Supports support, TypeDocs typeDocs, String libelDocument, String versionDocument, String mediaDocument, int nbrPagNBDocument, String reliureDocument, String texteDocument, String couvDocument) {
         this.idDocument = idDocument;
