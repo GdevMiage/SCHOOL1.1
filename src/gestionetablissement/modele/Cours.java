@@ -1,8 +1,11 @@
  
 package gestionetablissement.modele;
 
+import static gestionetablissement.modele.Contrats.listeContrats;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 
 
 public class Cours extends Seances {
@@ -21,6 +24,44 @@ public class Cours extends Seances {
    
     {
         this.listeCours.add(this);
+        
+    }
+    
+    //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listeCours.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Cours CoursPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  CoursPlusGrandId=  (Cours) it.next();
+        while(it.hasNext()){
+            Cours Cours = (Cours) it.next();
+            vide=false;
+            if(Cours.getIdCours()>CoursPlusGrandId.getIdCours()) CoursPlusGrandId =Cours;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(CoursPlusGrandId.getIdCours()+1);return CoursPlusGrandId.getIdCours()+1;}
+        
+        
+    }
+    
+    public static ArrayList<Cours> of(String id ){
+        Iterator it = listeCours.iterator();
+        ArrayList<Cours> listRecherche=null;
+        while(it.hasNext()){
+            Cours Cours = (Cours) it.next();
+            String idd = Cours.getIdCours()+"";
+            if(idd.indexOf(id)!=0){
+                
+                listRecherche.add(Cours);
+            }
+        }
+        return listRecherche;
     }
     
  public Cours(int idSeance, Groupes groupe, Horaires horaire,
