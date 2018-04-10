@@ -139,7 +139,7 @@ public class AdminViewController implements Initializable {
         application.init();
         return (Initializable) loader.getController();
     }
-    public void processLogout(ActionEvent event) {
+    @FXML public void processLogout(ActionEvent event) {
         if (application == null){
             // We are running in isolated FXML, possibly in Scene Builder.
             // NO-OP.

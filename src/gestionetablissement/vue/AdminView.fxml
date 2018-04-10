@@ -42,7 +42,7 @@
                                     </ImageView>
                                     <MenuButton fx:id="menuButon" mnemonicParsing="false" prefHeight="19.0" prefWidth="25.0" styleClass="back-transparent">
                                       <items>
-                                        <MenuItem mnemonicParsing="false" text="Deconnexion" />
+                                        <MenuItem mnemonicParsing="false" onAction="#processLogout" text="Deconnexion" />
                                         <MenuItem mnemonicParsing="false" text="Voir mon profil" />
                                       </items>
                                     </MenuButton>

@@ -32,6 +32,7 @@
 package gestionetablissement;
 
 import gestionetablissement.controleur.AdminViewController;
+import gestionetablissement.controleur.EtudiantViewController;
 import gestionetablissement.controleur.LoginController;
 
 import gestionetablissement.modele.Adresses;
@@ -89,15 +90,15 @@ public class GestionEtablissement extends Application {
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             
      Individus indi = new Etudiants("BEN AISSA","Ouadie","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\ouadie.jpg","","","0638441611","ben.aissa.ouadie@gmail.com");
-           // Individus indii = new Directeur("AOUALI","Salim","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
+            Individus indii = new Directeur("AOUALI","Salim","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\salim.jpg","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiii = new Individus("BELKHIRI","Lyes","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\lyes.jpg","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiii = new Individus("BENNARB","Lallou","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiii = new Individus("PAPE","Daouda","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiii = new Individus("BOUDEN","Rabye","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiiii = new Individus("HAMMAMI","Hamma","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiiiii = new Individus("BRIK","Jallel","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
-             Affectations aff = new Affectations(3,"CDI","abc","abc",new Date(),new Date(),"Prof","c://",indi);
-            // Affectations afff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indii);
+             Affectations aff = new Affectations(3,"CDI","ouadie","abc",new Date(),new Date(),"Prof","c://",indi);
+             Affectations afff = new Affectations(3,"CDI","salim","salim",new Date(),new Date(),"Prof","c://",indii);
              Affectations affff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiii);
              Affectations afffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiii);
              Affectations affffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiii);
@@ -123,7 +124,9 @@ public class GestionEtablissement extends Application {
         if (Affectations.validate(userId, password)) {
            loggedUser =Affectations.of(userId);
            System.out.println(loggedUser.getClass());
-            gotoAdminView();
+           if(loggedUser.getClass().toString().endsWith("Directeur")) gotoAdminView();
+           else if(loggedUser.getClass().toString().endsWith("Etudiants")) gotoEtudiantView();
+           else userLogout();
             return true;
         } else {
             return false;
@@ -151,6 +154,16 @@ public class GestionEtablissement extends Application {
             adminView = (AdminViewController) replaceSceneContent("vue/adminview.fxml");
           
             adminView.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+   public void gotoEtudiantView() {
+        try {
+            EtudiantViewController etudiantView;
+            etudiantView = (EtudiantViewController) replaceSceneContent("vue/EtudiantView.fxml");
+          
+            etudiantView.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }

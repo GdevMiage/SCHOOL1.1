@@ -12,7 +12,7 @@ public class Etudiants extends Individus  {
  private Inscriptions inscription ;
  private ArrayList<Modules> ListeModulesValide;
  private ArrayList<Evaluations> ListeEvaluations;
-
+private ArrayList<Groupes> ListeGroupes;
  private ListPro<Etudiants>  listeEtudiants;
 
     public Etudiants(int id){
@@ -101,6 +101,14 @@ public class Etudiants extends Individus  {
 
     public void setListeEtudiants(ListPro<Etudiants> listeEtudiants) {
         this.listeEtudiants = listeEtudiants;
+    }
+
+    public ArrayList<Groupes> getListeGroupes() {
+        return ListeGroupes;
+    }
+
+    public void setListeGroupes(ArrayList<Groupes> ListeGroupes) {
+        this.ListeGroupes = ListeGroupes;
     }
     
     
