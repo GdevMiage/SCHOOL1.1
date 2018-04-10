@@ -21,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -55,6 +56,8 @@ private Individus individusSelectionner;
 @FXML Label cAdresse;
 @FXML ImageView photoIndiv;
 @FXML AnchorPane afficheEtudiant;
+@FXML TextField rechercheIdTextField;
+ private ObservableList<Individus> data;
     /**
      * Initializes the controller class.
      */
@@ -88,8 +91,7 @@ private void remplirTableView() throws FileNotFoundException{
           prenomCol.setCellValueFactory(
                 new PropertyValueFactory<Individus, String>("prenomIndividu"));
            
-           ObservableList<Individus> data =
-           FXCollections.observableArrayList(Individus.listeIndividusEtablissement);
+            data = FXCollections.observableArrayList(Individus.listeIndividusEtablissement);
           
           etudiantTableView.setItems(data);
          afficheIndividusSelectionner ();
@@ -148,4 +150,12 @@ private void remplirTableView() throws FileNotFoundException{
          photoIndiv.setSmooth(true);
          photoIndiv.setCache(true);
     }
+     
+     @FXML void rechercheIndividusID () throws FileNotFoundException{
+        
+           data = FXCollections.observableArrayList(Individus.of(rechercheIdTextField.getText()));
+          
+          etudiantTableView.setItems(data);
+         afficheIndividusSelectionner ();
+     }
 }

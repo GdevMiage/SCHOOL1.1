@@ -35,6 +35,7 @@ import gestionetablissement.controleur.AdminViewController;
 import gestionetablissement.controleur.LoginController;
 
 import gestionetablissement.modele.Adresses;
+import gestionetablissement.modele.Etudiants;
 import gestionetablissement.modele.Individus;
 import gestionetablissement.modele.ListPro;
 import gestionetablissement.modele.Salles;
@@ -86,7 +87,7 @@ public class GestionEtablissement extends Application {
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             
-     Individus indi = new Individus("BEN AISSA","Ouadie","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\ouadie.jpg","","","0638441611","ben.aissa.ouadie@gmail.com");
+     Individus indi = new Etudiants("BEN AISSA","Ouadie","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\ouadie.jpg","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indii = new Individus("AOUALI","Salim","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiii = new Individus("BELKHIRI","Lyes","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","..\\assets\\image\\lyes.jpg","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiii = new Individus("BENNARB","Lallou","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
@@ -94,7 +95,7 @@ public class GestionEtablissement extends Application {
             Individus indiiiiii = new Individus("BOUDEN","Rabye","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiiii = new Individus("HAMMAMI","Hamma","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiiiii = new Individus("BRIK","Jallel","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
-             Affectations aff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indi);
+             Affectations aff = new Affectations(3,"CDI","abc","abc",new Date(),new Date(),"Prof","c://",indi);
              Affectations afff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indii);
              Affectations affff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiii);
              Affectations afffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiii);
@@ -120,6 +121,7 @@ public class GestionEtablissement extends Application {
     public boolean userLogging(String userId, String password){
         if (Affectations.validate(userId, password)) {
            loggedUser =Affectations.of(userId);
+           System.out.println(loggedUser.getClass());
             gotoAdminView();
             return true;
         } else {

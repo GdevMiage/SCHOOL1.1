@@ -170,16 +170,19 @@ public class Individus<T> {
     public void setTel(String tel) {
         this.tel = tel;
     }
-    /*public static Individus of(String id ){
+    public static ArrayList<Individus> of(String id ){
         Iterator it = listeIndividusEtablissement.iterator();
+        ArrayList<Individus> listRecherche=null;
         while(it.hasNext()){
             Individus indiv = (Individus) it.next();
-            if(id.equals(indiv.getIdIndividu()+)){
+            String idd = indiv.getIdIndividu()+"";
+            if(idd.indexOf(id)!=0){
                 
+                listRecherche.add(indiv);
             }
         }
-        return 
-    }*/
+        return listRecherche;
+    }
     public ArrayList<Assiduites> getListeAbsences() {
         return ListeAbsences;
     }

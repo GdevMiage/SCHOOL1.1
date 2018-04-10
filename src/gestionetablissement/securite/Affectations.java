@@ -71,6 +71,9 @@ public class Affectations {
         
         return validUserPassword != null && validUserPassword.equals(password);
     }
+     
+     //une méthode statique pour chercher l'individus avec son user 
+     
     public static Individus of(String user){
          Iterator it =listeAffectations.iterator();
          Individus indiv=null;
