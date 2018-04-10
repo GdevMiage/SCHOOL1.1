@@ -6,6 +6,11 @@ public class Competence {
     
 private Programme programme;
 private Enseignants ensignant;
+public static final ListPro<Competence> listeCompetence = new ListPro<Competence>();
+   
+    {
+        this.listeCompetence.add(this);
+    }
 
     public Competence(Programme programme, Enseignants ensignant) {
         this.programme = programme;
