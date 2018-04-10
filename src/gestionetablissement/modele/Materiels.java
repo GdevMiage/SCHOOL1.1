@@ -14,6 +14,12 @@ public class Materiels {
    private Date dateRemiseMateriel; 
    private Date dateRestitMateriel; 
    
+    public static final ListPro<Materiels> listeMateriels = new ListPro<Materiels>();
+   
+    {
+        this.listeMateriels.add(this);
+    }
+   
    
 //constructeur
     public Materiels(int idMateriel, String libelMateriel, String marqueMateriel, String referMateriel, Date dateAcquMateriel, Date datePerteMateriel, Date dateRemiseMateriel, Date dateRestitMateriel) {
