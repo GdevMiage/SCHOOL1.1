@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="690.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.controleur.GestionEtudiantController">
     <stylesheets>
-        <URL value="@gestionetudiant.css" />
+        <URL value="@../adminview.css" />
     </stylesheets>
    <children>
       <VBox prefHeight="768.0" prefWidth="1024.0">
@@ -100,7 +100,7 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="348.0">
                      <children>
-                        <TableView fx:id="etudiantTableView" layoutX="-4.0" layoutY="-2.0" prefHeight="618.0" prefWidth="347.0">
+                        <TableView fx:id="etudiantTableView" layoutX="-4.0" layoutY="-2.0" onMousePressed="#afficheIndividusSelectionner" prefHeight="618.0" prefWidth="347.0">
                           <columns>
                             <TableColumn fx:id="numCol" prefWidth="55.0" text="N°" />
                             <TableColumn fx:id="nomCol" prefWidth="149.0" text="Nom" />
@@ -109,150 +109,173 @@
                         </TableView>
                      </children>
                   </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="660.0">
+                <AnchorPane fx:id="afficheEtudiant" minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="660.0">
                      <children>
-                        <ImageView fitHeight="108.0" fitWidth="101.0" layoutX="38.0" layoutY="25.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../assets/image/user.png" />
-                           </image>
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <cursor>
-                              <Cursor fx:constant="NONE" />
-                           </cursor>
-                        </ImageView>
-                        <Label layoutX="7.0" layoutY="6.0" prefHeight="26.0" prefWidth="81.0" text="Details..." />
-                        <GridPane layoutX="61.0" layoutY="147.0" prefHeight="367.0" prefWidth="486.0">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="139.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="588.0" minWidth="10.0" prefWidth="347.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
+                        <VBox layoutX="43.0" prefHeight="610.0" prefWidth="621.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N°" textAlignment="JUSTIFY" wrappingWidth="120.13671875">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sex" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date de N." textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lieu de N." textAlignment="JUSTIFY" wrappingWidth="143.0498046875" GridPane.rowIndex="5">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="6">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Domaine" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="7">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tél" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="8">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mail" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="9">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="10">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Complement" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="11">
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                              </Text>
-                              <Label prefHeight="43.0" prefWidth="348.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="45.0" prefWidth="351.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="48.0" prefWidth="361.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="25.0" prefWidth="364.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="25.0" prefWidth="364.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="31.0" prefWidth="368.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="56.0" prefWidth="477.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="75.0" prefWidth="446.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="95.0" prefWidth="635.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="8">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="107.0" prefWidth="648.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="9">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="141.0" prefWidth="668.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="10">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
-                              <Label prefHeight="215.0" prefWidth="728.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="11">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font></Label>
+                              <ImageView fx:id="photoIndiv" fitHeight="108.0" fitWidth="101.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../assets/image/user.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <cursor>
+                                    <Cursor fx:constant="NONE" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <GridPane prefHeight="367.0" prefWidth="486.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="139.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="588.0" minWidth="10.0" prefWidth="347.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N°" textAlignment="JUSTIFY" wrappingWidth="120.13671875">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sex" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date de N." textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lieu de N." textAlignment="JUSTIFY" wrappingWidth="143.0498046875" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Domaine" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tél" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mail" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="9">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="10">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Complement" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="11">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="num" prefHeight="43.0" prefWidth="348.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="nom" prefHeight="45.0" prefWidth="351.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="prenom" prefHeight="48.0" prefWidth="361.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="sex" prefHeight="25.0" prefWidth="364.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dateN" prefHeight="25.0" prefWidth="364.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lieuN" prefHeight="31.0" prefWidth="368.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="niveau" prefHeight="56.0" prefWidth="477.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="domaine" prefHeight="75.0" prefWidth="446.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="tel" prefHeight="95.0" prefWidth="635.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mail" prefHeight="107.0" prefWidth="648.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="adresse" prefHeight="141.0" prefWidth="668.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cAdresse" prefHeight="215.0" prefWidth="728.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <Label prefHeight="26.0" prefWidth="81.0" text="Details...">
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
-                        </GridPane>
+                        </VBox>
                      </children>
                   </AnchorPane>
               </items>

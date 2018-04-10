@@ -24,13 +24,13 @@ public class Etudiants extends Individus  {
         String nivEtudIndividu, String domEtudIndividu, 
         String profIndividu, Adresses domCompetIndividu, String langMatIndividu,
         String langParlIndividu, String photoIndividu, String rectoPIDIndividu,
-        String versoPIDIndividu, Affectations affectation,Inscriptions inscription ,
+        String versoPIDIndividu,String tel,String mail, Affectations affectation,Inscriptions inscription ,
         String numEtudiant ) {
     super(idIndividu,nomIndividu,prenomIndividu,genreIndividu,
             datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,
             domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,
             langParlIndividu,photoIndividu,rectoPIDIndividu,
-            versoPIDIndividu,affectation);
+            versoPIDIndividu,tel, mail,affectation);
     this.inscription = inscription;
   
 
@@ -40,13 +40,13 @@ public class Etudiants extends Individus  {
         String nivEtudIndividu, String domEtudIndividu, 
         String profIndividu, Adresses domCompetIndividu, String langMatIndividu,
         String langParlIndividu, String photoIndividu, String rectoPIDIndividu,
-        String versoPIDIndividu, Affectations affectation,Inscriptions inscription ,
+        String versoPIDIndividu,String tel,String mail, Affectations affectation,Inscriptions inscription ,
         String numEtudiant ) {
     super(nomIndividu,prenomIndividu,genreIndividu,
             datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,
             domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,
             langParlIndividu,photoIndividu,rectoPIDIndividu,
-            versoPIDIndividu,affectation);
+            versoPIDIndividu, tel, mail,affectation);
     this.inscription = inscription;
   
 
@@ -56,12 +56,12 @@ public class Etudiants extends Individus  {
         String nivEtudIndividu, String domEtudIndividu, 
         String profIndividu, Adresses domCompetIndividu, String langMatIndividu,
         String langParlIndividu, String photoIndividu, String rectoPIDIndividu,
-        String versoPIDIndividu ) {
+        String versoPIDIndividu,String tel,String mail ) {
     super( nomIndividu,prenomIndividu,genreIndividu,
             datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,
             domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,
             langParlIndividu,photoIndividu,rectoPIDIndividu,
-            versoPIDIndividu);
+            versoPIDIndividu, tel, mail);
     this.inscription = inscription;
   
 
@@ -119,23 +119,7 @@ public class Etudiants extends Individus  {
     }
     
     
-       public Etudiants(int idIndividu, String nomIndividu, String prenomIndividu, 
-        String genreIndividu, Date datNaisIndividu, String lieuNaisIndividu,
-        String nivEtudIndividu, String domEtudIndividu, 
-        String profIndividu, Adresses domCompetIndividu, String langMatIndividu,
-        String langParlIndividu, String photoIndividu, String rectoPIDIndividu,
-        String versoPIDIndividu, Affectations affectation,Inscriptions inscription ,
-        String numEtudiant,ListPro<Etudiants>  listeEtudiants ) {
-    super(idIndividu,nomIndividu,prenomIndividu,genreIndividu,
-            datNaisIndividu,lieuNaisIndividu,nivEtudIndividu,
-            domEtudIndividu,profIndividu,domCompetIndividu,langMatIndividu,
-            langParlIndividu,photoIndividu,rectoPIDIndividu,
-            versoPIDIndividu,affectation);
-    this.inscription = inscription;
-    this.listeEtudiants = listeEtudiants;
-    listeEtudiants.add(this);
-
-    }
+      
    
 
 

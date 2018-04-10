@@ -22,11 +22,21 @@ public class Individus<T> {
     private String langParlIndividu; 
     private String photoIndividu;
     private String rectoPIDIndividu;
-    private String versoPIDIndividu; 
+    private String versoPIDIndividu;
+    private String tel;
+    private String mail;
     private Affectations affectation;    
     private ArrayList<Assiduites> ListeAbsences;
     private ArrayList<Assiduites> ListePresences;
     public static final ListPro<Individus> listeIndividusEtablissement= new ListPro<Individus>();
+
+    public static int getNbIndiv() {
+        return nbIndiv;
+    }
+
+    public static void setNbIndiv(int nbIndiv) {
+        Individus.nbIndiv = nbIndiv;
+    }
     
     //variable de classe pour definr les id des nouv individus
     private static int nbIndiv=0;
@@ -41,7 +51,7 @@ public class Individus<T> {
            String profIndividu, Adresses domCompetIndividu,
            String langMatIndividu, String langParlIndividu, 
            String photoIndividu, String rectoPIDIndividu,
-           String versoPIDIndividu,Affectations affectation) {
+           String versoPIDIndividu,String tel,String mail,Affectations affectation) {
         this.idIndividu = idIndividu;
         this.nomIndividu = nomIndividu;
         this.affectation = affectation;
@@ -58,6 +68,8 @@ public class Individus<T> {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
+        this.tel=tel;
+        this.mail=mail;
         this.listeIndividusEtablissement.add(this);
         
     }
@@ -68,7 +80,7 @@ public class Individus<T> {
            String profIndividu, Adresses domCompetIndividu,
            String langMatIndividu, String langParlIndividu, 
            String photoIndividu, String rectoPIDIndividu,
-           String versoPIDIndividu,Affectations affectation) {
+           String versoPIDIndividu,String tel,String mail,Affectations affectation) {
         this.idIndividu = Integer.parseInt("2018"+(Individus.nbIndiv+1));
         this.nomIndividu = nomIndividu;
         this.affectation = affectation;
@@ -85,6 +97,8 @@ public class Individus<T> {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
+        this.tel=tel;
+        this.mail=mail;
         this.listeIndividusEtablissement.add(this);
         
     }
@@ -95,7 +109,7 @@ public class Individus<T> {
            String profIndividu, Adresses domCompetIndividu,
            String langMatIndividu, String langParlIndividu, 
            String photoIndividu, String rectoPIDIndividu,
-           String versoPIDIndividu) {
+           String versoPIDIndividu,String tel,String mail) {
         this.idIndividu = idIndividu;
         this.nomIndividu = nomIndividu;
       
@@ -112,6 +126,8 @@ public class Individus<T> {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
+        this.tel=tel;
+        this.mail=mail;
         this.listeIndividusEtablissement.add(this);
         
     }
@@ -123,7 +139,7 @@ public class Individus<T> {
            String profIndividu, Adresses domCompetIndividu,
            String langMatIndividu, String langParlIndividu, 
            String photoIndividu, String rectoPIDIndividu,
-           String versoPIDIndividu) {
+           String versoPIDIndividu,String tel,String mail) {
         
         this.nomIndividu = nomIndividu;
       
@@ -140,9 +156,19 @@ public class Individus<T> {
         this.photoIndividu = photoIndividu;
         this.rectoPIDIndividu = rectoPIDIndividu;
         this.versoPIDIndividu = versoPIDIndividu;
+        this.tel=tel;
+        this.mail=mail;
         this.idIndividu = Integer.parseInt("2018"+(Individus.nbIndiv+1));
         this.listeIndividusEtablissement.add(this);
         
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
     }
     /*public static Individus of(String id ){
         Iterator it = listeIndividusEtablissement.iterator();
@@ -172,6 +198,14 @@ public class Individus<T> {
 
     public ListPro<Individus> getListeIndividusEtablissement() {
         return listeIndividusEtablissement;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
 
