@@ -1,7 +1,11 @@
 
 package gestionetablissement.modele;
 
+import static gestionetablissement.modele.Adresses.listeAdresse;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 
 
 public class Contrats {
@@ -22,7 +26,42 @@ public class Contrats {
         this.listeContrats.add(this);
     }
   
-
+//pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listeContrats.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Contrats ContratsPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  ContratsPlusGrandId=  (Contrats) it.next();
+        while(it.hasNext()){
+            Contrats cont = (Contrats) it.next();
+            vide=false;
+            if(cont.getIdContrat()>ContratsPlusGrandId.getIdContrat()) ContratsPlusGrandId =cont;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(ContratsPlusGrandId.getIdContrat()+1);return ContratsPlusGrandId.getIdContrat()+1;}
+        
+        
+    }
+    
+    public static ArrayList<Contrats> of(String id ){
+        Iterator it = listeContrats.iterator();
+        ArrayList<Contrats> listRecherche=null;
+        while(it.hasNext()){
+            Contrats cont = (Contrats) it.next();
+            String idd = cont.getIdContrat()+"";
+            if(idd.indexOf(id)!=0){
+                
+                listRecherche.add(cont);
+            }
+        }
+        return listRecherche;
+    }
    //constructeur
     public Contrats(int idContrat, Statuts status, Fonctions fonction, Individus individus, String libelContrat, Date dateEntrContrat, Date datesortContrat, float salaireContrat, float indemnitéContrat, String materielContrat, String contratContrat) {
         this.idContrat = idContrat;
