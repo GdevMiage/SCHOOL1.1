@@ -1,7 +1,7 @@
-/dist/
+dist/
 /build/
 /src/gestionetablissement/securite/dbConnect.java
-build/built-jar.properties
-dist/GestionEtablissement.html
-dist/GestionEtablissement.jar
-dist/GestionEtablissement.jnlp
+/build/built-jar.properties
+/dist/GestionEtablissement.html
+/dist/GestionEtablissement.jar
+/dist/GestionEtablissement.jnlp
