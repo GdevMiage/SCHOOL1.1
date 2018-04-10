@@ -1,6 +1,11 @@
  
 package gestionetablissement.modele;
 
+import static gestionetablissement.modele.Cours.listeCours;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Iterator;
+
  
 public class Documents {
     
@@ -19,6 +24,32 @@ public class Documents {
     {
         this.listeDocuments.add(this);
     }
+    
+    
+    //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listeDocuments.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Documents DocumentsPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  DocumentsPlusGrandId=  (Documents) it.next();
+        while(it.hasNext()){
+            Documents Documents = (Documents) it.next();
+            vide=false;
+            if(Documents.getIdDocument()>DocumentsPlusGrandId.getIdDocument()) DocumentsPlusGrandId =Documents;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(DocumentsPlusGrandId.getIdDocument()+1);return DocumentsPlusGrandId.getIdDocument()+1;}
+        
+        
+    }
+    
+    
 
     public Documents(int idDocument, Supports support, TypeDocs typeDocs, String libelDocument, String versionDocument, String mediaDocument, int nbrPagNBDocument, String reliureDocument, String texteDocument, String couvDocument) {
         this.idDocument = idDocument;
