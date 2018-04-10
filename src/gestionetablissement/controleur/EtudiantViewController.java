@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -35,19 +36,19 @@ public class EtudiantViewController implements Initializable {
     @FXML   private  MenuButton menuButon; 
     @FXML private ImageView imageView;
     private Etudiants individusSelectionner;
-@FXML Label num;
-@FXML Label nom;
-@FXML Label prenom;
-@FXML Label sex;
-@FXML Label dateN;
-@FXML Label lieuN;
-@FXML Label niveau;
-@FXML Label domaine;
-@FXML Label tel;
-@FXML Label mail;
-@FXML Label groupe;
-@FXML Label adresse;
-@FXML Label cAdresse;
+@FXML TextArea num;
+@FXML TextArea nom;
+@FXML TextArea prenom;
+@FXML TextArea sex;
+@FXML TextArea dateN;
+@FXML TextArea lieuN;
+@FXML TextArea niveau;
+@FXML TextArea domaine;
+@FXML TextArea tel;
+@FXML TextArea mail;
+@FXML TextArea groupe;
+@FXML TextArea adresse;
+@FXML TextArea cAdresse;
 @FXML ImageView photoIndiv;
 @FXML AnchorPane afficheEtudiant;
 @FXML TextField rechercheIdTextField;
@@ -64,13 +65,14 @@ public class EtudiantViewController implements Initializable {
         loggedUser = application.getLoggedUser();
         System.out.println(loggedUser.getNomIndividu()+"test5");
         menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
-        affichePhotoLoggedUser();   
+        affichePhotoLoggedUser();
+        afficheIndividusSelectionner ();
         
         
       
     }
     void afficheIndividusSelectionner () throws FileNotFoundException{
-   /* individusSelectionner=(Etudiants)loggedUser;
+    individusSelectionner=(Etudiants)loggedUser;
     
     
      
@@ -80,16 +82,16 @@ public class EtudiantViewController implements Initializable {
      prenom.setText(individusSelectionner.getPrenomIndividu());
      sex.setText(individusSelectionner.getGenreIndividu());
      dateN.setText(individusSelectionner.getDatNaisIndividu().toString());
-     lieuN.setText(individusSelectionner.getLieuNaisIndividu());
+     
      niveau.setText(individusSelectionner.getNivEtudIndividu());
      domaine.setText(individusSelectionner.getDomEtudIndividu());
      tel.setText(individusSelectionner.getTel());
-     groupe.setText(individusSelectionner.getListeGroupes().toString());
+     if(individusSelectionner.getListeGroupes()!=null)groupe.setText(individusSelectionner.getListeGroupes().toString());
      mail.setText(individusSelectionner.getMail());
      affichePhotoSelectedIndiv();
      adresse.setText(individusSelectionner.getDomCompetIndividu().toString());
-     cAdresse.setText(individusSelectionner.getDomCompetIndividu().toString());
-    */
+   // if(individusSelectionner.getDomCompetIndividu().toString()!="") cAdresse.setText(individusSelectionner.getDomCompetIndividu().toString());
+    
 }
     @FXML public void processLogout(ActionEvent event) {
         if (application == null){
