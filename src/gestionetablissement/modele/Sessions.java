@@ -70,7 +70,7 @@ public class Sessions {
         this.joursFerieSession = joursFerieSession;
         
     }
-     public Sessions(int idSession, Date annee, String libelSession, Horaires debutFinSession, Date[] joursFerieSession,ListPro<Sessions> ListeSession) {
+     public Sessions(int idSession, Date annee, String libelSession, Horaires debutFinSession, Date[] joursFerieSession) {
         this.idSession = idSession;
         this.annee = annee;
         this.libelSession = libelSession;
