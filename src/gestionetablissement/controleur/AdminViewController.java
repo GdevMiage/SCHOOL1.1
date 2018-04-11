@@ -52,14 +52,10 @@ public class AdminViewController implements Initializable {
     private Label success;
     @FXML   private  MenuButton menuButon; 
     @FXML private ImageView imageView;
-    @FXML private VBox vBoxAffichage;
-     @FXML private BorderPane borderPaneAff;
-     private AnchorPane notrePage;
+
+
     @FXML private HBox GrandFenetreHbox;
-    @FXML private Button gestionEtudiantButton;
-    @FXML private Button gestionEnseingnantButton;
-    @FXML private Button gestionMatiere;
-    @FXML private Button gestionEnseignant;
+  
     /**
      * Initializes the controller class.
      */
@@ -73,9 +69,9 @@ public class AdminViewController implements Initializable {
     public void setApp(GestionEtablissement application) throws FileNotFoundException{
         this.application = application;
         loggedUser = application.getLoggedUser();
-        System.out.println(loggedUser.getNomIndividu()+"test5");
-        menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
-        affichePhotoLoggedUser();   
+        System.out.println(loggedUser.getNomIndividu()+"test5logguedUserAdminViewsetApp");
+       menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
+       affichePhotoLoggedUser();   
         
      
       
@@ -135,7 +131,7 @@ public class AdminViewController implements Initializable {
        
        
        
-        notrePage=page;
+        
         application.init();
         return (Initializable) loader.getController();
     }

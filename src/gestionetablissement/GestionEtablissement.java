@@ -98,13 +98,8 @@ public class GestionEtablissement extends Application {
             Individus indiiiiiii = new Individus("HAMMAMI","Hamma","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiiiii = new Individus("BRIK","Jallel","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
              Affectations aff = new Affectations(3,"CDI","ouadie","abc",new Date(),new Date(),"Prof","c://",indi);
-             Affectations afff = new Affectations(3,"CDI","salim","salim",new Date(),new Date(),"Prof","c://",indii);
+             Affectations afff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indii);
              Affectations affff = new Affectations(3,"CDI","lyes","lyes",new Date(),new Date(),"Prof","c://",indiii);
-             Affectations afffff = new Affectations(3,"CDI","lallou","lallou",new Date(),new Date(),"Prof","c://",indiiii);
-             Affectations affffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiii);
-             Affectations afffffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiiii);
-             Affectations affffffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiiiii);
-             Affectations afffffffff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indiiiiiiii);
              
             gotoLogin();
             

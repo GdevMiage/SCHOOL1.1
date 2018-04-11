@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="690.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.controleur.GestionEtudiantController">
+    <stylesheets>
+        <URL value="@../gestionetudiant.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="768.0" prefWidth="1024.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="1024.0">
+               <children>
+                  <Button fx:id="returnButton" contentDisplay="RIGHT" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#revenirAdminView" prefHeight="27.0" prefWidth="40.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Button" textFill="TRANSPARENT">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="31.0">
+                           <image>
+                              <Image url="@../assets/image/icons8_Back_Arrow_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="rechercheIdTextField" onInputMethodTextChanged="#rechercheIndividusID" prefHeight="25.0" prefWidth="262.0" promptText="checher par ID">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="43.0" styleClass="back-transparent" stylesheets="@../adminview.css">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0">
+                           <image>
+                              <Image url="@../assets/image/icons8_Search_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField prefHeight="25.0" prefWidth="257.0" promptText="chercher par nom">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="43.0" styleClass="back-transparent" stylesheets="@../adminview.css">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0">
+                           <image>
+                              <Image url="@../assets/image/icons8_Search_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField prefHeight="25.0" prefWidth="280.0" promptText="chercher par prenom">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="43.0" styleClass="back-transparent" stylesheets="@../adminview.css">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/icons8_Search_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </HBox>
+            <SplitPane dividerPositions="0.3409090909090909" prefHeight="618.0" prefWidth="1024.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="348.0">
+                     <children>
+                        <TableView fx:id="etudiantTableView" layoutX="-4.0" layoutY="-2.0" onMousePressed="#afficheIndividusSelectionner" prefHeight="618.0" prefWidth="347.0">
+                          <columns>
+                            <TableColumn fx:id="numCol" prefWidth="94.0" text="N°" />
+                            <TableColumn fx:id="nomCol" prefWidth="110.0" text="Nom" />
+                              <TableColumn fx:id="prenomCol" prefWidth="142.0" text="Prénom" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="afficheEtudiant" minHeight="0.0" minWidth="0.0" prefHeight="616.0" prefWidth="660.0">
+                     <children>
+                        <VBox layoutX="43.0" prefHeight="610.0" prefWidth="621.0">
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="photoIndiv" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" StackPane.alignment="TOP_LEFT">
+                                       <image>
+                                          <Image url="@../assets/image/user.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="NONE" />
+                                       </cursor>
+                                       <StackPane.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </StackPane.margin>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <GridPane prefHeight="367.0" prefWidth="486.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="139.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="588.0" minWidth="10.0" prefWidth="347.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N°" textAlignment="JUSTIFY" wrappingWidth="120.13671875">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sex" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date de N." textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lieu de N." textAlignment="JUSTIFY" wrappingWidth="143.0498046875" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Domaine" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tél" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mail" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="9">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" textAlignment="JUSTIFY" wrappingWidth="142.0498046875" GridPane.rowIndex="10">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Complement" textAlignment="JUSTIFY" wrappingWidth="141.0498046875" GridPane.rowIndex="11">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="num" prefHeight="43.0" prefWidth="348.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="nom" prefHeight="45.0" prefWidth="351.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="prenom" prefHeight="48.0" prefWidth="361.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="sex" prefHeight="25.0" prefWidth="364.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dateN" prefHeight="25.0" prefWidth="364.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lieuN" prefHeight="31.0" prefWidth="368.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="niveau" prefHeight="56.0" prefWidth="477.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="domaine" prefHeight="75.0" prefWidth="446.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="tel" prefHeight="95.0" prefWidth="635.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mail" prefHeight="107.0" prefWidth="648.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="adresse" prefHeight="141.0" prefWidth="668.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cAdresse" prefHeight="215.0" prefWidth="728.0" text="Label" textFill="#6b2424" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <Label prefHeight="26.0" prefWidth="81.0" text="Details...">
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </SplitPane>
+         </children>
+      </VBox>
+      <HBox layoutX="310.0" layoutY="664.0" prefHeight="68.0" prefWidth="714.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="122.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="+ d'information" underline="true">
+               <HBox.margin>
+                  <Insets left="60.0" right="50.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="125.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Ajouter">
+               <HBox.margin>
+                  <Insets left="70.0" right="30.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/ajouter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="125.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Editer">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/modifier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="125.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Supprimer">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/supprimer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
