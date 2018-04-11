@@ -175,13 +175,44 @@ private void remplirTableView() throws FileNotFoundException{
        
       @FXML private void gotoAfficheEtudiant() {
         try {
-            AjoutEtudiantController ajoutEtudiant = (AjoutEtudiantController) replaceSceneContent("vue/AfficheEtudiant.fxml");
+            AfficheEtudiantController ajoutEtudiant = (AfficheEtudiantController) replaceSceneContent("vue/AfficheEtudiant.fxml");
             ajoutEtudiant.setApp(application);
         } catch (Exception ex) {
             Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
   public Initializable replaceSceneContent(String fxml) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        InputStream in = GestionEtablissement.class.getResourceAsStream(fxml);
+        loader.setBuilderFactory(new JavaFXBuilderFactory());
+        loader.setLocation(GestionEtablissement.class.getResource(fxml));
+       
+        AnchorPane page;
+       
+        try {
+            page = (AnchorPane) loader.load(in);
+        } finally {
+            System.out.println("hhhhhhhhhhhhhhhhhhhh"+fxml+"**"+GestionEtablissement.class.getResource(fxml));
+             in.close();
+            
+        } 
+        
+        
+       if(!afficheEtudiant.getChildren().isEmpty()){
+           
+            afficheEtudiant.getChildren().clear();
+        }
+         afficheEtudiant.getChildren().removeAll();
+        afficheEtudiant.getChildren().add(page);
+       
+       
+       
+       
+        
+        application.init();
+        return (Initializable) loader.getController();
+    }
+   public Initializable replaceTabContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         InputStream in = GestionEtablissement.class.getResourceAsStream(fxml);
         loader.setBuilderFactory(new JavaFXBuilderFactory());
