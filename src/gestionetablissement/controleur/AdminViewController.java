@@ -16,6 +16,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.FadeTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,10 +25,12 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -53,8 +57,9 @@ public class AdminViewController implements Initializable {
     @FXML   private  MenuButton menuButon; 
     @FXML private ImageView imageView;
 
-
+        @FXML PieChart pieChart;
     @FXML private HBox GrandFenetreHbox;
+    @FXML Tab reporting;
   
     /**
      * Initializes the controller class.
@@ -63,6 +68,7 @@ public class AdminViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+            
     }    
 
     
@@ -72,6 +78,7 @@ public class AdminViewController implements Initializable {
         System.out.println(loggedUser.getNomIndividu()+"test5logguedUserAdminViewsetApp");
        menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
        affichePhotoLoggedUser();   
+       pieChartAffiche();
         
      
       
@@ -102,7 +109,16 @@ public class AdminViewController implements Initializable {
         }
     }
     
-
+     @FXML private void pieChartAffiche(){
+        
+        ObservableList<PieChart.Data> pieChartData =
+                FXCollections.observableArrayList(
+                new PieChart.Data("Produits", 67),
+                new PieChart.Data("Charges", 33));
+               
+         pieChart.setData(pieChartData);
+         
+    }
  
   public Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
