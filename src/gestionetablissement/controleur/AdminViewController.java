@@ -16,6 +16,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.FadeTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,10 +25,12 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -52,14 +56,11 @@ public class AdminViewController implements Initializable {
     private Label success;
     @FXML   private  MenuButton menuButon; 
     @FXML private ImageView imageView;
-    @FXML private VBox vBoxAffichage;
-     @FXML private BorderPane borderPaneAff;
-     private AnchorPane notrePage;
+
+        @FXML PieChart pieChart;
     @FXML private HBox GrandFenetreHbox;
-    @FXML private Button gestionEtudiantButton;
-    @FXML private Button gestionEnseingnantButton;
-    @FXML private Button gestionMatiere;
-    @FXML private Button gestionEnseignant;
+    @FXML Tab reporting;
+  
     /**
      * Initializes the controller class.
      */
@@ -67,15 +68,17 @@ public class AdminViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+            
     }    
 
     
     public void setApp(GestionEtablissement application) throws FileNotFoundException{
         this.application = application;
         loggedUser = application.getLoggedUser();
-        System.out.println(loggedUser.getNomIndividu()+"test5");
-        menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
-        affichePhotoLoggedUser();   
+        System.out.println(loggedUser.getNomIndividu()+"test5logguedUserAdminViewsetApp");
+       menuButon.getItems().add(0,new MenuItem(loggedUser.getNomIndividu()+" "+loggedUser.getPrenomIndividu()));
+       affichePhotoLoggedUser();   
+       pieChartAffiche();
         
      
       
@@ -106,7 +109,16 @@ public class AdminViewController implements Initializable {
         }
     }
     
-
+     @FXML private void pieChartAffiche(){
+        
+        ObservableList<PieChart.Data> pieChartData =
+                FXCollections.observableArrayList(
+                new PieChart.Data("Produits", 67),
+                new PieChart.Data("Charges", 33));
+               
+         pieChart.setData(pieChartData);
+         
+    }
  
   public Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
@@ -135,7 +147,7 @@ public class AdminViewController implements Initializable {
        
        
        
-        notrePage=page;
+        
         application.init();
         return (Initializable) loader.getController();
     }

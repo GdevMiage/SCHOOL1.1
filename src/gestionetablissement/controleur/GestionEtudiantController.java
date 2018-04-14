@@ -9,6 +9,7 @@ import gestionetablissement.GestionEtablissement;
 import gestionetablissement.modele.Individus;
 
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -16,9 +17,12 @@ import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -57,6 +61,7 @@ private Individus individusSelectionner;
 @FXML ImageView photoIndiv;
 @FXML AnchorPane afficheEtudiant;
 @FXML TextField rechercheIdTextField;
+@FXML private Button ajoutButton;
  private ObservableList<Individus> data;
     /**
      * Initializes the controller class.
@@ -158,4 +163,84 @@ private void remplirTableView() throws FileNotFoundException{
           etudiantTableView.setItems(data);
          afficheIndividusSelectionner ();
      }
+     
+       @FXML private void gotoAjoutEtudiant() {
+        try {
+            AjoutEtudiantController ajoutEtudiant = (AjoutEtudiantController) replaceSceneContent("vue/AjoutEtudiant.fxml");
+            ajoutEtudiant.setApp(application);
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+       
+      @FXML private void gotoAfficheEtudiant() {
+        try {
+            AfficheEtudiantController ajoutEtudiant = (AfficheEtudiantController) replaceSceneContent("vue/AfficheEtudiant.fxml");
+            ajoutEtudiant.setApp(application);
+        } catch (Exception ex) {
+            Logger.getLogger(GestionEtablissement.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+  public Initializable replaceSceneContent(String fxml) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        InputStream in = GestionEtablissement.class.getResourceAsStream(fxml);
+        loader.setBuilderFactory(new JavaFXBuilderFactory());
+        loader.setLocation(GestionEtablissement.class.getResource(fxml));
+       
+        AnchorPane page;
+       
+        try {
+            page = (AnchorPane) loader.load(in);
+        } finally {
+            System.out.println("hhhhhhhhhhhhhhhhhhhh"+fxml+"**"+GestionEtablissement.class.getResource(fxml));
+             in.close();
+            
+        } 
+        
+        
+       if(!afficheEtudiant.getChildren().isEmpty()){
+           
+            afficheEtudiant.getChildren().clear();
+        }
+         afficheEtudiant.getChildren().removeAll();
+        afficheEtudiant.getChildren().add(page);
+       
+       
+       
+       
+        
+        application.init();
+        return (Initializable) loader.getController();
+    }
+   public Initializable replaceTabContent(String fxml) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        InputStream in = GestionEtablissement.class.getResourceAsStream(fxml);
+        loader.setBuilderFactory(new JavaFXBuilderFactory());
+        loader.setLocation(GestionEtablissement.class.getResource(fxml));
+       
+        AnchorPane page;
+       
+        try {
+            page = (AnchorPane) loader.load(in);
+        } finally {
+            System.out.println("hhhhhhhhhhhhhhhhhhhh"+fxml+"**"+GestionEtablissement.class.getResource(fxml));
+             in.close();
+            
+        } 
+        
+        
+       if(!afficheEtudiant.getChildren().isEmpty()){
+           
+            afficheEtudiant.getChildren().clear();
+        }
+         afficheEtudiant.getChildren().removeAll();
+        afficheEtudiant.getChildren().add(page);
+       
+       
+       
+       
+        
+        application.init();
+        return (Initializable) loader.getController();
+    }
 }

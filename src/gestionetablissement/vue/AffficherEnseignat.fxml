@@ -282,8 +282,8 @@
                                        <children>
                                           <TableView prefHeight="700.0" prefWidth="1025.0">
                                              <columns>
-                                                <TableColumn prefWidth="34.0" text="ID" />
-                                                <TableColumn prefWidth="778.0" text="Competence " />
+                                                <TableColumn prefWidth="85.0" text="ID" />
+                                                <TableColumn prefWidth="927.0" text="Competence " />
                                              </columns>
                                           </TableView>
                                        </children>
@@ -579,9 +579,9 @@
                                        <children>
                                           <TableView prefHeight="576.0" prefWidth="1024.0">
                                              <columns>
-                                                <TableColumn prefWidth="113.0" text="1" />
-                                                <TableColumn minWidth="0.0" prefWidth="154.0" text="2" />
-                                                <TableColumn prefWidth="105.0" text="3" />
+                                                <TableColumn prefWidth="113.0" text="id" />
+                                                <TableColumn minWidth="0.0" prefWidth="154.0" text="titre" />
+                                                <TableColumn prefWidth="105.0" text="theme" />
                                                 <TableColumn prefWidth="90.0" text="4" />
                                                 <TableColumn prefWidth="110.0" text="5" />
                                                 <TableColumn prefWidth="140.0" text="6" />

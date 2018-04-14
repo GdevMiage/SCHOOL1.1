@@ -50,14 +50,14 @@ public class Seances {
         
         for( i=0; i<=groupe.getListeEtudiants().size();i++){
             if( listeAbsences.contains(groupe.getListeEtudiants().get(i))){
-                groupe.getListeEtudiants().get(i).getListePresences().add(new Assiduites(groupe.getListeEtudiants().get(i),this,"absent",reportSeance,"","",listeAssiduite));
+                groupe.getListeEtudiants().get(i).getListePresences().add(new Assiduites(groupe.getListeEtudiants().get(i),this,"absent",reportSeance,"",""));
 
             }else{
-                groupe.getListeEtudiants().get(i).getListePresences().add(new Assiduites(groupe.getListeEtudiants().get(i),this,"present",reportSeance,"","",listeAssiduite));
+                groupe.getListeEtudiants().get(i).getListePresences().add(new Assiduites(groupe.getListeEtudiants().get(i),this,"present",reportSeance,"",""));
 
             }
-            if( listeAbsences.contains(enseignant))enseignant.getListeAbsences().add(new Assiduites(enseignant,this,"absent",reportSeance,"","",listeAssiduite));
-            else enseignant.getListeAbsences().add(new Assiduites(enseignant,this,"present",reportSeance,"","",listeAssiduite));
+            if( listeAbsences.contains(enseignant))enseignant.getListeAbsences().add(new Assiduites(enseignant,this,"absent",reportSeance,"",""));
+            else enseignant.getListeAbsences().add(new Assiduites(enseignant,this,"present",reportSeance,"",""));
            
 
         }

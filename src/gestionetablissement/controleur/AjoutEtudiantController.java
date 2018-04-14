@@ -5,6 +5,9 @@
  */
 package gestionetablissement.controleur;
 
+import gestionetablissement.GestionEtablissement;
+import gestionetablissement.modele.Individus;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
@@ -12,9 +15,11 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author lyess
+ * @author Ouadie
  */
 public class AjoutEtudiantController implements Initializable {
+private GestionEtablissement application; 
+private Individus loggedUser;
 
     /**
      * Initializes the controller class.
@@ -23,5 +28,12 @@ public class AjoutEtudiantController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+         public void setApp(GestionEtablissement application) throws FileNotFoundException{
+        this.application = application;
+        loggedUser = application.getLoggedUser();
+   
+    }
+    
     
 }

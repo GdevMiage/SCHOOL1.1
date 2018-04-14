@@ -40,7 +40,9 @@ private GestionEtablissement application;
     public void removeListener(InvalidationListener listener) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-       public void setApp(GestionEtablissement application) throws FileNotFoundException{
+    
+    
+    public void setApp(GestionEtablissement application) throws FileNotFoundException{
         
         
       

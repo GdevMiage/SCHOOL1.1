@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
@@ -62,14 +63,14 @@
                                        <children>
                                           <BorderPane prefHeight="632.0" prefWidth="1024.0" styleClass="txt-center">
                                              <left>
-                                                <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+                                                <HBox prefHeight="617.0" prefWidth="275.0" style="-fx-background-color: #21dcef33;" BorderPane.alignment="CENTER">
                                                    <children>
-                                                      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="297.0" styleClass="back-white">
+                                                      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="602.0" prefWidth="285.0" style="-fx-background-color: #f5f5f5;">
                                                          <padding>
                                                             <Insets top="20.0" />
                                                          </padding>
                                                          <HBox.margin>
-                                                            <Insets top="30.0" />
+                                                            <Insets />
                                                          </HBox.margin>
                                                          <children>
                                                             <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des entités" underline="true" wrappingWidth="206.13671875">
@@ -215,21 +216,38 @@
                                                                </VBox.margin>
                                                             </VBox>
                                                          </children>
+                                                         <effect>
+                                                            <Lighting diffuseConstant="1.35" specularConstant="0.0" specularExponent="0.0">
+                                                               <bumpInput>
+                                                                  <Shadow />
+                                                               </bumpInput>
+                                                               <light>
+                                                                  <Light.Distant azimuth="0.0" elevation="124.53" />
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect>
                                                       </VBox>
                                                    </children>
                                                    <BorderPane.margin>
-                                                      <Insets right="10.0" />
+                                                      <Insets />
                                                    </BorderPane.margin>
                                                 </HBox>
                                              </left>
                                              <center>
                                                 <VBox prefHeight="602.0" prefWidth="711.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
                                                    <BorderPane.margin>
-                                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                                      <Insets bottom="15.0" right="15.0" top="15.0" />
                                                    </BorderPane.margin>
                                                    <padding>
                                                       <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                                    </padding>
+                                                   <children>
+                                                      <ImageView fitHeight="581.0" fitWidth="756.0">
+                                                         <image>
+                                                            <Image url="@../assets/image/back2.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
                                                 </VBox>
                                              </center>
                                           </BorderPane>
@@ -247,12 +265,19 @@
                                                    <BorderPane.margin>
                                                       <Insets top="30.0" />
                                                    </BorderPane.margin>
+                                                   <children>
+                                                      <ImageView fitHeight="568.0" fitWidth="773.0">
+                                                         <image>
+                                                            <Image url="@../assets/image/back5.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
                                                 </VBox>
                                              </center>
                                              <left>
                                                 <HBox prefHeight="632.0" prefWidth="244.0" BorderPane.alignment="CENTER">
                                                    <children>
-                                                      <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                      <VBox prefHeight="624.0" prefWidth="244.0" styleClass="back-white">
                                                          <children>
                                                             <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Administration" underline="true" wrappingWidth="206.13671875">
                                                                <styleClass>
@@ -304,8 +329,18 @@
                                                             <Insets top="20.0" />
                                                          </padding>
                                                          <HBox.margin>
-                                                            <Insets top="30.0" />
+                                                            <Insets />
                                                          </HBox.margin>
+                                                         <effect>
+                                                            <Lighting diffuseConstant="1.26" specularConstant="0.0" specularExponent="0.0" surfaceScale="2.78">
+                                                               <bumpInput>
+                                                                  <Shadow />
+                                                               </bumpInput>
+                                                               <light>
+                                                                  <Light.Distant />
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect>
                                                       </VBox>
                                                    </children>
                                                    <BorderPane.margin>
@@ -328,12 +363,19 @@
                                                    <BorderPane.margin>
                                                       <Insets top="30.0" />
                                                    </BorderPane.margin>
+                                                   <children>
+                                                      <ImageView fitHeight="568.0" fitWidth="770.0">
+                                                         <image>
+                                                            <Image url="@../assets/image/back4.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
                                                 </VBox>
                                              </center>
                                              <left>
-                                                <HBox prefHeight="632.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                                                <HBox prefHeight="632.0" prefWidth="245.0" BorderPane.alignment="CENTER">
                                                    <children>
-                                                      <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                      <VBox prefHeight="632.0" prefWidth="255.0" styleClass="back-white">
                                                          <children>
                                                             <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des entités" underline="true" wrappingWidth="206.13671875">
                                                                <styleClass>
@@ -385,8 +427,18 @@
                                                             <Insets top="20.0" />
                                                          </padding>
                                                          <HBox.margin>
-                                                            <Insets top="30.0" />
+                                                            <Insets />
                                                          </HBox.margin>
+                                                         <effect>
+                                                            <Lighting diffuseConstant="1.28" specularConstant="0.0" specularExponent="0.0">
+                                                               <bumpInput>
+                                                                  <Shadow />
+                                                               </bumpInput>
+                                                               <light>
+                                                                  <Light.Distant />
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect>
                                                       </VBox>
                                                    </children>
                                                    <BorderPane.margin>
@@ -409,12 +461,19 @@
                                                    <BorderPane.margin>
                                                       <Insets top="30.0" />
                                                    </BorderPane.margin>
+                                                   <children>
+                                                      <ImageView fitHeight="566.0" fitWidth="696.0">
+                                                         <image>
+                                                            <Image url="@../assets/image/back6.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
                                                 </VBox>
                                              </center>
                                              <left>
-                                                <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+                                                <HBox prefHeight="651.0" prefWidth="247.0" BorderPane.alignment="CENTER">
                                                    <children>
-                                                      <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                      <VBox prefHeight="621.0" prefWidth="246.0" styleClass="back-white">
                                                          <children>
                                                             <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Suivi pédagogique" underline="true" wrappingWidth="206.13671875">
                                                                <styleClass>
@@ -449,13 +508,23 @@
                                                             <Insets top="20.0" />
                                                          </padding>
                                                          <HBox.margin>
-                                                            <Insets top="30.0" />
+                                                            <Insets />
                                                          </HBox.margin>
                                                       </VBox>
                                                    </children>
                                                    <BorderPane.margin>
                                                       <Insets right="10.0" />
                                                    </BorderPane.margin>
+                                                   <effect>
+                                                      <Lighting diffuseConstant="1.23" specularConstant="0.0" specularExponent="0.0" surfaceScale="2.9">
+                                                         <bumpInput>
+                                                            <Shadow />
+                                                         </bumpInput>
+                                                         <light>
+                                                            <Light.Distant />
+                                                         </light>
+                                                      </Lighting>
+                                                   </effect>
                                                 </HBox>
                                              </left>
                                           </BorderPane>
@@ -471,14 +540,21 @@
                                              <center>
                                                 <VBox prefHeight="632.0" prefWidth="723.0" styleClass="hover-hand" stylesheets="@../adminview.css" BorderPane.alignment="CENTER">
                                                    <BorderPane.margin>
-                                                      <Insets top="30.0" />
+                                                      <Insets />
                                                    </BorderPane.margin>
+                                                   <children>
+                                                      <ImageView fitHeight="598.0" fitWidth="696.0">
+                                                         <image>
+                                                            <Image url="@../assets/image/back3.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
                                                 </VBox>
                                              </center>
                                              <left>
-                                                <HBox prefHeight="632.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+                                                <HBox prefHeight="632.0" prefWidth="248.0" BorderPane.alignment="CENTER">
                                                    <children>
-                                                      <VBox prefHeight="602.0" prefWidth="297.0" styleClass="back-white">
+                                                      <VBox prefHeight="632.0" prefWidth="273.0" style="-fx-background-color: #f5f5f5;" styleClass="back-white">
                                                          <children>
                                                             <Text fill="#428d05" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscriptions" underline="true" wrappingWidth="206.13671875">
                                                                <styleClass>
@@ -503,7 +579,7 @@
                                                                   </Button>
                                                                </children>
                                                             </VBox>
-                                                            <VBox prefHeight="107.0" prefWidth="305.0" styleClass="hover-hand">
+                                                            <VBox prefHeight="107.0" prefWidth="272.0" styleClass="hover-hand">
                                                                <children>
                                                                   <Button alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" prefHeight="45.0" prefWidth="239.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Affectation" textOverrun="CLIP">
                                                                      <graphic>
@@ -524,8 +600,18 @@
                                                             <Insets top="20.0" />
                                                          </padding>
                                                          <HBox.margin>
-                                                            <Insets top="30.0" />
+                                                            <Insets />
                                                          </HBox.margin>
+                                                         <effect>
+                                                            <Lighting diffuseConstant="1.18" specularConstant="0.0" specularExponent="0.0" surfaceScale="2.55">
+                                                               <bumpInput>
+                                                                  <Shadow height="15.07" radius="8.5175" />
+                                                               </bumpInput>
+                                                               <light>
+                                                                  <Light.Distant elevation="49.19" />
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect>
                                                       </VBox>
                                                    </children>
                                                    <BorderPane.margin>
@@ -538,9 +624,25 @@
                                     </AnchorPane>
                                  </content>
                               </Tab>
-                              <Tab text="EDIT&amp;MAIL">
+                              <Tab fx:id="Reporting" onSelectionChanged="#pieChartAffiche" text="REPORTING">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0" />
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1009.0">
+                                       <children>
+                                          <PieChart fx:id="pieChart" layoutX="34.0" layoutY="14.0" prefHeight="350.0" prefWidth="416.0" title="Produit/Charge" />
+                                          <BarChart fx:id="barChart" layoutX="471.0" layoutY="14.0" prefHeight="364.0" prefWidth="448.0">
+                                            <xAxis>
+                                              <CategoryAxis label="Formation" side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis label="Nombre d'etudiant" side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                          <ImageView fitHeight="256.0" fitWidth="311.0" layoutX="301.0" layoutY="328.0">
+                                             <image>
+                                                <Image url="@../assets/image/back8.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children></AnchorPane>
                                  </content>
                               </Tab>
                           </tabs>

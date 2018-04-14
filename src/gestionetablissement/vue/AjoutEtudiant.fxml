@@ -10,12 +10,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gestionetablissement.vue.AjoutEtudiantController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="499.0" prefWidth="928.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.controleur.AjoutEtudiantController">
     <stylesheets>
         <URL value="@ajoutetudiant.css" />
     </stylesheets>
    <children>
-      <GridPane layoutX="81.0" layoutY="175.0" prefHeight="442.0" prefWidth="892.0">
+      <GridPane layoutX="7.0" layoutY="169.0" prefHeight="314.0" prefWidth="559.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N°" textAlignment="JUSTIFY" wrappingWidth="120.13671875">
                <font>
@@ -77,47 +77,47 @@
                   <Font size="19.0" />
                </font>
             </Text>
-            <TextField prefHeight="43.0" prefWidth="347.0" GridPane.columnIndex="1">
+            <TextField fx:id="num" prefHeight="29.0" prefWidth="478.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="46.0" prefWidth="351.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="nom" prefHeight="46.0" prefWidth="351.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="61.0" prefWidth="365.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="prenom" prefHeight="61.0" prefWidth="365.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="59.0" prefWidth="364.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <TextField fx:id="lieuNaiss" prefHeight="59.0" prefWidth="364.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="51.0" prefWidth="361.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <TextField fx:id="tel" prefHeight="51.0" prefWidth="361.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="58.0" prefWidth="367.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <TextField fx:id="mail" prefHeight="58.0" prefWidth="367.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="49.0" prefWidth="364.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <TextField fx:id="adresses" prefHeight="49.0" prefWidth="364.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="56.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+            <TextField fx:id="cAdresses" prefHeight="56.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
             </TextField>
-            <DatePicker prefHeight="56.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <DatePicker fx:id="datePickerNaiss" prefHeight="56.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets top="2.0" />
                </GridPane.margin>
@@ -125,7 +125,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </DatePicker>
-            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <HBox fx:id="sex" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
                   <RadioButton mnemonicParsing="false" text="M">
                      <HBox.margin>
@@ -145,7 +145,7 @@
                   <Insets left="10.0" right="10.0" />
                </GridPane.margin>
             </HBox>
-            <MenuButton mnemonicParsing="false" prefHeight="35.0" prefWidth="152.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Choisir le niveau" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <MenuButton fx:id="nivDom" mnemonicParsing="false" prefHeight="35.0" prefWidth="152.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Choisir le niveau" GridPane.columnIndex="1" GridPane.rowIndex="6">
               <items>
                 <MenuItem mnemonicParsing="false" text="Bac +1" />
                 <MenuItem mnemonicParsing="false" text="Bac +2" />
@@ -160,7 +160,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </MenuButton>
-            <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="151.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Choisir un domaine" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <MenuButton fx:id="domaine" mnemonicParsing="false" prefHeight="37.0" prefWidth="151.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Choisir un domaine" GridPane.columnIndex="1" GridPane.rowIndex="7">
               <items>
                 <MenuItem mnemonicParsing="false" text="Informatique" />
                 <MenuItem mnemonicParsing="false" text="Mecanique" />
@@ -180,8 +180,8 @@
             </MenuButton>
          </children>
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="246.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="714.0" minWidth="10.0" prefWidth="646.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="175.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="714.0" minWidth="10.0" prefWidth="434.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -198,15 +198,31 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="81.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/image/ouadie.jpg" />
-         </image>
-      </ImageView>
+      <Button fx:id="imageButton" cacheShape="false" centerShape="false" focusTraversable="false" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" scaleShape="false" styleClass="back-transparent" stylesheets="@../adminview.css" AnchorPane.bottomAnchor="341.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="763.0" AnchorPane.topAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/ouadie.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <Button layoutX="257.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" styleClass="back-transparent" stylesheets="@../adminview.css" text="Ajouter une photo">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </Button>
+      <Button fx:id="ajoutListButton" layoutX="514.0" layoutY="77.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../assets/image/icons8_Add_List_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
 </AnchorPane>

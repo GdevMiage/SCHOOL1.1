@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetablissement.controleur.AffficherEnseignatController">
+    <stylesheets>
+        <URL value="@affficherenseignat.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="768.0" prefWidth="1024.0">
+         <left>
+            <TabPane prefHeight="768.0" prefWidth="1023.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Informations générals">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="739.0" prefWidth="1024.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <center>
+                                    <HBox prefHeight="467.0" prefWidth="953.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox prefHeight="427.0" prefWidth="160.0">
+                                             <children>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="N° Enseignat">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Nom">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Prénom">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Sex">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Domaine">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Statut">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Age">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Adresse">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="N° tél">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="54.0" prefWidth="164.0" text="Mail">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox prefHeight="427.0" prefWidth="668.0">
+                                             <children>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0" />
+                                                <TextArea editable="false" prefHeight="54.0" prefWidth="668.0" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </center>
+                                 <top>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="252.0" prefWidth="558.0" BorderPane.alignment="TOP_LEFT">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <ImageView fitHeight="178.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
+                                                   <VBox.margin>
+                                                      <Insets bottom="20.0" />
+                                                   </VBox.margin>
+                                                   <image>
+                                                      <Image url="@../assets/image/teacher.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" text="Modifier">
+                                                         <graphic>
+                                                            <ImageView fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../assets/image/modifier.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets left="400.0" top="10.0" />
+                                                         </HBox.margin>
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" text="Supprimer">
+                                                         <graphic>
+                                                            <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../assets/image/supprimer.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="400.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets left="70.0" right="200.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Competances">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="27.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Ajouter une compétence">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/ajouter.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Modifier un module validé">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/modifier.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Supprimer un module validé">
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/validr.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutY="27.0" prefHeight="576.0" prefWidth="1024.0">
+                                       <children>
+                                          <TableView prefHeight="700.0" prefWidth="1025.0">
+                                             <columns>
+                                                <TableColumn prefWidth="34.0" text="ID" />
+                                                <TableColumn prefWidth="778.0" text="Competence " />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Historique des taches">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="27.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Ajouter une absence">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/ajouter.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Modifier une absence">
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/modifier.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Supprimer une absence">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/supprimer.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutY="27.0" prefHeight="576.0" prefWidth="1024.0">
+                                       <children>
+                                          <TableView prefHeight="700.0" prefWidth="1025.0">
+                                             <columns>
+                                                <TableColumn prefWidth="133.0" text="ID Tache" />
+                                                <TableColumn minWidth="0.0" prefWidth="879.0" text="Description de la tache" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Retards">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="27.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="27.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Ajouter un retard">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/ajouter.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Modifier un retard">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/modifier.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Supprimer un retard">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/supprimer.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutY="27.0" prefHeight="576.0" prefWidth="1024.0">
+                                       <children>
+                                          <TableView prefHeight="700.0" prefWidth="1025.0">
+                                             <columns>
+                                                <TableColumn prefWidth="169.0" text="Date" />
+                                                <TableColumn minWidth="0.0" prefWidth="197.0" text="Heure" />
+                                                <TableColumn prefWidth="190.0" text="Cours" />
+                                                <TableColumn prefWidth="468.0" text="Justificatif" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Absences">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="27.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Ajouter une absence">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/ajouter.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Modifier une absence">
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/modifier.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Supprimer une absence">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/supprimer.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutY="27.0" prefHeight="576.0" prefWidth="1024.0">
+                                       <children>
+                                          <TableView prefHeight="700.0" prefWidth="1025.0">
+                                             <columns>
+                                                <TableColumn prefWidth="169.0" text="Date" />
+                                                <TableColumn minWidth="0.0" prefWidth="197.0" text="Heure" />
+                                                <TableColumn prefWidth="190.0" text="Cours" />
+                                                <TableColumn prefWidth="468.0" text="Justificatif" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Les rapports">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="27.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Ajouter une note">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/ajouter.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="20.0" right="5.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Modifier une note">
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/modifier.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="287.0" text="Supprimer une note">
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/image/supprimer.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="30.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutY="27.0" prefHeight="576.0" prefWidth="1024.0">
+                                       <children>
+                                          <TableView prefHeight="576.0" prefWidth="1024.0">
+                                             <columns>
+                                                <TableColumn prefWidth="113.0" text="1" />
+                                                <TableColumn minWidth="0.0" prefWidth="154.0" text="2" />
+                                                <TableColumn prefWidth="105.0" text="3" />
+                                                <TableColumn prefWidth="90.0" text="4" />
+                                                <TableColumn prefWidth="110.0" text="5" />
+                                                <TableColumn prefWidth="140.0" text="6" />
+                                                <TableColumn prefWidth="311.0" text="7" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
