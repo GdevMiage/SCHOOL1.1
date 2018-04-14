@@ -13,7 +13,13 @@ public class Etudiants extends Individus  {
  private ArrayList<Modules> ListeModulesValide;
  private ArrayList<Evaluations> ListeEvaluations;
 private ArrayList<Groupes> ListeGroupes;
- private ListPro<Etudiants>  listeEtudiants;
+
+ 
+ public static final ListPro<Etudiants> listeEtudiants = new ListPro<Etudiants>();
+   
+    {
+        this.listeEtudiants.add(this);
+    }
 
     public Etudiants(int id){
         super(id);
@@ -99,9 +105,7 @@ private ArrayList<Groupes> ListeGroupes;
         return listeEtudiants;
     }
 
-    public void setListeEtudiants(ListPro<Etudiants> listeEtudiants) {
-        this.listeEtudiants = listeEtudiants;
-    }
+
 
     public ArrayList<Groupes> getListeGroupes() {
         return ListeGroupes;

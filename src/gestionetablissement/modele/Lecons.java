@@ -9,6 +9,11 @@ public class Lecons {
     private String libelLecon;
     private String pagDebLecon;
     private String pagFinLecon;
+     public static final ListPro<Lecons> listeLecons = new ListPro<Lecons>();
+   
+    {
+        this.listeLecons.add(this);
+    }
 
     public Lecons(int idLecon, Supports support, String libelLecon, String pagDebLecon, String pagFinLecon) {
         this.idLecon = idLecon;

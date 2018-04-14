@@ -1,7 +1,10 @@
  
 package gestionetablissement.modele;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
  
 public class Paiements {
     
@@ -20,7 +23,51 @@ public class Paiements {
     private int trigrEncaisPaiment;
     private Date dateTransfPaiement;
     private int trigrTranfPaiment;
-    private ListPro<Paiements> listePaiement ;
+   
+    
+    public static final ListPro<Paiements> listePaiements = new ListPro<Paiements>();
+   
+    {
+        this.listePaiements.add(this);
+    }
+  
+        //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listePaiements.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Paiements PaiementsPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  PaiementsPlusGrandId=  (Paiements) it.next();
+        while(it.hasNext()){
+            Paiements Paiements = (Paiements) it.next();
+            vide=false;
+            if(Paiements.getIdPaiement()>PaiementsPlusGrandId.getIdPaiement()) PaiementsPlusGrandId = Paiements;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(PaiementsPlusGrandId.getIdPaiement()+1);return PaiementsPlusGrandId.getIdPaiement()+1;}
+        
+        
+    }
+    
+    public static ArrayList<Paiements> of(String id ){
+        Iterator it = listePaiements.iterator();
+        ArrayList<Paiements> listRecherche=null;
+        while(it.hasNext()){
+            Paiements Paiements = (Paiements) it.next();
+            String idd = Paiements.getIdPaiement()+"";
+            if(idd.indexOf(id)!=0){
+                
+                listRecherche.add(Paiements);
+            }
+        }
+        return listRecherche;
+    }
+    
     public Paiements(){
         
         
@@ -42,8 +89,7 @@ public class Paiements {
         this.trigrEncaisPaiment = trigrEncaisPaiment;
         this.dateTransfPaiement = dateTransfPaiement;
         this.trigrTranfPaiment = trigrTranfPaiment;
-        this.listePaiement = listePaiements;
-        listePaiements.add(this);
+       
         
     }
 

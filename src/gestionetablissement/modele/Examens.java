@@ -13,7 +13,12 @@ public class Examens extends Seances{
   private String formeExamen; 
   private int baremExamen; 
   private String descrExamen;
-  private ListPro<Examens> listeExamens ;
+
+  public static final ListPro<Examens> listeExamens = new ListPro<Examens>();
+   
+    {
+        this.listeExamens.add(this);
+    }
   
  public Examens(int idSeance, Groupes groupe, Horaires horaire,
             Enseignants enseignant, String rattrapageSeance,
@@ -51,8 +56,7 @@ public class Examens extends Seances{
         this.typeExamen = typeExamen;
         this.baremExamen = baremExamen;
         this.descrExamen = descrExamen;
-        this.listeExamens=listeExamens;
-        listeExamens.add(this);
+      
     }
  
   

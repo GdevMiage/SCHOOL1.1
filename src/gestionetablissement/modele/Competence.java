@@ -1,11 +1,23 @@
  
 package gestionetablissement.modele;
 
+import static gestionetablissement.modele.Adresses.listeAdresse;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Iterator;
+
  
 public class Competence {
     
 private Programme programme;
 private Enseignants ensignant;
+public static final ListPro<Competence> listeCompetence = new ListPro<Competence>();
+   
+    {
+        this.listeCompetence.add(this);
+    }
+   
+    
 
     public Competence(Programme programme, Enseignants ensignant) {
         this.programme = programme;

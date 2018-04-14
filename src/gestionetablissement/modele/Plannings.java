@@ -2,6 +2,8 @@
 package gestionetablissement.modele;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Iterator;
 
 
 public class Plannings {
@@ -16,7 +18,50 @@ public class Plannings {
   private String horDimPlanning;
   private String libelPlanning; 
   private ArrayList<Sessions> session;
-  private ListPro<Plannings> listePlannings ;
+  
+  
+  public static final ListPro<Plannings> listePlannings = new ListPro<Plannings>();
+   
+    {
+        this.listePlannings.add(this);
+    }
+  
+        //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listePlannings.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+       Plannings PlanningsPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  PlanningsPlusGrandId=  (Plannings) it.next();
+        while(it.hasNext()){
+            Plannings Plannings = (Plannings) it.next();
+            vide=false;
+            if(Plannings.getIdPlanning()>PlanningsPlusGrandId.getIdPlanning()) PlanningsPlusGrandId = Plannings;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(PlanningsPlusGrandId.getIdPlanning()+1);return PlanningsPlusGrandId.getIdPlanning()+1;}
+        
+        
+    }
+    
+    public static ArrayList<Plannings> of(String id ){
+        Iterator it = listePlannings.iterator();
+        ArrayList<Plannings> listRecherche=null;
+        while(it.hasNext()){
+            Plannings Plannings = (Plannings) it.next();
+            String idd = Plannings.getIdPlanning()+"";
+            if(idd.indexOf(id)!=0){
+                
+                listRecherche.add(Plannings);
+            }
+        }
+        return listRecherche;
+    }
   
     public Plannings(){
         
@@ -32,8 +77,7 @@ public class Plannings {
         this.horDimPlanning = horDimPlanning;
         this.libelPlanning = libelPlanning;
         this.session.add(session);
-        this.listePlannings=plan;
-        plan.add(this);
+       
         
     }
 

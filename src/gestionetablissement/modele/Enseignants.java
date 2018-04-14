@@ -11,7 +11,13 @@ public class Enseignants extends Individus {
  private ArrayList<String>     listeCompetence; 
  private ArrayList<String>     listeTache; 
  private ArrayList<String>     listeRapport; 
- private ListPro<Enseignants>  listeEnseignants;
+
+ 
+ public static final ListPro<Enseignants> listeEnseignants = new ListPro<Enseignants>();
+   
+    {
+        this.listeEnseignants.add(this);
+    }
 
     public Enseignants(int id){
         super(id);

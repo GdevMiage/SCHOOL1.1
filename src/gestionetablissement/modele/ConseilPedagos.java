@@ -7,7 +7,13 @@ public class ConseilPedagos {
    private Reunions reunion;
    private String libelConseilPedago;
    private String decisConseilPedago;
-   private ListPro<ConseilPedagos> listeConseilPedagos;
+
+   
+   public static final ListPro<ConseilPedagos> listeConseilPedagos = new ListPro<ConseilPedagos>();
+   
+    {
+        this.listeConseilPedagos.add(this);
+    }
    
    //constructeur avec l'ajout dans la liste 
     public ConseilPedagos(int idConseilPedago, Reunions reunion,
@@ -18,8 +24,7 @@ public class ConseilPedagos {
         this.reunion = reunion;
         this.libelConseilPedago = libelConseilPedago;
         this.decisConseilPedago = decisConseilPedago;
-        this.listeConseilPedagos=listeConseilPedagos;
-        listeConseilPedagos.add(this);
+       
     }
   //constructeur sans ajout a la liste
     public ConseilPedagos(int idConseilPedago, Reunions reunion,

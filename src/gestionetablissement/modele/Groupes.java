@@ -2,7 +2,9 @@
 package gestionetablissement.modele;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 
 
 public class Groupes {
@@ -23,7 +25,54 @@ public class Groupes {
  private ArrayList<Seances>     seanceGroupe; 
  private ArrayList<Date>        dateExamGroupe;  
  private int                    dureePauseHoraire;
- private ListPro<Groupes>       listeGroupe;
+ 
+ 
+ 
+  public static final ListPro<Groupes> listeGroupe = new ListPro<Groupes>();
+   
+    {
+        this.listeGroupe.add(this);
+    }
+  
+        //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listeGroupe.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Groupes GroupesPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  GroupesPlusGrandId=  (Groupes) it.next();
+        while(it.hasNext()){
+            Groupes Groupes = (Groupes) it.next();
+            vide=false;
+            if(Groupes.getIdGroupe()>GroupesPlusGrandId.getIdGroupe()) GroupesPlusGrandId =Groupes;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(GroupesPlusGrandId.getIdGroupe()+1);return GroupesPlusGrandId.getIdGroupe()+1;}
+        
+        
+    }
+    
+    public static ArrayList<Groupes> of(String id ){
+        Iterator it = listeGroupe.iterator();
+        ArrayList<Groupes> listRecherche=null;
+        while(it.hasNext()){
+            Groupes Groupes  = (Groupes) it.next();
+            String idd = Groupes.getIdGroupe()+"";
+            if(idd.indexOf(id)!=0){
+                
+                listRecherche.add(Groupes);
+            }
+        }
+        return listRecherche;
+    }
+ 
+ 
+ 
 public Groupes(){
     
 }
@@ -149,9 +198,7 @@ public Groupes(){
         return listeGroupe;
     }
 
-    public void setListeGroupe(ListPro<Groupes> listeGroupe) {
-        this.listeGroupe = listeGroupe;
-    }
+  
     public Groupes(int idGroupe, Sessions session,
            int capacite,String libelGroupe, String commentGroupe, 
            int dureePauseHoraire,ListPro<Groupes>listeGroupe) {
@@ -161,8 +208,7 @@ public Groupes(){
         this.commentGroupe = commentGroupe;
         this.dateExamGroupe = dateExamGroupe;
         this.dureePauseHoraire = dureePauseHoraire;
-        this.listeGroupe = listeGroupe;
-        listeGroupe.add(this);
+        
         
     }
   public Groupes(int idGroupe, ArrayList<Sessions>    listeSession, ArrayList<Plannings>   listePlanning,
@@ -187,8 +233,7 @@ public Groupes(){
         this.seanSuplGroupe =seanSuplGroupe ;
         this.dateExamGroupe = dateExamGroupe;
         this.dureePauseHoraire = dureePauseHoraire;
-        this.listeGroupe = listeGroupe;
-        listeGroupe.add(this);
+        
     }
   
     public int getIdGroupe() {

@@ -2,7 +2,9 @@
 package gestionetablissement.modele;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 
 
 public class Reunions {
@@ -19,7 +21,50 @@ public class Reunions {
     private ConseilPedagos conseilPedagos;
     private ConseilAdmins conseilAdmins;
     private ArrayList<TacheAFaires> listeTacheAFaire;
-    private ListPro<Reunions> listeReunions;
+    
+    
+    public static final ListPro<Reunions> listeReunions = new ListPro<Reunions>();
+   
+    {
+        this.listeReunions.add(this);
+    }
+  
+        //pour definir a chaque fois les ID
+    public static int definirId(){
+        Iterator it = listeReunions.iterator();
+        
+        //année actuelle 
+       
+        int annee =Calendar.getInstance().get(Calendar.YEAR);
+        
+        Reunions ReunionsPlusGrandId=null;
+        boolean vide =true;
+        if(it.hasNext())  ReunionsPlusGrandId=  (Reunions) it.next();
+        while(it.hasNext()){
+            Reunions Reunions = (Reunions) it.next();
+            vide=false;
+            if(Reunions.getIdReunion()>ReunionsPlusGrandId.getIdReunion()) ReunionsPlusGrandId = Reunions;
+        }
+            
+            if(vide) {System.out.println((annee *10)+1);return ((annee *100000)+1);}
+            else {System.out.println(ReunionsPlusGrandId.getIdReunion()+1);return ReunionsPlusGrandId.getIdReunion()+1;}
+        
+        
+    }
+    
+    public static ArrayList<Reunions> of(String id ){
+        Iterator it = listeReunions.iterator();
+        ArrayList<Reunions> listRecherche=null;
+        while(it.hasNext()){
+            Reunions Reunions = (Reunions) it.next();
+            String idd = Reunions.getIdReunion()+"";
+            if(idd.indexOf(id)!=0){
+                
+                listRecherche.add(Reunions);
+            }
+        }
+        return listRecherche;
+    }
     
     public Reunions(int idReunion, String libelReunion, Individus[] participantsReunion, String ODJReunion, Horaires horaireDebutFin, ArrayList<Individus> presReunion, ArrayList<Individus> abscReunion, String commReunion, String CRReunion,ListPro<Reunions> listeReunions) {
         this.idReunion = idReunion;
@@ -32,9 +77,7 @@ public class Reunions {
         this.abscReunion = abscReunion;
         this.commReunion = commReunion;
         this.CRReunion = CRReunion;
-        this.listeReunions =listeReunions;
-        this.listeReunions=listeReunions;
-        listeReunions.add(this);
+       
     }
 
     public int getIdReunion() {
@@ -90,9 +133,7 @@ public class Reunions {
         return listeReunions;
     }
 
-    public void setListeReunions(ListPro<Reunions> listeReunions) {
-        this.listeReunions = listeReunions;
-    }
+
 
 
     public String getODJReunion() {
