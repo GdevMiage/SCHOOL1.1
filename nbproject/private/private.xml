@@ -3,32 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/SecretaireViewController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/EtudiantView.fxml</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/GestionEnseignat.fxml</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/ModifierEtudiant_etdController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/GestionEtudiant.fxml</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/SecretaireView.fxml</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/AjoutEtudiant.fxml</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/ModifierEtudiant_etd.fxml</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/GestionEtudiantController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/etudiantview.css</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/Individus.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modifieretudiant.css</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/securite/dbConnect.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modifieretudiant_etd.css</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/AjouterEtudiantController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/ListPro.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/AjoutEtudiantController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/GestionEnseignatController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/EtudiantViewController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/ModifierEtudiantController.java</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/ajouteretudiant.css</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/ModifierEtudiant_adm.fxml</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/ajoutetudiant.css</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/gestionetudiant.css</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/gestionenseignat.css</file>
-            <file>file:/C:/Users/lyess/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/secretaireview.css</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/GestionEtablissement.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/ProfileController.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/User.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/assets/image/LoginLogo.png</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/AdminView.fxml</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/LoginController.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/Directeur.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/assets/image/CoarseGrid.png</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/TypeDocs.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/adminview.css</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/Login.css</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/assets/image/LoginLogo1.png</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/vue/login.fxml</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/controleur/AffficherEnseignatController.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/Adresses.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/Etudiants.java</file>
+            <file>file:/C:/Users/salim/Documents/NetBeansProjects/GestionEtablissement/src/gestionetablissement/modele/Secretaire.java</file>
         </group>
     </open-files>
 </project-private>
