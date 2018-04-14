@@ -15,6 +15,9 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
+import static javafx.collections.FXCollections.observableArrayList;
+import static javafx.collections.FXCollections.observableArrayList;
+import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -62,6 +65,7 @@ private Individus individusSelectionner;
 @FXML AnchorPane afficheEtudiant;
 @FXML TextField rechercheIdTextField;
 @FXML private Button ajoutButton;
+@FXML private Button idButton;
  private ObservableList<Individus> data;
     /**
      * Initializes the controller class.
@@ -88,7 +92,21 @@ private Individus individusSelectionner;
         }
     }
   
-private void remplirTableView() throws FileNotFoundException{
+private void remplirTableView( ObservableList<Individus> list) throws FileNotFoundException{
+          numCol.setCellValueFactory(
+                new PropertyValueFactory<Individus, String>("idIndividu"));
+          nomCol.setCellValueFactory(
+                new PropertyValueFactory<Individus, String>("nomIndividu"));
+          prenomCol.setCellValueFactory(
+                new PropertyValueFactory<Individus, String>("prenomIndividu"));
+           
+            list = FXCollections.observableArrayList(Individus.listeIndividusEtablissement);
+          
+          etudiantTableView.setItems(list);
+         afficheIndividusSelectionner ();
+      }
+
+private void remplirTableView( ) throws FileNotFoundException{
           numCol.setCellValueFactory(
                 new PropertyValueFactory<Individus, String>("idIndividu"));
           nomCol.setCellValueFactory(
@@ -101,7 +119,6 @@ private void remplirTableView() throws FileNotFoundException{
           etudiantTableView.setItems(data);
          afficheIndividusSelectionner ();
       }
-
 
 @FXML void afficheIndividusSelectionner () throws FileNotFoundException{
     if(individusSelectionner==null)individusSelectionner =etudiantTableView.getItems().get(1);
@@ -156,12 +173,14 @@ private void remplirTableView() throws FileNotFoundException{
          photoIndiv.setCache(true);
     }
      
-     @FXML void rechercheIndividusID () throws FileNotFoundException{
-        
+     @FXML private   void rechercheIndividusID () throws FileNotFoundException{
+            data.clear();
+            System.out.println("Test textFild recherche :"+rechercheIdTextField.getText());
            data = FXCollections.observableArrayList(Individus.of(rechercheIdTextField.getText()));
-          
-          etudiantTableView.setItems(data);
-         afficheIndividusSelectionner ();
+         
+        remplirTableView(data);
+        etudiantTableView.refresh();
+        
      }
      
        @FXML private void gotoAjoutEtudiant() {

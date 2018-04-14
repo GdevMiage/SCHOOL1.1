@@ -97,8 +97,8 @@ public class GestionEtablissement extends Application {
             Individus indiiiiii = new Individus("BOUDEN","Rabye","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiiii = new Individus("HAMMAMI","Hamma","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
             Individus indiiiiiiii = new Individus("BRIK","Jallel","H",new Date(),"Bizerte","L3MIAGE","Informatique","Etudiant",new Adresses(),"Arabe","FR","","","","0638441611","ben.aissa.ouadie@gmail.com");
-             Affectations aff = new Affectations(3,"CDI","ouadie","abc",new Date(),new Date(),"Prof","c://",indi);
-             Affectations afff = new Affectations(3,"CDI","","",new Date(),new Date(),"Prof","c://",indii);
+             Affectations aff = new Affectations(3,"CDI","etudiant","pass",new Date(),new Date(),"Prof","c://",indi);
+             Affectations afff = new Affectations(3,"CDI","directeur","pass",new Date(),new Date(),"Prof","c://",indii);
              Affectations affff = new Affectations(3,"CDI","lyes","lyes",new Date(),new Date(),"Prof","c://",indiii);
              
             gotoLogin();
